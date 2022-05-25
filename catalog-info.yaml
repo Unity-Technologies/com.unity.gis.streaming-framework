@@ -3,8 +3,8 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   annotations:
-    github.com/project-slug: Unity-Technologies/com.unity.gis.streaming-framework.rc
-  name: com.unity.gis.streaming-framework.rc
+    github.com/project-slug: Unity-Technologies/com.unity.gis.streaming-framework
+  name: com.unity.gis.streaming-framework
   description: "A streaming framework for geospatial data"
   labels:
     costcenter: "5029"
@@ -17,4 +17,4 @@ metadata:
 spec:
   type: unity-package
   lifecycle: experimental
-  owner: unity-technologies/dt-members
+  owner: unity-technologies/dt-3d-data-streaming
