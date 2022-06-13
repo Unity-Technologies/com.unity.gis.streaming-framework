@@ -1,0 +1,2 @@
+INKSCAPE_PATH = /C/Program Files/Inkscape/bin/inkscape.exe
+UMLET_PATH = java -jar "/c/MProgramFiles/umlet-standalone-14.3.0/Umlet/umlet.jar"

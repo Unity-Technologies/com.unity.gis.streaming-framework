@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>0</y>
+      <w>248</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Hierarchy&lt;P&gt;
+--
+
++ Hierarchy()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>552</x>
+      <y>128</y>
+      <w>304</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>IEditHierarchyNodes
+&lt;&lt;interface&gt;&gt;
+--
+
++ GetRootNode() : NodeId
++ GetChildren(NodeId, [out] List&lt;NodeId&gt;)
+
++ AddNode(NodeId parent, NodeData) : NodeId result
++ RemoveNode(NodeId)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>64</y>
+      <w>96</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-
+&lt;&lt;implements&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>552</x>
+      <y>272</y>
+      <w>304</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>IEditTargetState
+&lt;&lt;interface&gt;&gt;
+--
+
++ GetRootNode() : NodeId
++ GetChildren(NodeId, [out] List&lt;NodeId&gt;)
+
++ GetBounds(NodeId) : DBounds
++ GetGeometricError(NodeId) : float
++ GetTargetState(NodeId) : NodeState
+
++ SetTargetState(NodeId, NodeState)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>552</x>
+      <y>464</y>
+      <w>304</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>IEditCurrentState
+&lt;&lt;interface&gt;&gt;
+--
+
++ GetRootNode() : NodeId
++ GetChildren(NodeId, [out] List&lt;NodeId&gt;)
+
++ GetCurrentState(NodeId) : NodeState
++ GetRefinementMode(NodeId): RefinementMode
++ GetNodeContent(NodeId) : NodeContent
+
++ SetCurrentState(NodeId, NodeState)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>120</y>
+      <w>24</w>
+      <h>616</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;750.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>352</y>
+      <w>48</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>184</y>
+      <w>48</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>520</y>
+      <w>48</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>552</x>
+      <y>640</y>
+      <w>304</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>IScheduleNodeChanges&lt;P&gt;
+--
+
++ GetRootNode() : NodeId
++ GetChildren(NodeId, [out] List&lt;NodeId&gt;)
+
++ GetTargetState(NodeId) : NodeState
++ GetCurrentState(NodeId) : NodeState
+
++ GetGeometricError(NodeId) : float
++ GetErrorSpecification(NodeId) : float
++ GetBounds(NodeId) : DBounds
++ GetPrioritizerCache(NodeId) : P
+
++ SetPrioritizerCache(NodeId, P)
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>712</y>
+      <w>48</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+</diagram>

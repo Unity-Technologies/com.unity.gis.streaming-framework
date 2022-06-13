@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>368</x>
+      <y>440</y>
+      <w>256</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>TargetStateController
+--
++ SetDetailObserverData(DetailObserverData[])
++ UpdateTargetStates()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>584</y>
+      <w>216</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>DetailObserverData
+&lt;&lt;struct&gt;&gt;
+--
++ DMatrix4x4 ClipFromUniverse
++ bool UseClipPlane
++ DPlane ClipPlane
++ Func&lt;
+     DetailObserverData, 
+     DBounds, 
+     float&gt; GeometricErrorFunction
++ float ErrorMultiplier</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>704</x>
+      <y>376</y>
+      <w>248</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>IEditHierarchyTargetState
+&lt;&lt;interface&gt;&gt;
+--
+
++ GetRootNode() : NodeId
++ GetChildren(NodeId, [out] List&lt;NodeId&gt;)
+
++ GetBounds(NodeId) : DBounds
++ GetGeometricError(NodeId) : float
++ GetTargetState(NodeId) : TargetState
+
++ SetTargetState(NodeId, NodeState)
++ SetErrorSpecification(NodeId, float)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>616</x>
+      <y>464</y>
+      <w>104</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>488</x>
+      <y>488</y>
+      <w>40</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=0..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>784</x>
+      <y>600</y>
+      <w>96</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>TargetState
+&lt;&lt;enum&gt;&gt;
+--
+Collapsed
+Expanded</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>824</x>
+      <y>544</y>
+      <w>56</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;..
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

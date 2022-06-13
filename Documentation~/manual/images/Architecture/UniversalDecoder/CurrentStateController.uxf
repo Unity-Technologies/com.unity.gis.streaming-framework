@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text>// Uncomment the following line to change the fontsize and font:
+fontsize=10
+// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use +/- or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// This text will be stored with each diagram;  use it for notes.</help_text>
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>198</x>
+      <y>517</y>
+      <w>242</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>IEditCurrentState
+&lt;&lt;interface&gt;&gt;
+--
+
++ GetRootNode() : NodeId
++ GetChildren(NodeId, [out] List&lt;NodeId&gt;)
+
++ GetCurrentState(NodeId) : NodeState
++ GetRefinementMode(NodeId): RefinementMode
++ GetNodeContent(NodeId) : NodeContent
+
++ SetCurrentState(NodeId, NodeState)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>517</x>
+      <y>528</y>
+      <w>198</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>CurrentStateController
+--
++ HierarchyStateController(
+     IEditHierarchyCurrentState,
+     IManageContent)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>792</x>
+      <y>517</y>
+      <w>176</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>IManageContent
+--
+
++ LoadingCount : int
++ UnloadingCount : int
+
++ Load(NodeID, NodeContent)
++ Unload(NodeId)
++ Show(NodeId)
++ Hide(NodeId)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>704</x>
+      <y>583</y>
+      <w>110</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>429</x>
+      <y>583</y>
+      <w>110</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>506</x>
+      <y>352</y>
+      <w>220</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>ICurrentStateController
+--
+
++ LoadingCount : int
++ Load(NodeId)
++ Unload(NodeId)
++ Expand(NodeId)
++ Collapse(NodeId)
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>605</x>
+      <y>462</y>
+      <w>99</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+&lt;&lt;implements&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

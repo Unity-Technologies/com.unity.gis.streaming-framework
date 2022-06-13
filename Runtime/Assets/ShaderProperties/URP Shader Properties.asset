@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dec31f5ecf3d324b954f84f79ab3d50, type: 3}
+  m_Name: URP Shader Properties
+  m_EditorClassIdentifier: 
+  PropertyList:
+  - Type: 1
+    Name: _BaseColor
+    TextureScaleTiling: 
+  - Type: 0
+    Name: _BaseMap
+    TextureScaleTiling: _BaseMap_ST
+  - Type: 2
+    Name: _Smoothness
+    TextureScaleTiling: 
+  - Type: 3
+    Name: _AlphaCutoff
+    TextureScaleTiling: 

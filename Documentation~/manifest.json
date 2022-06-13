@@ -1,0 +1,872 @@
+{
+  "sitemap": {
+    "fileOptions": {},
+    "priority": 0.0,
+    "lastmod": "0001-01-01T00:00:00"
+  },
+  "homepages": [],
+  "source_base_path": "C:/temp/com.unity.gis.streaming-framework@1.0",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/Architecture/universal-decoder.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/Architecture/universal-decoder.html",
+          "hash": "H6cBlT6ub1rrnMc+7TLTnbSKxafniENI7/qxELre77M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/FileFormats/ogc-3d-tiles.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/FileFormats/ogc-3d-tiles.html",
+          "hash": "zTtw3ebMSYnEoPjHvpUYzn9ZQ9tw/yw5qJd/izRCv6Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/FileFormats/unity-terrain-mesh.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/FileFormats/unity-terrain-mesh.html",
+          "hash": "Kp/591VONoYFcbg2j4uwu3bUelOa5K0En3p9GRjBbOQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/GettingStarted/adding-multiple-datasets.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/GettingStarted/adding-multiple-datasets.html",
+          "hash": "pRGlSQTrJD2LwCH2uqI/9GhFBtxxgZUc1lNBkQFXUX4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/GettingStarted/first-time-setup.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/GettingStarted/first-time-setup.html",
+          "hash": "bi45SmNAPtDQVn1s6xcCEn6kvMTxNo4Xfqq2PQIEDoM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/GettingStarted/frequently-asked.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/GettingStarted/frequently-asked.html",
+          "hash": "VNZ0WlMGZiVKx/YccRRdbrQWPbVdQfEMnK1joJf24T8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/GettingStarted/known-limitations.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/GettingStarted/known-limitations.html",
+          "hash": "zJeLYT1/9rM5jH0X0PgFj8GHpXEaehRlDbgirxVJcHM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/TableOfContents.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/TableOfContents.html",
+          "hash": "soQT9SFzw7n1N4FSOf7KVRuSs0rekaFWCzfhc1iEt2c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/guide.html",
+          "hash": "/eO9nAnlXm2Ws5/0egPAigXkE/Xg253ctYslO/A/hxA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/Architecture/UniversalDecoder/Backup.uxf",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/Architecture/UniversalDecoder/Backup.uxf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/Architecture/UniversalDecoder/CurrentStateController.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/Architecture/UniversalDecoder/CurrentStateController.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/Architecture/UniversalDecoder/CurrentStateController.uxf",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/Architecture/UniversalDecoder/CurrentStateController.uxf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/Architecture/UniversalDecoder/ExpansionScheduler.uxf",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/Architecture/UniversalDecoder/ExpansionScheduler.uxf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/Architecture/UniversalDecoder/Hierarchy.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/Architecture/UniversalDecoder/Hierarchy.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/Architecture/UniversalDecoder/Hierarchy.uxf",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/Architecture/UniversalDecoder/Hierarchy.uxf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/Architecture/UniversalDecoder/HighLevelClassDiagram.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/Architecture/UniversalDecoder/HighLevelClassDiagram.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/Architecture/UniversalDecoder/HighLevelClassDiagram.uxf",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/Architecture/UniversalDecoder/HighLevelClassDiagram.uxf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/Architecture/UniversalDecoder/TargetStateController.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/Architecture/UniversalDecoder/TargetStateController.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/Architecture/UniversalDecoder/TargetStateController.uxf",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/Architecture/UniversalDecoder/TargetStateController.uxf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/FileFormats/TerrainExtentExample.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/FileFormats/TerrainExtentExample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/FileFormats/TerrainExtentExample.svg",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/FileFormats/TerrainExtentExample.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/FileFormats/UnityTerrainMesh-Ordering.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/FileFormats/UnityTerrainMesh-Ordering.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/FileFormats/UnityTerrainMesh-Ordering.svg",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/FileFormats/UnityTerrainMesh-Ordering.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/FileFormats/UnityTerrainMesh-UTRLayout.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/FileFormats/UnityTerrainMesh-UTRLayout.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/FileFormats/UnityTerrainMesh-UTRLayout.svg",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/FileFormats/UnityTerrainMesh-UTRLayout.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/AddCesiumAsset.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/AddCesiumAsset.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/AddFlyCamera.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/AddFlyCamera.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/BasicUGCamera.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/BasicUGCamera.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/BasicUGSystem.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/BasicUGSystem.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/CesiumToken.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/CesiumToken.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/Complete.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/Complete.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/CreateAssetToken.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/CreateAssetToken.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/DisableFog.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/DisableFog.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/DisableFogHDRP.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/DisableFogHDRP.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/ExtentExample.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/ExtentExample.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/ExtentModifierMelbourne.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/ExtentModifierMelbourne.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/FixedSkybox.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/FixedSkybox.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/HillAirforceBaseDataset.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/HillAirforceBaseDataset.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/Import.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/Import.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/ImportPackageWindow.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/ImportPackageWindow.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/InputSystemSetting.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/InputSystemSetting.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/MelbourneComplete.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/MelbourneComplete.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/MelbourneConfiguration.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/MelbourneConfiguration.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/MelbourneIon.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/MelbourneIon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/MelbourneLayer.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/MelbourneLayer.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/NewHDRPScene.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/NewHDRPScene.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/NewProject.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/NewProject.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/OddSkybox.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/OddSkybox.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/PackageManager.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/PackageManager.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/ProceduralSkySettings.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/ProceduralSkySettings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/SampleDatasets.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/SampleDatasets.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/SceneHierarchySystem.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/SceneHierarchySystem.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/UnityCesiumTokenString.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/UnityCesiumTokenString.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/UnityEarthDataSourceSettings.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/GettingStarted/UnityEarthDataSourceSettings.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/Makefile",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/Makefile"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/config.txt",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/config.txt"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/index.html",
+          "hash": "fXWX9galeObNnlTHKSJ/tj2w/chjL+uZPKfhpISVXA0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/sample-package-guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/sample-package-guide.html",
+          "hash": "zE3ytq7JEU3gtQbvXElLb9GH8/kBniJOmWgiGiO2oio="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/test-package-guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/test-package-guide.html",
+          "hash": "FoPynKNXn4AyNFbtoPu9qsxDmuR4ZafunezVKsgvtx4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/toc.html",
+          "hash": "OoC7lzoZSx2utoIS6/hvKraJ9qLPG817t2BDpCNA6jM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/tools-package-guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/tools-package-guide.html",
+          "hash": "Q096dG/BBhfBKXX3vCysOLCf8gaZs+vwKh6lEABIB50="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "77ww6FnN11P0kJG2IELkHub+8mF7+mCepuj2l5zXcdQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "changelog/CHANGELOG.md",
+      "output": {
+        ".html": {
+          "relative_path": "changelog/CHANGELOG.html",
+          "hash": "DJJk85S/tmfHaiQvkhdiZ+lpDDsoh7cyzvOQ89Kz3g8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "changelog/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "changelog/toc.html",
+          "hash": "NNxjDmqfyrYxcv1MzNCvi8NHk74c3SXHi83RxB1PZEA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "0GtzvTJ0cXhw+WlY9b51ywohdFpUXzmkk4ZC+sZp33w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "license/LICENSE.md",
+      "output": {
+        ".html": {
+          "relative_path": "license/LICENSE.html",
+          "hash": "skWDJwxEMdfuVAueIcwRW3rhkKkDIvRo6nACFWSeo4I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "license/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "license/index.html",
+          "hash": "BtB4LelZ0TxniZCQmgXDDgn3JSRhibEsEx3GI6aQQ5I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "license/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "license/toc.html",
+          "hash": "7fCxril+M8ICr7R7Qn3c0wfv2eAxkUGYLPYxG+4SZTw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "BqbM7eKjWKqFwqT9wmPyUjyszlJ6MGJj3RhASETYmgk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 18,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

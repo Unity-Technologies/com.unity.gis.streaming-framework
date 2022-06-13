@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2b7b7c616d59749978b19c1bd9fbff, type: 3}
+  m_Name: Builtin Material Factory
+  m_EditorClassIdentifier: 
+  DefaultMaterialObjectList:
+  - MaterialType:
+      Lighting: 0
+      AlphaMode: 0
+    Material: {fileID: 2100000, guid: 5186b2ed8cae97a4d84b5068d23b43db, type: 2}
+    PropertyObject: {fileID: 11400000, guid: d2691068933d56c45b0a72c2b10793a5, type: 2}
+  - MaterialType:
+      Lighting: 0
+      AlphaMode: 2
+    Material: {fileID: 2100000, guid: 9fda7a09682e92c4d8e50d74eb0400a4, type: 2}
+    PropertyObject: {fileID: 11400000, guid: d2691068933d56c45b0a72c2b10793a5, type: 2}
+  - MaterialType:
+      Lighting: 0
+      AlphaMode: 1
+    Material: {fileID: 2100000, guid: c75a77a98e3f95d4a92cd839fb8a846e, type: 2}
+    PropertyObject: {fileID: 11400000, guid: d2691068933d56c45b0a72c2b10793a5, type: 2}
+  - MaterialType:
+      Lighting: 1
+      AlphaMode: 0
+    Material: {fileID: 2100000, guid: b7dce7d7acbdd9547b0c8dad8f0cf949, type: 2}
+    PropertyObject: {fileID: 11400000, guid: d2691068933d56c45b0a72c2b10793a5, type: 2}
+  - MaterialType:
+      Lighting: 1
+      AlphaMode: 2
+    Material: {fileID: 2100000, guid: f28ea33dc76f1c94683eb91791800e20, type: 2}
+    PropertyObject: {fileID: 11400000, guid: d2691068933d56c45b0a72c2b10793a5, type: 2}
+  - MaterialType:
+      Lighting: 1
+      AlphaMode: 1
+    Material: {fileID: 2100000, guid: 1520a21eb1fcf8a4995dbca36cfd315f, type: 2}
+    PropertyObject: {fileID: 11400000, guid: d2691068933d56c45b0a72c2b10793a5, type: 2}

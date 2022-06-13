@@ -1,0 +1,21 @@
+{
+    "name": "Unity.Geospatial.Streaming.Editor",
+    "rootNamespace": "Unity.Geospatial.Streaming.Editor",
+    "references": [
+        "Unity.Geospatial.Streaming",
+        "Unity.Geospatial.HighPrecision.Editor",
+        "Unity.Geospatial.HighPrecision",
+        "Unity.Mathematics"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

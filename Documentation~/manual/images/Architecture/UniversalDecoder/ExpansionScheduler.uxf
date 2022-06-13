@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>486</x>
+      <y>486</y>
+      <w>297</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>ExpansionScheduler
+--
++CompansionScheduler(
+        ICurrentStateController,
+        IPrioritizeHierarchy)
+
++ Update()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>486</x>
+      <y>180</y>
+      <w>297</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>IScheduleNodeChanges&lt;P&gt;
+--
+
++ GetRootNode() : NodeId
++ GetChildren(NodeId, [out] List&lt;NodeId&gt;)
+
++ GetTargetState(NodeId) : NodeState
++ GetCurrentState(NodeId) : NodeState
+
++ GetGeometricError(NodeId) : float
++ GetErrorSpecification(NodeId) : float
++ GetBounds(NodeId) : DBounds
++ GetPrioritizerCache(NodeId) : P
+
++ SetPrioritizerCache(NodeId, P)
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>486</x>
+      <y>648</y>
+      <w>297</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>ICurrentStateController
+--
+
++ Expand(NodeId, bool loadChildren)
++ Collapse(NodeId, bool unloadChildren)
+
++ Load(NodeId)
++ Unload(NodeId)
+
++ LoadingCount : int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>621</x>
+      <y>414</y>
+      <w>27</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>621</x>
+      <y>594</y>
+      <w>27</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

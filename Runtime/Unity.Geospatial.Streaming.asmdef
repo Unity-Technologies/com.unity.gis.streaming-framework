@@ -1,0 +1,23 @@
+{
+    "name": "Unity.Geospatial.Streaming",
+    "rootNamespace": "Unity.Geospatial.Streaming",
+    "references": [
+        "Unity.Geospatial.HighPrecision",
+        "glTFast",
+        "glTFastSchema",
+        "Unity.InputSystem",
+        "Unity.Mathematics",
+        "Unity.Burst"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Newtonsoft.Json.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

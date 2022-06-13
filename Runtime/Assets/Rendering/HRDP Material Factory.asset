@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2b7b7c616d59749978b19c1bd9fbff, type: 3}
+  m_Name: HRDP Material Factory
+  m_EditorClassIdentifier: 
+  DefaultMaterialObjectList:
+  - MaterialType:
+      Lighting: 0
+      AlphaMode: 0
+    Material: {fileID: 2100000, guid: e314506381711da4b8535994dab70b51, type: 2}
+    PropertyObject: {fileID: 11400000, guid: 3400fb5df1d80b04a8769fc0e8611a11, type: 2}
+  - MaterialType:
+      Lighting: 0
+      AlphaMode: 2
+    Material: {fileID: 2100000, guid: 8440657f2bfa2c24f84887ff9ab1f582, type: 2}
+    PropertyObject: {fileID: 11400000, guid: 3400fb5df1d80b04a8769fc0e8611a11, type: 2}
+  - MaterialType:
+      Lighting: 0
+      AlphaMode: 1
+    Material: {fileID: 2100000, guid: 26ba7fc04a709a442b3bb55d68fa2f78, type: 2}
+    PropertyObject: {fileID: 11400000, guid: 3400fb5df1d80b04a8769fc0e8611a11, type: 2}
+  - MaterialType:
+      Lighting: 1
+      AlphaMode: 0
+    Material: {fileID: 2100000, guid: 01efd5329a46cf543a34c32b9ce4e77f, type: 2}
+    PropertyObject: {fileID: 11400000, guid: 3400fb5df1d80b04a8769fc0e8611a11, type: 2}
+  - MaterialType:
+      Lighting: 1
+      AlphaMode: 2
+    Material: {fileID: 2100000, guid: 0579c470f1901004c9db51fd7d8754d0, type: 2}
+    PropertyObject: {fileID: 11400000, guid: 3400fb5df1d80b04a8769fc0e8611a11, type: 2}
+  - MaterialType:
+      Lighting: 1
+      AlphaMode: 1
+    Material: {fileID: 2100000, guid: 23ab0597f6052e64ba7f10f31c18c1c1, type: 2}
+    PropertyObject: {fileID: 11400000, guid: 3400fb5df1d80b04a8769fc0e8611a11, type: 2}

@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>385</x>
+      <y>140</y>
+      <w>140</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>Hierarchy
+--
+A representation of the
+bounding volume hierarchy.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>574</x>
+      <y>140</y>
+      <w>140</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>HierarchyStateController
+--
+Updates the current state of
+the hierarchy while queing up
+the corresponding instructions
+in the content manager.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1155</x>
+      <y>133</y>
+      <w>140</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>UGCommandBuffer
+--
+Allows content loaders to work
+on multiple threads. The 
+command buffer 
+resynchronizes main thread
+exclusive actions back onto
+the main thread.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>196</x>
+      <y>140</y>
+      <w>140</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>HierarchyTargetController
+--
+Updates the target state of the
+hierarchy, as it would be
+should the detail observers
+remain in their current state
+indefinitely.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>329</x>
+      <y>196</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>518</x>
+      <y>196</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>756</x>
+      <y>140</y>
+      <w>126</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>UGContentManager
+--
+Orchestrates and calls
+upon the correct content
+loaders depending on the 
+content type of each node.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>931</x>
+      <y>105</y>
+      <w>140</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>GLTFContentLoader
+--
+Loads GLTF content</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>931</x>
+      <y>161</y>
+      <w>140</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>B3DMContentLoader
+--
+Loads B3DM content</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>931</x>
+      <y>217</y>
+      <w>140</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>3DTilesContentLoader
+--
+Loads 3DTiles content</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>875</x>
+      <y>189</y>
+      <w>49</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>903</x>
+      <y>182</y>
+      <w>42</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>903</x>
+      <y>126</y>
+      <w>42</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>903</x>
+      <y>238</y>
+      <w>42</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>903</x>
+      <y>126</y>
+      <w>21</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1064</x>
+      <y>238</y>
+      <w>56</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1064</x>
+      <y>182</y>
+      <w>56</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1064</x>
+      <y>126</y>
+      <w>56</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1099</x>
+      <y>126</y>
+      <w>21</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1099</x>
+      <y>175</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>707</x>
+      <y>196</y>
+      <w>63</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>140</y>
+      <w>140</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>DetailObserver
+--
+A generic observer such as a
+camera or a volume</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>210</y>
+      <w>140</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>DetailObserver
+--
+A generic observer such as a
+camera or a volume</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>161</x>
+      <y>189</y>
+      <w>49</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>161</x>
+      <y>161</y>
+      <w>21</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>133</x>
+      <y>161</y>
+      <w>49</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>133</x>
+      <y>231</y>
+      <w>49</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>476</x>
+      <y>483</y>
+      <w>217</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Hierarchy&lt;P&gt;
+--
+
++ Hierarchy()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>371</x>
+      <y>1001</y>
+      <w>224</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>HierarchyTargetController
+--
++ SetDetailObserverData(DetailObserverData[])
++ UpdateTargetStates()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>1127</y>
+      <w>189</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>DetailObserverData
+&lt;&lt;struct&gt;&gt;
+--
++ DMatrix4x4 ClipFromUniverse
++ bool UseClipPlane
++ DPlane ClipPlane
++ Func&lt;
+     DetailObserverData, 
+     DBounds, 
+     float&gt; GeometricErrorFunction
++ float ErrorMultiplier</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>98</x>
+      <y>609</y>
+      <w>266</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>IEditHierarchyNodes
+--
+
++ GetRootNode() : NodeId
++ GetChildren(NodeId, [out] List&lt;NodeId&gt;)
+
++ AddNode(NodeId parent, NodeData) : NodeId result
++ RemoveNode(NodeId)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>574</x>
+      <y>539</y>
+      <w>84</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-
+&lt;&lt;implements&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>378</x>
+      <y>609</y>
+      <w>217</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>IEditHierarchyTargetState
+&lt;&lt;interface&gt;&gt;
+--
+
++ GetRootNode() : NodeId
++ GetChildren(NodeId, [out] List&lt;NodeId&gt;)
+
++ GetBounds(NodeId) : DBounds
++ GetGeometricError(NodeId) : float
++ GetTargetState(NodeId) : NodeState
+
++ SetTargetState(NodeId, NodeState)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>609</x>
+      <y>609</y>
+      <w>224</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>IEditHierarchyCurrentState
+--
+
++ GetRootNode() : NodeId
++ GetChildren(NodeId, [out] List&lt;NodeId&gt;)
+
++ GetCurrentState(NodeId) : NodeState
++ GetNodeContent(NodeId) : NodeContent
+
++ SetCurretnState(NodeId, NodeState)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>448</x>
+      <y>231</y>
+      <w>567</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>790.0;50.0;790.0;90.0;10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>196</x>
+      <y>574</y>
+      <w>770</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;1080.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>476</x>
+      <y>574</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>196</x>
+      <y>574</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>707</x>
+      <y>574</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>574</x>
+      <y>0</y>
+      <w>140</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>Prioritizer
+--
+Observes the difference
+between the current state and
+target state of the hierarchy
+and determines which nodes
+to load and expand first and
+which nodes to unload and
+collapse.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>847</x>
+      <y>609</y>
+      <w>224</w>
+      <h>203</h>
+    </coordinates>
+    <panel_attributes>IPrioritizeHierarchy&lt;P&gt;
+--
+
++ GetRootNode() : NodeId
++ GetChildren(NodeId, [out] List&lt;NodeId&gt;)
+
++ GetTargetState(NodeId) : NodeState
++ GetCurrentState(NodeId) : NodeState
+
++ GetGeometricError(NodeId) : float
++ GetErrorSpecification(NodeId) : float
++ GetBounds(NodeId) : DBounds
++ GetPrioritizerCache(NodeId) : P
+
++ SetPrioritizerCache(NodeId, P)
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>945</x>
+      <y>574</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>637</x>
+      <y>98</y>
+      <w>21</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>455</x>
+      <y>70</y>
+      <w>133</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>665</x>
+      <y>945</y>
+      <w>217</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>IEditHierarchyTargetState
+&lt;&lt;interface&gt;&gt;
+--
+
++ GetRootNode() : NodeId
++ GetChildren(NodeId, [out] List&lt;NodeId&gt;)
+
++ GetBounds(NodeId) : DBounds
++ GetGeometricError(NodeId) : float
++ GetTargetState(NodeId) : NodeState
+
++ SetTargetState(NodeId, NodeState)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>1022</y>
+      <w>91</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>476</x>
+      <y>1043</y>
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=0..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>217</x>
+      <y>1505</y>
+      <w>224</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>IEditHierarchyCurrentState
+--
+
++ GetRootNode() : NodeId
++ GetChildren(NodeId, [out] List&lt;NodeId&gt;)
+
++ GetCurrentState(NodeId) : NodeState
++ SetCurretnState(NodeId, NodeState)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>1512</y>
+      <w>238</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>HierarchyStateController
+--
++ HierarchyStateController(
+     IEditHierarchyCurrentState,
+     IManageContent)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>777</x>
+      <y>1491</y>
+      <w>189</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>IManageContent
+--
+
++ LoadingCount : int
++ UnloadingCount : int
+
++ Load(NodeID, NodeContent)
++ Unload(NodeId)
++ Show(NodeId)
++ Hide(NodeId)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>721</x>
+      <y>1547</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>434</x>
+      <y>1547</y>
+      <w>70</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>1358</y>
+      <w>238</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>IHierarchyStateController
+--
+
++ Expand(NodeId, bool loadChildren)
++ Collapse(NodeId, bool unloadChildren)
+
++ Load(NodeId)
++ Unload(NodeId)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>602</x>
+      <y>1449</y>
+      <w>84</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+&lt;&lt;implements&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>511</x>
+      <y>1813</y>
+      <w>231</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>Prioritizer
+--
++Prioritizer(
+        IHierarchyStateController,
+        IPrioritizeHierarchy)
+
++ Update()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>196</x>
+      <y>1778</y>
+      <w>224</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>IPrioritizeHierarchy&lt;P&gt;
+--
+
++ GetRootNode() : NodeId
++ GetChildren(NodeId, [out] List&lt;NodeId&gt;)
+
++ GetTargetState(NodeId) : NodeState
++ GetCurrentState(NodeId) : NodeState
+
++ GetGeometricError(NodeId) : float
++ GetErrorSpecification(NodeId) : float
++ GetBounds(NodeId) : DBounds
++ GetPrioritizerCache(NodeId) : P
+
++ SetPrioritizerCache(NodeId, P)
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>833</x>
+      <y>1806</y>
+      <w>238</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>IHierarchyStateController
+--
+
++ Expand(NodeId, bool loadChildren)
++ Collapse(NodeId, bool unloadChildren)
+
++ Load(NodeId)
++ Unload(NodeId)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>413</x>
+      <y>1855</y>
+      <w>112</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>735</x>
+      <y>1855</y>
+      <w>112</w>
+      <h>21</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
