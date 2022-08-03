@@ -16,6 +16,8 @@ namespace Unity.Geospatial.Streaming.Ogc3dTiles
     /// <summary>
     /// Default B3DM <see cref="UriLoader"/>.
     /// </summary>
+    /// <typeparam name="TTableSchema">Schema to be used when deserializing the json header part of B3DM files.</typeparam>
+    /// <typeparam name="TBatchSchema">Deserializing the batch header part of B3DM files to this type.</typeparam>
     public class OgcB3dmUriLoader<TTableSchema, TBatchSchema> :
         GltfUriLoader
         where TTableSchema: B3dmTableSchema

@@ -30,7 +30,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
         /// <summary>
         /// Register a material to be instantiated.
         /// </summary>
-        /// <param name="materialType">Type of material to create.</param>
+        /// <param name="type">Type of material to create.</param>
         /// <returns>A new <see cref="MaterialID"/> instance linked to the newly created material.</returns>
         MaterialID AllocateMaterial(MaterialType type);
 

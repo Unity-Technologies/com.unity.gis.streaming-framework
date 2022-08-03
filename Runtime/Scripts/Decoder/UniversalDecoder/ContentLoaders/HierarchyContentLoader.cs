@@ -98,10 +98,15 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
             UriNodeContent,
             IExpandingNodeContent
         {
+            /// <summary>
+            /// Top parent <see cref="NodeContent"/> part of the same dataset.
+            /// </summary>
             public RootContent Root { get; }
 
+            /// <inheritdoc cref="IExpandingNodeContent.Leaf"/>
             public ILeaf Leaf { get; }
 
+            /// <inheritdoc cref="IExpandingNodeContent.InheritedRefineMode"/>
             public RefinementMode InheritedRefineMode { get; }
 
             /// <summary>

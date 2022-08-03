@@ -8,6 +8,10 @@ using Unity.Geospatial.HighPrecision;
 
 namespace Unity.Geospatial.Streaming
 {
+    /// <summary>
+    /// Methods allowing to convert from / to <see cref="GeodeticCoordinates"/> when based on the Earth-fixed terrestrial
+    /// reference system and geodetic datum: WGS84.
+    /// </summary>
     public static class Wgs84
     {
         private const double k_a = 6_378_137.0;
@@ -55,6 +59,12 @@ namespace Unity.Geospatial.Streaming
                 (k_a * c + elevation) * ratios.CosLat * ratios.SinLon);
         }
 
+        /// <summary>
+        /// Convert a geodetic (latitude/longitude) to a euclidean transformation.
+        /// </summary>
+        /// <param name="position">The coordinates values representing the translation expressed in degrees and minutes..</param>
+        /// <param name="eulerAngles">Orientation of the vector where zero (0, 0, 0) is pointing to the same direction as the <see cref="Position"/> normal.</param>
+        /// <returns>The converted translation / rotation.</returns>
         public static EuclideanTR GeodeticToXzyEcef(GeodeticCoordinates position, float3 eulerAngles)
         {
             EuclideanTR result;
@@ -68,6 +78,11 @@ namespace Unity.Geospatial.Streaming
             return result;
         }
 
+        /// <summary>
+        /// Convert a geodetic (latitude/longitude) to a euclidean matrix.
+        /// </summary>
+        /// <param name="origin">The position to convert as a matrix.</param>
+        /// <returns>The converted result.</returns>
         public static double4x4 GetXzyEcefFromXzyEnuMatrix(GeodeticCoordinates origin)
         {
             TrigonometricRatios ratios = new TrigonometricRatios(origin);
@@ -82,6 +97,11 @@ namespace Unity.Geospatial.Streaming
             );
         }
 
+        /// <summary>
+        /// Convert a euclidean transformation to a geodetic (latitude/longitude) format.
+        /// </summary>
+        /// <param name="xzyEcef">The position to convert.</param>
+        /// <returns>The converted result.</returns>
         public static GeodeticCoordinates GetGeodeticCoordinates(double3 xzyEcef)
         {
             //
@@ -153,6 +173,12 @@ namespace Unity.Geospatial.Streaming
             return d * d * d;
         }
 
+        /// <summary>
+        /// Convert a euclidean transformation with its rotation to a geodetic (latitude/longitude) format.
+        /// </summary>
+        /// <param name="position">The translation of the vector to convert.</param>
+        /// <param name="rotation">The orientation of the vector to convert.</param>
+        /// <returns>The converted result.</returns>
         public static GeodeticTR XzyEcefToGeodetic(double3 position, quaternion rotation)
         {
             GeodeticTR result;

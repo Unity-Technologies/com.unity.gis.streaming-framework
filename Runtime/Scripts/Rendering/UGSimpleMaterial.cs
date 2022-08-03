@@ -4,6 +4,10 @@ using UnityEngine;
 
 namespace Unity.Geospatial.Streaming
 {
+    /// <summary>
+    /// <see cref="UGMaterial"/> instance creator with a single
+    /// <see href="https://docs.unity3d.com/ScriptReference/Material.html">material</see>.
+    /// </summary>
     public class UGSimpleMaterial : UGMaterial
     {
         private struct ResolvedProperty
@@ -12,6 +16,11 @@ namespace Unity.Geospatial.Streaming
             public int TextureScaleTiling;
         }
 
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
+        /// <param name="mat">The material to be instantiated when applied to <see href="https://docs.unity3d.com/ScriptReference/Mesh.html">meshes</see>.</param>
+        /// <param name="propertyList">Properties to be evaluated when applied.</param>
         public UGSimpleMaterial(Material mat, IEnumerable<UGShaderProperty> propertyList) : 
             base(isComposite: false)
         {
@@ -44,11 +53,12 @@ namespace Unity.Geospatial.Streaming
         {
             { MaterialPropertyValue.Color, SetColor },
             { MaterialPropertyValue.Float, SetFloat },
-            { MaterialPropertyValue.Vector, SetVector },
+            { MaterialPropertyValue.Vector4, SetVector },
             { MaterialPropertyValue.Texture, SetTexture },
             { MaterialPropertyValue.TerrainTexture, SetTerrainTexture },
         };
 
+        /// <inheritdoc cref="UGMaterial.UnityMaterials"/>
         public override List<Material> UnityMaterials
         {
             get
@@ -57,6 +67,7 @@ namespace Unity.Geospatial.Streaming
             }
         }
 
+        /// <inheritdoc cref="UGMaterial.OnDispose"/>
         protected override void OnDispose()
         {
             foreach (Material material in m_Materials)
@@ -68,6 +79,7 @@ namespace Unity.Geospatial.Streaming
             }
         }
 
+        /// <inheritdoc cref="UGMaterial.OnAddMaterialProperty"/>
         protected override void OnAddMaterialProperty(MaterialProperty materialProperty)
         {
             if (m_ResolvedProperties.TryGetValue(materialProperty.Type, out ResolvedProperty property) &&
@@ -77,6 +89,7 @@ namespace Unity.Geospatial.Streaming
             }
         }
 
+        /// <inheritdoc cref="UGMaterial.OnRemoveMaterialProperty"/>
         protected override void OnRemoveMaterialProperty(MaterialProperty materialProperty)
         {
             if (m_ResolvedProperties.TryGetValue(materialProperty.Type, out ResolvedProperty property) &&
@@ -93,7 +106,7 @@ namespace Unity.Geospatial.Streaming
 
         private static void SetVector(Material material, MaterialProperty materialProperty, ResolvedProperty property)
         {
-            material.SetVector(property.ID, materialProperty.VectorValue);
+            material.SetVector(property.ID, materialProperty.Vector4Value);
         }
 
         private static void SetFloat(Material material, MaterialProperty materialProperty, ResolvedProperty property)
@@ -104,7 +117,7 @@ namespace Unity.Geospatial.Streaming
         private static void SetTexture(Material material, MaterialProperty materialProperty, ResolvedProperty property)
         {
             material.SetTexture(property.ID, materialProperty.Texture);
-            material.SetVector(property.TextureScaleTiling, materialProperty.VectorValue);
+            material.SetVector(property.TextureScaleTiling, materialProperty.Vector4Value);
         }
 
         private static void SetTerrainTexture(Material material, MaterialProperty materialProperty, ResolvedProperty property)

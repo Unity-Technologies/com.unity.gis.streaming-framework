@@ -46,7 +46,7 @@ jobs:
         id: tag-match
         shell: bash
         run: |
-          if [[ ${{ github.event.ref }} =~ ^refs\/tags\/([rR](elease)?[\.-]?([0-9]+\.[0-9]+\.[0-9]+(-.*\.[0-9])))$ ]]; then
+          if [[ ${{ github.event.ref }} =~ ^refs\/tags\/([rR](elease)?[\.-]?([0-9]+\.[0-9]+\.[0-9]+(-.*\.[0-9])?))$ ]]; then
               echo ::set-output name=tag::${BASH_REMATCH[1]}
               echo ::set-output name=version::${BASH_REMATCH[3]}
               echo TAG = ${BASH_REMATCH[1]}
@@ -102,7 +102,7 @@ jobs:
           
       - name: Update CHANGELOG.md
         if: ${{ steps.tag-match.outputs.tag != '' }}
-        run: sed -i "s/\\[\\\$ReleasedVersion\\\$\\]/[\$ReleasedVersion\$]\r\n### Added\r\n### Modified\r\n### Fix\r\n\r\n## [${{ steps.tag-match.outputs.version }}] - ${{ steps.date.outputs.date }}/" CHANGELOG.md
+        run: sed -i "s/\\[\\\$ReleasedVersion\\\$\\]/[\$ReleasedVersion\$]\r\n### Added\r\n### Modified\r\n### Fix\r\n\r\n\r\n\r\n## [${{ steps.tag-match.outputs.version }}] - ${{ steps.date.outputs.date }}/" CHANGELOG.md
 
       - name: Commit the changes
         if: ${{ steps.tag-match.outputs.tag != '' }}

@@ -6,6 +6,9 @@ using Unity.Mathematics;
 
 namespace Unity.Geospatial.Streaming
 {
+    /// <summary>
+    /// Store the required data to be loaded for a specified <see cref="InstanceID"/>.
+    /// </summary>
     public class InstanceData
     {
         /// <summary>

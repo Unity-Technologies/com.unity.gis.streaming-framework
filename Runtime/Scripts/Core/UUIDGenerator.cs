@@ -13,6 +13,9 @@ namespace Unity.Geospatial.Streaming
         
         private static readonly object s_Lock = new object();
 
+        /// <summary>
+        /// Create a new <see cref="UUIDGenerator"/> instance.
+        /// </summary>
         public static UUIDGenerator Instance { get; } = new UUIDGenerator();
 
         private UUIDGenerator() { }

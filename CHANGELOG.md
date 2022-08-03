@@ -4,6 +4,33 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [1.0.0-preview.3] - 2022-08-03
+### Modified
+- Changed Ogc3dTiles extensions list to a class instead of a JsonToken.
+- Rename UnityTerrain to TmsTerrain
+- Renamed UGOmniCameraBehaviour to UGOmniObserverBehaviour
+- Updated to unity glTFast 4.6.0
+- Updated High Precision Framework dependency to 1.0.0
+- Documentation
+- IndirectionBlock is now internal.
+- UGSynchronizationContext is now internal.
+- Removed unused InstanceGroupID.
+- Removed UGSceneObserver default constructor.
+- Renamed MaterialProperty.VectorValue to MaterialProperty.Vector4Value
+- Renamed MaterialProperty.Color to MaterialProperty.AlbedoColor
+- Renamed MaterialPropertyType.ColorTexture to MaterialPropertyType.AlbedoTexture
+- Renamed MaterialPropertyType.ColorValue to MaterialPropertyType.AlbedoColor
+- Replaced EdgeCollection to a List<Edge> extension.
+- Renamed BuiltinLit to BuiltinLitOpaque to match the Material names.
+- README file to direct contributors to CONTRIBUTING.md
+### Fixed
+- BuiltInLitOpaque is now working in Unity 2022.
+- Fixed the Toggle Gui not drawn when no style is given.
+### Added
+- Getting Started guide on how to create a custom Material Factory.
+
+
+
 ## [1.0.0-preview.2] - 2022-06-08
 ### Modified
 - Make MaterialType readonly due to immutable hashcode, use SerializableMaterialType in editor inspector
@@ -12,7 +39,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Removed UGEditorWindow, UGGeodeticExtentInspector, UGSkyboxInspector
 - Renamed FlyCamera.setClipPlanes to updateClipPlanes to prevent clash between the property and the method
 - Renamed  UGSimpleSceneObserver.Implementation to  UGSimpleSceneObserver.IImplementation
-- Changed UGSystemBehaviour / UGBehaviourPresenter delegates to events 
+- Changed UGSystemBehaviour / UGBehaviourPresenter delegates to events
 - Set NodeContent, UGMath to internal
 - Set MaximumSimultaneousContentRequests back to 10
 - Changed WGS84 to a static class
@@ -22,11 +49,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - SerializableMaterialType to allow for easy MaterialType serialization
 - Documentation to explain the calculation of terrain extents when the dataset starts with non-zero min level
-### Fixed
+- Implement two task managers to enable single thread operation
+
+
 
 ## [1.0.0-preview.1] - 2022-05-11
 ### Modified
 - Use the SerializableDoubleBounds where necessary, since DoubleBounds is no longer serializable
+
+
 
 ## [1.0.0-preview.0] - 2022-05-11
 ### Modified
@@ -62,16 +93,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Update refinement mode and geometric error on tileset loading root node
 - OGC 3D Tiles not applying Detail Multiplier to root tiles.
 
+
+
 ## [0.5.1-preview.0] - 2021-12-23
 ### Fixed
 - Support counterclockwise extent modifier
 - Support negative DBound with extent modifier
 - Connect URPLit smoothness to the underlying Unity material
 
+
+
 ## [0.5.0-preview.0] - 2021-11-04
 ### Added
 - Support for Omnidirectional camera
 - Support material customization per instance data
+
+
 
 ## [0.4.0-preview.0] - 2021-11-03
 ### Added
@@ -80,10 +117,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - Ability to unload nodes that do not have content
 
+
+
 ## [0.3.3-preview.0] - 2021-10-03
 ### Added
 - Support for variable resolution Terrain Tiles
 - Support edge extrusion for uncontinuous edges in mesh editor
+
+
 
 ## [0.3.2-preview.0] - 2021-09-16
 ### Modified
@@ -102,6 +143,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Bugs related to geometric error, bounds and error specs in BVH
 
 
+
 ## [0.3.1-preview.3] - 2021-06-04
 ### Added
 - Support for multiple cameras
@@ -116,6 +158,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fix
 - Memory leak which was detected in previous version
 
+
+
 ## [0.3.1-preview.2] - 2021-05-15
 ### Added
 - Support for hierarchical OGC 3DTiles tilesets
@@ -129,6 +173,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   to load first rather than the opposite in previous
   implementation.
 
+
+
 ## [0.3.1-preview.1] - 2021-05-12
 ### Added
 - Geospatial Synchronization Context to better control execution
@@ -138,6 +184,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   space rather than being located in Universe space.
 - Make it possible for extent modifier to deal with children
 
+
+
 ## [0.3.1-preview.0] - 2021-05-10
 ### Added
 - Universal OGC 3D Tiles loader
@@ -146,6 +194,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - HPTransform optimizations
 - Changes to the internal presenter structure to
   support children (required for GLTFast)
+
+
 
 ## [0.3.0-preview.0] - 2021-04-02
 ### Added
@@ -184,10 +234,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Implemented proper error message on missing Cesium-Ion token
 
 
+
 ## [0.2.1-preview.0] - 2021-02-25
 ### Fixed
 - Perpetual dialog that opened up when adding an HPTransform
   to a prefab.
+
+
 
 ## [0.2.0-preview.0] - 2021-02-22
 ### Modified
@@ -204,6 +257,7 @@ CHANGES:
    rebasing as well as static rebasing, via the HPRoot/HPTransform.
 - All objects instantiated by the UGSystem now have an HPTransform
   component.
+
 
 
 ## [0.1.0-preview.5] - 2020-12-15
@@ -228,6 +282,7 @@ CHANGES:
    for the camera to get stuck looking down.
 
 
+
 ## [0.1.0-preview.4] - 2020-11-07
 ### Added
 - Docs: Added license file to .unitypackage
@@ -237,6 +292,8 @@ CHANGES:
 - Fly Camera now controls near clip plane and far clip plane automatically
 - Refactored some private variables in Fly Camera to match coding standard
 
+
+
 ## [0.1.0-preview.2] - 2020-11-03
 ### Added
 - Docs: Screenshots for more explicit documentation
@@ -245,6 +302,8 @@ CHANGES:
 - Changed project file structure
 - Updated Makefile accordingly
 - Built documentation into the Makefile
+
+
 
 ## [0.1.0-preview.1] - 2020-11-02
 ### Added

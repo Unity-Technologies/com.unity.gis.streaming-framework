@@ -4,6 +4,13 @@ using UnityEngine.Assertions;
 
 namespace Unity.Geospatial.Streaming
 {
+    /// <summary>
+    /// Responsible to convert the streamed geometry into actual
+    /// <see href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObjects</see>. Most
+    /// configurations will only require a single presenter but applications with multiple cameras or applications
+    /// where the source data is not normalized in space (think multiple planets or non-geolocated dataset) may
+    /// require multiple presenters.
+    /// </summary>
     public abstract class UGPresenter : UGProcessingNode
     {
         private sealed class NodeInputImpl : NodeInput<InstanceCommand>
@@ -26,6 +33,9 @@ namespace Unity.Geospatial.Streaming
             }
         }
         
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
         protected UGPresenter()
         {
             OutputConnections = null;
@@ -33,15 +43,22 @@ namespace Unity.Geospatial.Streaming
             InputConnections[0] = Input = new NodeInputImpl(this);
         }
 
+        /// <summary>
+        /// <see cref="InstanceCommand"/> to be executed before this instance gets executed.
+        /// </summary>
         public NodeInput<InstanceCommand> Input { get; private set; }
+        
         private bool m_IsAtomicInProgress;
+        
         private readonly Queue<InstanceCommand> m_AtomicQueue = new Queue<InstanceCommand>();
 
+        /// <inheritdoc cref="UGProcessingNode.IsProcessing"/> 
         protected override bool IsProcessing
         {
             get { return false; }
         }
 
+        /// <inheritdoc cref="UGProcessingNode.ScheduleMainThread"/> 
         public override bool ScheduleMainThread
         {
             get { return false; }
@@ -92,19 +109,40 @@ namespace Unity.Geospatial.Streaming
             }
         }
 
-        protected abstract void CmdAllocate(InstanceID id, InstanceData instance);
-        protected abstract void CmdDispose(InstanceID id);
-        protected abstract void CmdUpdateVisibility(InstanceID id, bool isVisible);
+        /// <summary>
+        /// Command to be executed when an instance gets loaded.
+        /// </summary>
+        /// <param name="instanceId">Id of the instance that is loaded.</param>
+        /// <param name="instanceData">Data loaded for the given <paramref name="instanceId"/>.</param>
+        protected abstract void CmdAllocate(InstanceID instanceId, InstanceData instanceData);
+        
+        /// <summary>
+        /// Command to be executed when an instance gets unloaded.
+        /// </summary>
+        /// <param name="instanceId">Id of the instance that is disposed.</param>
+        protected abstract void CmdDispose(InstanceID instanceId);
+        
+        /// <summary>
+        /// Command to be executed when the visibility state for the given <paramref name="instanceId">instance</paramref> changes.
+        /// </summary>
+        /// <param name="instanceId">Instance with its visibility state changed.</param>
+        /// <param name="visibility">
+        /// <see langword="true"/> when the instance is displayed;
+        /// <see langword="false"/> when the instance is hidden.
+        /// </param>
+        protected abstract void CmdUpdateVisibility(InstanceID instanceId, bool visibility);
 
+        /// <inheritdoc cref="UGProcessingNode.MainThreadProcess"/> 
         public override void MainThreadProcess()
         {
             throw new System.InvalidOperationException("This method should never be called");
         }
 
+        /// <inheritdoc cref="UGProcessingNode.MainThreadUpKeep"/> 
         public override void MainThreadUpKeep()
         {
             //
-            //  Method left intentionnally blank
+            //  Method left intentionally blank
             //
         }
     }

@@ -7,6 +7,9 @@ using UnityEngine.Assertions;
 
 namespace Unity.Geospatial.Streaming.UniversalDecoder
 {
+    /// <summary>
+    /// Main decoder used with a <see cref="UniversalDecoderDataSource"/> implementation.
+    /// </summary>
     public class UGUniversalDecoder : UGDataSourceDecoder
     {
         /// <summary>
@@ -180,6 +183,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
         /// unloading all no more required <see href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObjects</see>
         /// and load the newly required <see href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObjects</see>.
         /// </summary>
+        /// <returns>Task to be executed by the <see cref="UGSystem"/> <see cref="ITaskManager"/>.</returns>
         public async Task UpdateBvh()
         {
             try

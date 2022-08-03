@@ -3,6 +3,10 @@ using UnityEngine.Assertions;
 
 namespace Unity.Geospatial.Streaming
 {
+    /// <summary>
+    /// Class responsible for converting <see cref="InstanceID">Instances</see> into <see cref="GameObject">GameObjects</see>
+    /// with just a simple static <see cref="MeshRenderer"/>.
+    /// </summary>
     public class GOMeshRenderer : GOBaseRenderer
     {
         private sealed class MaterialListener
@@ -32,13 +36,18 @@ namespace Unity.Geospatial.Streaming
 
         }
 
+        /// <summary>
+        /// Default constructor.
+        /// Responsible to create <see href="https://docs.unity3d.com/ScriptReference/MeshFilter.html">MeshFilter</see>
+        /// and <see href="https://docs.unity3d.com/ScriptReference/MeshRenderer.html">MeshRenderer</see>
+        /// <see href="https://docs.unity3d.com/ScriptReference/Component.html">Components</see>.
+        /// </summary>
         public GOMeshRenderer()
         {
             m_MeshFilter = m_GameObject.AddComponent<MeshFilter>();
             m_MeshRenderer = m_GameObject.AddComponent<MeshRenderer>();
         }
-
-
+        
         private readonly MeshFilter m_MeshFilter;
 
         private readonly MeshRenderer m_MeshRenderer;
@@ -47,6 +56,7 @@ namespace Unity.Geospatial.Streaming
 
         private MaterialListener[] m_MaterialListeners;
 
+        /// <inheritdoc cref="GOBaseRenderer.UnityLayer"/>
         public override int UnityLayer
         {
             set
@@ -55,6 +65,7 @@ namespace Unity.Geospatial.Streaming
             }
         }
 
+        /// <inheritdoc cref="GOBaseRenderer.Mesh"/>
         public override Mesh Mesh
         {
             set
@@ -63,6 +74,7 @@ namespace Unity.Geospatial.Streaming
             }
         }
 
+        /// <inheritdoc cref="GOBaseRenderer.Materials"/>
         public override UGMaterial[] Materials
         {
             set

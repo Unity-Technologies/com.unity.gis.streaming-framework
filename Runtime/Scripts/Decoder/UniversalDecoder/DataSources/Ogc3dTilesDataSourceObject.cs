@@ -3,6 +3,10 @@ using UnityEngine;
 
 namespace Unity.Geospatial.Streaming.Ogc3dTiles
 {
+    /// <summary>
+    /// <see href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html">ScriptableObject</see> allowing
+    /// to load ogc3d tiles files.
+    /// </summary>
     [CreateAssetMenu(fileName = "OGC-3DTiles", menuName = "Geospatial/Data Sources/OGC 3DTiles", order = AssetMenuOrder)]
     public class Ogc3dTilesDataSourceObject : UGDataSourceObject
     {

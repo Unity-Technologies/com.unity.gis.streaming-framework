@@ -4,7 +4,7 @@
   
   <head>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');</script>
-    <script type="text/javascript">thisPackageMetaData = { name: "com.unity.gis.streaming-framework", version: "1.0.0-preview.2", displayTitle:"Unity Geospatial Streaming 1.0.0-preview.2", lang: "en" };</script>
+    <script type="text/javascript">thisPackageMetaData = { name: "com.unity.gis.streaming-framework", version: "1.0.0-preview.3", displayTitle:"Unity Geospatial Streaming 1.0.0-preview.3", lang: "en" };</script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   
@@ -13,9 +13,9 @@
     <meta http-equiv="Expires" content="0">
     
   
-    <title>Changelog | Unity Geospatial Streaming | 1.0.0-preview.2 </title>
+    <title>Changelog | Unity Geospatial Streaming | 1.0.0-preview.3 </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Changelog | Unity Geospatial Streaming | 1.0.0-preview.2 ">
+    <meta name="title" content="Changelog | Unity Geospatial Streaming | 1.0.0-preview.3 ">
     <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <meta property="docfx:navrel" content="../toc.html">
     <meta property="docfx:tocrel" content="toc.html">
-    <meta property="unity:packageTitle" content="Unity Geospatial Streaming | 1.0.0-preview.2">
+    <meta property="unity:packageTitle" content="Unity Geospatial Streaming | 1.0.0-preview.3">
     <meta property="docfx:rel" content="../">
     
   </head>
@@ -123,8 +123,34 @@
 <p>All notable changes to this package will be documented in this file.</p>
 <p>The format is based on <a href="http://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>
 and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
-<h2 id="100-preview2---2022-06-08">[1.0.0-preview.2] - 2022-06-08</h2>
+<h2 id="100-preview3---2022-08-03">[1.0.0-preview.3] - 2022-08-03</h2>
 <h3 id="modified">Modified</h3>
+<ul>
+<li>Changed Ogc3dTiles extensions list to a class instead of a JsonToken.</li>
+<li>Rename UnityTerrain to TmsTerrain</li>
+<li>Renamed UGOmniCameraBehaviour to UGOmniObserverBehaviour</li>
+<li>Updated to unity glTFast 4.6.0</li>
+<li>Updated High Precision Framework dependency to 1.0.0</li>
+<li>Documentation</li>
+<li>IndirectionBlock is now internal.</li>
+<li>UGSynchronizationContext is now internal.</li>
+<li>Removed unused InstanceGroupID.</li>
+<li>Removed UGSceneObserver default constructor.</li>
+<li>Renamed MaterialProperty.VectorValue to MaterialProperty.Vector4Value</li>
+<li>Renamed MaterialProperty.Color to MaterialProperty.AlbedoColor</li>
+<li>Renamed MaterialPropertyType.ColorTexture to MaterialPropertyType.AlbedoTexture</li>
+<li>Renamed MaterialPropertyType.ColorValue to MaterialPropertyType.AlbedoColor</li>
+<li>Replaced EdgeCollection to a List<edge> extension.</edge></li>
+<li>Renamed BuiltinLit to BuiltinLitOpaque to match the Material names.</li>
+<li>README file to direct contributors to CONTRIBUTING.md
+### Fixed</li>
+<li>BuiltInLitOpaque is now working in Unity 2022.</li>
+<li>Fixed the Toggle Gui not drawn when no style is given.
+### Added</li>
+<li>Getting Started guide on how to create a custom Material Factory.</li>
+</ul>
+<h2 id="100-preview2---2022-06-08">[1.0.0-preview.2] - 2022-06-08</h2>
+<h3 id="modified-1">Modified</h3>
 <ul>
 <li>Make MaterialType readonly due to immutable hashcode, use SerializableMaterialType in editor inspector</li>
 <li>Refactored UGObjectPool for better performances.</li>
@@ -132,7 +158,7 @@ and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semanti
 <li>Removed UGEditorWindow, UGGeodeticExtentInspector, UGSkyboxInspector</li>
 <li>Renamed FlyCamera.setClipPlanes to updateClipPlanes to prevent clash between the property and the method</li>
 <li>Renamed  UGSimpleSceneObserver.Implementation to  UGSimpleSceneObserver.IImplementation</li>
-<li>Changed UGSystemBehaviour / UGBehaviourPresenter delegates to events </li>
+<li>Changed UGSystemBehaviour / UGBehaviourPresenter delegates to events</li>
 <li>Set NodeContent, UGMath to internal</li>
 <li>Set MaximumSimultaneousContentRequests back to 10</li>
 <li>Changed WGS84 to a static class</li>
@@ -141,16 +167,16 @@ and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semanti
 <li>Changed editor classes by using a wrapper allowing easier testing and uniformized the UI layout.
 ### Added</li>
 <li>SerializableMaterialType to allow for easy MaterialType serialization</li>
-<li>Documentation to explain the calculation of terrain extents when the dataset starts with non-zero min level
-### Fixed</li>
+<li>Documentation to explain the calculation of terrain extents when the dataset starts with non-zero min level</li>
+<li>Implement two task managers to enable single thread operation</li>
 </ul>
 <h2 id="100-preview1---2022-05-11">[1.0.0-preview.1] - 2022-05-11</h2>
-<h3 id="modified-1">Modified</h3>
+<h3 id="modified-2">Modified</h3>
 <ul>
 <li>Use the SerializableDoubleBounds where necessary, since DoubleBounds is no longer serializable</li>
 </ul>
 <h2 id="100-preview0---2022-05-11">[1.0.0-preview.0] - 2022-05-11</h2>
-<h3 id="modified-2">Modified</h3>
+<h3 id="modified-3">Modified</h3>
 <ul>
 <li>Separate extent modifier from UGSystem.</li>
 <li>Add sub-structs in UTR TileContent to group parameters.</li>
@@ -213,7 +239,7 @@ and this project adheres to <a href="http://semver.org/spec/v2.0.0.html">Semanti
 <li>Support edge extrusion for uncontinuous edges in mesh editor</li>
 </ul>
 <h2 id="032-preview0---2021-09-16">[0.3.2-preview.0] - 2021-09-16</h2>
-<h3 id="modified-3">Modified</h3>
+<h3 id="modified-4">Modified</h3>
 <ul>
 <li>Migrate to Standard Unity Package format</li>
 <li>Split High Precision Framework repo from Streaming Framework</li>
@@ -322,7 +348,7 @@ messages are still non-descript.</li>
 to a prefab.</li>
 </ul>
 <h2 id="020-preview0---2021-02-22">[0.2.0-preview.0] - 2021-02-22</h2>
-<h3 id="modified-4">Modified</h3>
+<h3 id="modified-5">Modified</h3>
 <p>THIS IS A COMPLETELY NEW VERSION OF THE API THAT INCORPORATES
 A HIGH PRECISION RENDERING FRAMEWORK. SEE BELOW FOR PRIMARY
 CHANGES:</p>

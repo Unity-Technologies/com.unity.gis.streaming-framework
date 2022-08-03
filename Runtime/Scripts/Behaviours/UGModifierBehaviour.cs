@@ -2,8 +2,15 @@ using UnityEngine;
 
 namespace Unity.Geospatial.Streaming
 {
+    /// <summary>
+    /// Abstract class allowing to <see cref="Instantiate"/> a <see cref="UGModifier"/>.
+    /// </summary>
     public abstract class UGModifierBehaviour : MonoBehaviour
     {
+        /// <summary>
+        /// Create a new <see cref="UGModifier"/> instance representing this <see cref="UGModifierBehaviour"/>.
+        /// </summary>
+        /// <returns>The newly created instance.</returns>
         public abstract UGModifier Instantiate();
 
         /// <summary>

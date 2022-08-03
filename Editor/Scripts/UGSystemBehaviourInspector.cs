@@ -54,6 +54,13 @@ namespace Unity.Geospatial.Streaming.Editor
             "Sets the planet's radius, which is used by various scripts to control things like clipping planes based off of altitude and the appearance of the skybox.");
 
         /// <summary>
+        /// Label with its <see href="https://docs.unity3d.com/ScriptReference/GUI-tooltip.html">tooltip</see> for <see cref="m_AllowMultithreading"/>.
+        /// </summary>
+        private readonly GUIContent m_AllowMultithreadingContent = new GUIContent(
+            "Allow Multithreading",
+            "Allow multithreading. Leave this enabled for most platforms, disable this for platforms that do not support threading such as WebGL");
+
+        /// <summary>
         /// Horizontal offset specifying where the property modifier widget to be positioned compared to the left side of the label.
         /// </summary>
         private const float k_LabelOffset = 100.0f;
@@ -127,6 +134,12 @@ namespace Unity.Geospatial.Streaming.Editor
         /// </summary>
         private SerializedProperty m_MaximumSimultaneousContentRequests;
 
+
+        /// <summary>
+        /// Serialized property used to connect to <see cref="UGSystemBehaviour.AllowMultithreading"/>
+        /// </summary>
+        private SerializedProperty m_AllowMultithreading;
+
         /// <summary>
         /// Sets the planet's radius, which is used by various scripts to control things like clipping planes based off of altitude and the appearance of the skybox.
         /// </summary>
@@ -162,7 +175,7 @@ namespace Unity.Geospatial.Streaming.Editor
         /// <summary>
         /// <see href="https://docs.unity3d.com/ScriptReference/MenuItem.html">MenuItem</see> creating a default
         /// <see cref="UGSystemBehaviour"/> setup with all required
-        /// <see href="https://docs.unity3d.com/ScriptReference/Component.html">Components</see> and a <see cref="FlyCamera"/> when executed.
+        /// <see href="https://docs.unity3d.com/ScriptReference/Component.html">Components</see> and a <see cref="GlobalFlyCamera"/> when executed.
         /// </summary>
         /// <param name="menuCommand">Context for the <see href="https://docs.unity3d.com/ScriptReference/MenuItem.html">MenuItem</see></param>
         [MenuItem("GameObject/Geospatial/Geospatial System", false, 10)]
@@ -177,7 +190,7 @@ namespace Unity.Geospatial.Streaming.Editor
 
             ugSystem.sceneObservers = new List<UGSceneObserverBehaviour> { camera.GetComponent<UGSceneObserverBehaviour>() };
 
-            var flyCamera = camera.AddComponent<FlyCamera>();
+            var flyCamera = camera.AddComponent<GlobalFlyCamera>();
             flyCamera.Speed = 1743384;
             var lvcs = system.AddComponent<LocalVerticalCoordinateSystem>();
 
@@ -257,10 +270,10 @@ namespace Unity.Geospatial.Streaming.Editor
                 elementHeight = 4.5f * EditorGUIUtility.singleLineHeight
             };
 
-            m_MaterialFactory = serializedObject.FindProperty("materialFactory");
-            m_MainThreadTimeLimit = serializedObject.FindProperty("mainThreadTimeLimitMS");
-            m_MaximumSimultaneousContentRequests = serializedObject.FindProperty("maximumSimultaneousContentRequests");
-            m_PlanetRadius = serializedObject.FindProperty("planetRadius");
+            m_MaterialFactory = serializedObject.FindProperty(nameof(UGSystemBehaviour.MaterialFactory));
+            m_MainThreadTimeLimit = serializedObject.FindProperty(nameof(UGSystemBehaviour.MainThreadTimeLimitMS));
+            m_MaximumSimultaneousContentRequests = serializedObject.FindProperty(nameof(UGSystemBehaviour.MaximumSimultaneousContentRequests));
+            m_AllowMultithreading = serializedObject.FindProperty(nameof(UGSystemBehaviour.AllowMultithreading));
         }
 
         /// <summary>
@@ -366,6 +379,9 @@ namespace Unity.Geospatial.Streaming.Editor
                 // TODO
                 // This value is not yet used, removed to prevent users complaining it doesn't work.
                 // m_PlanetRadius.floatValue = EditorGUILayout.FloatField(m_PlanetRadiusContent, m_PlanetRadius.floatValue);
+
+                m_AllowMultithreading.boolValue = GUILayoutWrapper.BoolField(m_AllowMultithreadingContent, m_AllowMultithreading.boolValue);
+                
 
             }
             GUILayoutWrapper.EndFoldoutHeaderGroup();

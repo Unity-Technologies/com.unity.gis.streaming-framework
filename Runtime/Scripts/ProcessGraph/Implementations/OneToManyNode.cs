@@ -3,6 +3,10 @@ using UnityEngine.Assertions;
 
 namespace Unity.Geospatial.Streaming
 {
+    /// <summary>
+    /// Create a many output as requested pointing to the same input value.
+    /// </summary>
+    /// <typeparam name="T">Type of value receiving in the input and sharing through the output.</typeparam>
     public class OneToManyNode<T> : UGProcessingNode
     {
         private sealed class InputImpl : NodeInput<T>
@@ -38,6 +42,10 @@ namespace Unity.Geospatial.Streaming
             }
         }
 
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
+        /// <param name="outputCount">Create this amount of outputs that can be retrieve via <see cref="GetOutput(int)"/></param>
         public OneToManyNode(int outputCount)
         {
             Input = new InputImpl(this);
@@ -48,20 +56,26 @@ namespace Unity.Geospatial.Streaming
                 m_Outputs[i] = new NodeOutput<T>(this);
         }
 
+        /// <summary>
+        /// The input to be converted to multiple outputs.
+        /// </summary>
         public NodeInput<T> Input { get; private set; }
         
         private readonly NodeOutput<T>[] m_Outputs;
         
+        /// <inheritdoc cref="UGProcessingNode.ScheduleMainThread"/> 
         public override bool ScheduleMainThread
         {
             get { return false; }
         }
 
+        /// <inheritdoc cref="UGProcessingNode.IsProcessing"/> 
         protected override bool IsProcessing
         {
             get { return false; }
         }
 
+        /// <inheritdoc cref="UGProcessingNode.Dispose"/> 
         public override void Dispose()
         {
             //
@@ -69,11 +83,13 @@ namespace Unity.Geospatial.Streaming
             //
         }
 
+        /// <inheritdoc cref="UGProcessingNode.MainThreadProcess"/> 
         public override void MainThreadProcess()
         {
             throw new System.NotImplementedException("This should never be called");
         }
 
+        /// <inheritdoc cref="UGProcessingNode.MainThreadUpKeep"/> 
         public override void MainThreadUpKeep()
         {
             //
@@ -81,11 +97,19 @@ namespace Unity.Geospatial.Streaming
             //
         }
 
+        /// <summary>
+        /// Get the number of available outputs that can be retrieved from <see cref="GetOutput(int)"/>.
+        /// </summary>
         public int OutputCount
         {
             get { return m_Outputs.Length; }
         }
 
+        /// <summary>
+        /// Get the <see cref="UGProcessingNode.NodeOutput{T}"/> for the given <paramref name="index"/>.
+        /// </summary>
+        /// <param name="index">Index of the instance to retrieve.</param>
+        /// <returns>The node output instance at the given <paramref name="index"/>.</returns>
         public NodeOutput<T> GetOutput(int index)
         {
             return m_Outputs[index];

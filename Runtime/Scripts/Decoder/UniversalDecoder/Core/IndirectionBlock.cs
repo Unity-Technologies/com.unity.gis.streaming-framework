@@ -5,13 +5,7 @@ using UnityEngine.Assertions;
 
 namespace Unity.Geospatial.Streaming
 {
-    //
-    //  FIXME - Unit test adequately
-    //
-    //
-    //  FIXME - Change to class, no reason to be a struct
-    //
-    public struct IndirectionBlock
+    internal struct IndirectionBlock
     {
         public IndirectionBlock(List<int> indirectionTable, int blockId)
         {

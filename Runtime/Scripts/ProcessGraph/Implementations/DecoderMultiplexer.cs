@@ -4,7 +4,10 @@ using UnityEngine.Assertions;
 
 namespace Unity.Geospatial.Streaming
 {
-
+    /// <summary>
+    /// Multiplexer used to converge multiple outputs into a single input with round-robin arbitration of which input
+    /// to use at which time.
+    /// </summary>
     public class DecoderMultiplexer :
         UGProcessingNode
     {
@@ -31,6 +34,10 @@ namespace Unity.Geospatial.Streaming
             }
         }
 
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
+        /// <param name="inputCount">Amount of decoders to be executed.</param>
         public DecoderMultiplexer(int inputCount)
         {
             m_InputCount = inputCount;
@@ -53,18 +60,25 @@ namespace Unity.Geospatial.Streaming
         private int m_RoundRobinIndex;
 
         private readonly NodeInput<InstanceCommand>[] m_Inputs;
+        
+        /// <summary>
+        /// Downstream <see cref="UGProcessingNode"/> to be executed after this instance.
+        /// </summary>
         public NodeOutput<InstanceCommand> Output { get; private set; }
 
+        /// <inheritdoc cref="UGProcessingNode.ScheduleMainThread"/> 
         public override bool ScheduleMainThread
         {
             get { return false; }
         }
 
+        /// <inheritdoc cref="UGProcessingNode.IsProcessing"/> 
         protected override bool IsProcessing
         {
             get { return false; }
         }
 
+        /// <inheritdoc cref="UGProcessingNode.Dispose"/> 
         public override void Dispose()
         {
             //
@@ -110,6 +124,7 @@ namespace Unity.Geospatial.Streaming
             return (index == m_RoundRobinIndex) && Output.IsReadyForData;
         }
 
+        /// <inheritdoc cref="UGProcessingNode.MainThreadUpKeep"/> 
         public override void MainThreadUpKeep()
         {
             //
@@ -117,16 +132,25 @@ namespace Unity.Geospatial.Streaming
             //
         }
 
+        /// <inheritdoc cref="UGProcessingNode.MainThreadProcess"/> 
         public override void MainThreadProcess()
         {
             throw new System.NotImplementedException("This should never be called");
         }
 
+        /// <summary>
+        /// Get the number of <see cref="UGProcessingNode.NodeInput{T}"/> have been created with a <see cref="InstanceCommand"/>.
+        /// </summary>
         public int InputCount
         {
             get { return m_Inputs.Length; }
         }
-
+        
+        /// <summary>
+        /// Get the <see cref="InstanceCommand"/> <see cref="UGProcessingNode.NodeInput{T}"/> for the given <paramref name="index"/>.
+        /// </summary>
+        /// <param name="index">Index of the instance to retrieve.</param>
+        /// <returns>The node input instance at the given <paramref name="index"/>.</returns>
         public NodeInput<InstanceCommand> GetInput(int index)
         {
             return m_Inputs[index];

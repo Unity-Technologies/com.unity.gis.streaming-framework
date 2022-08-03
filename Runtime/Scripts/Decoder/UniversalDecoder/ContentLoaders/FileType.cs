@@ -108,9 +108,9 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
         public static readonly FileType Ogc3dTilesPnts = CreateAndRegister(".pnts", 0x70, 0x6e, 0x74, 0x73);
 
         /// <summary>
-        /// Unity terrain format.
+        /// TMS (Terrain Management System) terrain format.
         /// </summary>
-        public static readonly FileType UnityTerrain = CreateAndRegister(".utr", new char[] { 'u', 't', 'r', 'm' });
+        public static readonly FileType TmsTerrain = CreateAndRegister(".utr", new char[] { 'u', 't', 'r', 'm' });
 
         /// <summary>
         /// Default constructor.
@@ -156,6 +156,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
         /// <param name="name">Name used when converting to string.</param>
         /// <param name="extensions">List of file path extensions associated with the file format.</param>
         /// <param name="magicNumbers">List of <see href="https://en.wikipedia.org/wiki/Magic_number_(programming)#In_files">magic numbers</see> associated with the file format.</param>
+        /// <returns>The newly created <see cref="FileType"/> instance.</returns>
         public static FileType CreateAndRegister(string name, IEnumerable<string> extensions, IEnumerable<byte[]> magicNumbers = null)
         {
             FileType result = new FileType(name, extensions, magicNumbers);
@@ -170,6 +171,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
         /// <param name="extensions">List of file path extensions associated with the file format.</param>
         /// <param name="magicNumbers">List of <see href="https://en.wikipedia.org/wiki/Magic_number_(programming)#In_files">magic numbers</see>
         /// as a char array when the header can be considered as UTF8 encoded.</param>
+        /// <returns>The newly created <see cref="FileType"/> instance.</returns>
         public static FileType CreateAndRegister(string name, IEnumerable<string> extensions, IEnumerable<char[]> magicNumbers)
         {
             return CreateAndRegister(
@@ -188,6 +190,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
         /// <param name="name">Name used when converting to string.</param>
         /// <param name="extensions">List of file path extensions associated with the file format.</param>
         /// <param name="magicNumber">The <see href="https://en.wikipedia.org/wiki/Magic_number_(programming)#In_files">magic number</see> associated with the file format.</param>
+        /// <returns>The newly created <see cref="FileType"/> instance.</returns>
         public static FileType CreateAndRegister(string name, IEnumerable<string> extensions, params byte[] magicNumber)
         {
             return CreateAndRegister(name, extensions, new byte[][] { magicNumber });
@@ -200,6 +203,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
         /// <param name="extensions">List of file path extensions associated with the file format.</param>
         /// <param name="magicNumbers">The <see href="https://en.wikipedia.org/wiki/Magic_number_(programming)#In_files">magic numbers</see>
         /// as a string when the header can be considered as UTF8 encoded.</param>
+        /// <returns>The newly created <see cref="FileType"/> instance.</returns>
         public static FileType CreateAndRegister(string name, IEnumerable<string> extensions, IEnumerable<string> magicNumbers)
         {
             return CreateAndRegister(
@@ -217,6 +221,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
         /// <param name="extensions">List of file path extensions associated with the file format.</param>
         /// <param name="magicNumber">The <see href="https://en.wikipedia.org/wiki/Magic_number_(programming)#In_files">magic number</see>
         /// as a char array when the header can be considered as UTF8 encoded.</param>
+        /// <returns>The newly created <see cref="FileType"/> instance.</returns>
         public static FileType CreateAndRegister(string name, IEnumerable<string> extensions, IEnumerable<char> magicNumber)
         {
             return CreateAndRegister(
@@ -234,6 +239,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
         /// <param name="extensions">List of file path extensions associated with the file format.</param>
         /// <param name="magicNumber">The <see href="https://en.wikipedia.org/wiki/Magic_number_(programming)#In_files">magic number</see>
         /// as a string when the header can be considered as UTF8 encoded.</param>
+        /// <returns>The newly created <see cref="FileType"/> instance.</returns>
         public static FileType CreateAndRegister(string name, IEnumerable<string> extensions, string magicNumber)
         {
             return CreateAndRegister(
@@ -248,6 +254,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
         /// <param name="name">Name used when converting to string.</param>
         /// <param name="extension">List of file path extensions associated with the file format.</param>
         /// <param name="magicNumber">The <see href="https://en.wikipedia.org/wiki/Magic_number_(programming)#In_files">magic number</see> associated with the file format.</param>
+        /// <returns>The newly created <see cref="FileType"/> instance.</returns>
         public static FileType CreateAndRegister(string name, string extension, params byte[] magicNumber)
         {
             return CreateAndRegister(name, new string[] { extension }, new byte[][] { magicNumber });
@@ -260,6 +267,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
         /// <param name="extension">List of file path extensions associated with the file format.</param>
         /// <param name="magicNumber">The <see href="https://en.wikipedia.org/wiki/Magic_number_(programming)#In_files">magic number</see>
         /// as a char array when the header can be considered as UTF8 encoded.</param>
+        /// <returns>The newly created <see cref="FileType"/> instance.</returns>
         public static FileType CreateAndRegister(string name, string extension, IEnumerable<char> magicNumber)
         {
             return CreateAndRegister(
@@ -277,6 +285,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
         /// <param name="extension">List of file path extensions associated with the file format.</param>
         /// <param name="magicNumber">The <see href="https://en.wikipedia.org/wiki/Magic_number_(programming)#In_files">magic number</see>
         /// as a string when the header can be considered as UTF8 encoded.</param>
+        /// <returns>The newly created <see cref="FileType"/> instance.</returns>
         public static FileType CreateAndRegister(string name, string extension, string magicNumber)
         {
             return CreateAndRegister(
@@ -291,6 +300,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
         /// </summary>
         /// <param name="extension">List of file path extensions associated with the file format.</param>
         /// <param name="magicNumber">The <see href="https://en.wikipedia.org/wiki/Magic_number_(programming)#In_files">magic number</see> associated with the file format.</param>
+        /// <returns>The newly created <see cref="FileType"/> instance.</returns>
         public static FileType CreateAndRegister(string extension, params byte[] magicNumber)
         {
             Assert.IsFalse(
@@ -307,6 +317,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
         /// <param name="extension">List of file path extensions associated with the file format.</param>
         /// <param name="magicNumber">The <see href="https://en.wikipedia.org/wiki/Magic_number_(programming)#In_files">magic number</see>
         /// as a char array when the header can be considered as UTF8 encoded.</param>
+        /// <returns>The newly created <see cref="FileType"/> instance.</returns>
         public static FileType CreateAndRegister(string extension, IEnumerable<char> magicNumber)
         {
             return CreateAndRegister(
@@ -323,6 +334,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
         /// <param name="extension">List of file path extensions associated with the file format.</param>
         /// <param name="magicNumber">The <see href="https://en.wikipedia.org/wiki/Magic_number_(programming)#In_files">magic number</see>
         /// as a string when the header can be considered as UTF8 encoded.</param>
+        /// <returns>The newly created <see cref="FileType"/> instance.</returns>
         public static FileType CreateAndRegister(string extension, string magicNumber)
         {
             return CreateAndRegister(

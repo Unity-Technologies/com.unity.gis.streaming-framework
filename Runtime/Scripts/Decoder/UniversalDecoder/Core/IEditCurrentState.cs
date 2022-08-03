@@ -1,6 +1,9 @@
 
 namespace Unity.Geospatial.Streaming.UniversalDecoder
 {
+    /// <summary>
+    /// Interface to interact with the <see cref="CurrentState"/> for a given <see cref="NodeId"/>.
+    /// </summary>
     public interface IEditCurrentState : IExploreHierarchyNodes
     {
         /// <summary>

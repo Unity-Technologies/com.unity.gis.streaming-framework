@@ -1,0 +1,1125 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');</script>
+    <script type="text/javascript">thisPackageMetaData = { name: "com.unity.gis.streaming-framework", version: "1.0.0-preview.3", displayTitle:"Unity Geospatial Streaming 1.0.0-preview.3", lang: "en" };</script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+  
+    <title>Class VertexInterpolator
+   | Unity Geospatial Streaming | 1.0.0-preview.3 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class VertexInterpolator
+   | Unity Geospatial Streaming | 1.0.0-preview.3 ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/statictoc.docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="unity:packageTitle" content="Unity Geospatial Streaming | 1.0.0-preview.3">
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+                <div class="back-to-unity-group">
+                  <a class="back-to-unity" href="http://docs.unity3d.com/">docs.unity3d.com</a>
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li class="">
+                          <a href="../manual/index.html" title="Manual">Manual</a>
+                      </li>
+                      <li class="active">
+                          <a href="../api/index.html" title="Scripting API">Scripting API</a>
+                      </li>
+                      <li class="">
+                          <a href="../changelog/CHANGELOG.html" title="Changelog">Changelog</a>
+                      </li>
+                      <li class="">
+                          <a href="../license/LICENSE.html" title="License">License</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle"></a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Unity.Geospatial.Streaming.html" title="Unity.Geospatial.Streaming" class="">Unity.Geospatial.Streaming</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.CameraData.html" title="CameraData" class="">CameraData</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.DecoderMultiplexer.html" title="DecoderMultiplexer" class="">DecoderMultiplexer</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.DeferredMaterialFactory.html" title="DeferredMaterialFactory" class="">DeferredMaterialFactory</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.DeferredMaterialFactoryObject.html" title="DeferredMaterialFactoryObject" class="">DeferredMaterialFactoryObject</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.DetailObserverData.html" title="DetailObserverData" class="">DetailObserverData</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.DetailObserverData.GeometricErrorFunction.html" title="DetailObserverData.GeometricErrorFunction" class="">DetailObserverData.GeometricErrorFunction</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Edge.html" title="Edge" class="">Edge</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.EdgeCollection.html" title="EdgeCollection" class="">EdgeCollection</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.EuclideanFlyCamera.html" title="EuclideanFlyCamera" class="">EuclideanFlyCamera</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.EuclideanTR.html" title="EuclideanTR" class="">EuclideanTR</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.GeodeticCoordinates.html" title="GeodeticCoordinates" class="">GeodeticCoordinates</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.GeodeticExtent.html" title="GeodeticExtent" class="">GeodeticExtent</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.GeodeticExtentObject.html" title="GeodeticExtentObject" class="">GeodeticExtentObject</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.GeodeticTR.html" title="GeodeticTR" class="">GeodeticTR</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.GeospatialAssets.html" title="GeospatialAssets" class="">GeospatialAssets</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.GlobalFlyCamera.html" title="GlobalFlyCamera" class="">GlobalFlyCamera</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.GOBaseRenderer.html" title="GOBaseRenderer" class="">GOBaseRenderer</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.GOCompositeRenderer.html" title="GOCompositeRenderer" class="">GOCompositeRenderer</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.GOMeshRenderer.html" title="GOMeshRenderer" class="">GOMeshRenderer</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.GONodeRenderer.html" title="GONodeRenderer" class="">GONodeRenderer</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.HPTransformExtensions.html" title="HPTransformExtensions" class="">HPTransformExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.InstanceCommand.html" title="InstanceCommand" class="">InstanceCommand</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.InstanceCommand.CommandType.html" title="InstanceCommand.CommandType" class="">InstanceCommand.CommandType</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.InstanceData.html" title="InstanceData" class="">InstanceData</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.InstanceID.html" title="InstanceID" class="">InstanceID</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.ITaskManager.html" title="ITaskManager" class="">ITaskManager</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.IUGObject.html" title="IUGObject" class="">IUGObject</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.IUGRenderer.html" title="IUGRenderer" class="">IUGRenderer</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.LocalVerticalCoordinateSystem.html" title="LocalVerticalCoordinateSystem" class="">LocalVerticalCoordinateSystem</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.MaterialAlphaMode.html" title="MaterialAlphaMode" class="">MaterialAlphaMode</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.MaterialID.html" title="MaterialID" class="">MaterialID</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.MaterialLighting.html" title="MaterialLighting" class="">MaterialLighting</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.MaterialProperty.html" title="MaterialProperty" class="">MaterialProperty</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.MaterialPropertyType.html" title="MaterialPropertyType" class="">MaterialPropertyType</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.MaterialPropertyValue.html" title="MaterialPropertyValue" class="">MaterialPropertyValue</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.MaterialType.html" title="MaterialType" class="">MaterialType</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.MeshData.html" title="MeshData" class="">MeshData</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.MeshDataUtil.html" title="MeshDataUtil" class="">MeshDataUtil</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.MeshEditor.html" title="MeshEditor" class="">MeshEditor</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.MeshID.html" title="MeshID" class="">MeshID</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.MetadataKeys.html" title="MetadataKeys" class="">MetadataKeys</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.ObserverMultiplexer.html" title="ObserverMultiplexer" class="">ObserverMultiplexer</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.ObserverMultiplexer.Input.html" title="ObserverMultiplexer.Input" class="">ObserverMultiplexer.Input</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.OneToManyNode-1.html" title="OneToManyNode&lt;T&gt;" class="">OneToManyNode&lt;T&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.RefinementMode.html" title="RefinementMode" class="">RefinementMode</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.RevertingCommandStack.html" title="RevertingCommandStack" class="">RevertingCommandStack</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.SerializableMaterialType.html" title="SerializableMaterialType" class="">SerializableMaterialType</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.SimpleMaterialFactory.html" title="SimpleMaterialFactory" class="">SimpleMaterialFactory</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.SimpleMaterialFactory.DefaultMaterial.html" title="SimpleMaterialFactory.DefaultMaterial" class="">SimpleMaterialFactory.DefaultMaterial</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.SimpleMaterialFactoryObject.html" title="SimpleMaterialFactoryObject" class="">SimpleMaterialFactoryObject</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.SimpleMaterialFactoryObject.DefaultMaterialObject.html" title="SimpleMaterialFactoryObject.DefaultMaterialObject" class="">SimpleMaterialFactoryObject.DefaultMaterialObject</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.SystemProcessingEventArgs.html" title="SystemProcessingEventArgs" class="">SystemProcessingEventArgs</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.TextureData.html" title="TextureData" class="">TextureData</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.TextureID.html" title="TextureID" class="">TextureID</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.TriangleCollectionIndex.html" title="TriangleCollectionIndex" class="">TriangleCollectionIndex</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGBehaviourPresenter.html" title="UGBehaviourPresenter" class="">UGBehaviourPresenter</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGCameraBehaviour.html" title="UGCameraBehaviour" class="">UGCameraBehaviour</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGCommandBuffer.html" title="UGCommandBuffer" class="">UGCommandBuffer</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGCommandBuffer.IListener.html" title="UGCommandBuffer.IListener" class="">UGCommandBuffer.IListener</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGCommandBufferProcessor.html" title="UGCommandBufferProcessor" class="">UGCommandBufferProcessor</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGCommonTerrainMaterial.html" title="UGCommonTerrainMaterial" class="">UGCommonTerrainMaterial</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGCommonTerrainMaterial.Factory.html" title="UGCommonTerrainMaterial.Factory" class="">UGCommonTerrainMaterial.Factory</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGDataSource.html" title="UGDataSource" class="">UGDataSource</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGDataSourceDecoder.html" title="UGDataSourceDecoder" class="">UGDataSourceDecoder</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGDataSourceID.html" title="UGDataSourceID" class="">UGDataSourceID</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGDataSourceObject.html" title="UGDataSourceObject" class="">UGDataSourceObject</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGDeferredMaterial.html" title="UGDeferredMaterial" class="">UGDeferredMaterial</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGExtentModifier.html" title="UGExtentModifier" class="">UGExtentModifier</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGExtentModifierBehaviour.html" title="UGExtentModifierBehaviour" class="">UGExtentModifierBehaviour</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGInstantiator.html" title="UGInstantiator" class="">UGInstantiator</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGLighting.html" title="UGLighting" class="">UGLighting</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGMaterial.html" title="UGMaterial" class="">UGMaterial</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGMaterialFactory.html" title="UGMaterialFactory" class="">UGMaterialFactory</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGMaterialFactoryObject.html" title="UGMaterialFactoryObject" class="">UGMaterialFactoryObject</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGMetadata.html" title="UGMetadata" class="">UGMetadata</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGMetadataBehaviour.html" title="UGMetadataBehaviour" class="">UGMetadataBehaviour</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGModifier.html" title="UGModifier" class="">UGModifier</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGModifierBehaviour.html" title="UGModifierBehaviour" class="">UGModifierBehaviour</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGObjectPool-1.html" title="UGObjectPool&lt;T&gt;" class="">UGObjectPool&lt;T&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGOmniObserverBehaviour.html" title="UGOmniObserverBehaviour" class="">UGOmniObserverBehaviour</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGPresenter.html" title="UGPresenter" class="">UGPresenter</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGProcessingNode.html" title="UGProcessingNode" class="">UGProcessingNode</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGProcessingNode.DataAvailability.html" title="UGProcessingNode.DataAvailability" class="">UGProcessingNode.DataAvailability</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGProcessingNode.NodeInput.html" title="UGProcessingNode.NodeInput" class="">UGProcessingNode.NodeInput</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGProcessingNode.NodeInput-1.html" title="UGProcessingNode.NodeInput&lt;T&gt;" class="">UGProcessingNode.NodeInput&lt;T&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGProcessingNode.NodeOutput.html" title="UGProcessingNode.NodeOutput" class="">UGProcessingNode.NodeOutput</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGProcessingNode.NodeOutput-1.html" title="UGProcessingNode.NodeOutput&lt;T&gt;" class="">UGProcessingNode.NodeOutput&lt;T&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGSceneObserver.html" title="UGSceneObserver" class="">UGSceneObserver</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGSceneObserverBehaviour.html" title="UGSceneObserverBehaviour" class="">UGSceneObserverBehaviour</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGShaderPropertiesObject.html" title="UGShaderPropertiesObject" class="">UGShaderPropertiesObject</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGShaderProperty.html" title="UGShaderProperty" class="">UGShaderProperty</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGSimpleMaterial.html" title="UGSimpleMaterial" class="">UGSimpleMaterial</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGSimpleSceneObserver.html" title="UGSimpleSceneObserver" class="">UGSimpleSceneObserver</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGSimpleSceneObserver.IImplementation.html" title="UGSimpleSceneObserver.IImplementation" class="">UGSimpleSceneObserver.IImplementation</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGSkyboxBehaviour.html" title="UGSkyboxBehaviour" class="">UGSkyboxBehaviour</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGSystem.html" title="UGSystem" class="">UGSystem</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGSystem.Configuration.html" title="UGSystem.Configuration" class="">UGSystem.Configuration</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGSystem.StreamingModes.html" title="UGSystem.StreamingModes" class="">UGSystem.StreamingModes</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGSystemBehaviour.html" title="UGSystemBehaviour" class="">UGSystemBehaviour</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGSystemBehaviour.PresenterConfiguration.html" title="UGSystemBehaviour.PresenterConfiguration" class="">UGSystemBehaviour.PresenterConfiguration</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UGTextureSettings.html" title="UGTextureSettings" class="">UGTextureSettings</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UUIDGenerator.html" title="UUIDGenerator" class="">UUIDGenerator</a>
+                          </li>
+                          <li class="active">
+                            <a href="Unity.Geospatial.Streaming.VertexInterpolator.html" title="VertexInterpolator" class="active">VertexInterpolator</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Wgs84.html" title="Wgs84" class="">Wgs84</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Unity.Geospatial.Streaming.Editor.html" title="Unity.Geospatial.Streaming.Editor" class="">Unity.Geospatial.Streaming.Editor</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Editor.EcefCoordinateSystemInspector.html" title="EcefCoordinateSystemInspector" class="">EcefCoordinateSystemInspector</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Editor.EditorGUILayoutWrapper.html" title="EditorGUILayoutWrapper" class="">EditorGUILayoutWrapper</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Editor.GeodeticExtentObjectInspector.html" title="GeodeticExtentObjectInspector" class="">GeodeticExtentObjectInspector</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Editor.SceneHandleWrapper.html" title="SceneHandleWrapper" class="">SceneHandleWrapper</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Editor.UGCameraBehaviourInspector.html" title="UGCameraBehaviourInspector" class="">UGCameraBehaviourInspector</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Editor.UGExtentModifierBehaviourInspector.html" title="UGExtentModifierBehaviourInspector" class="">UGExtentModifierBehaviourInspector</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Editor.UGMetadataInspector.html" title="UGMetadataInspector" class="">UGMetadataInspector</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Editor.UGSystemBehaviourInspector.html" title="UGSystemBehaviourInspector" class="">UGSystemBehaviourInspector</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Editor.Wgs84CoordinateSystemInspector.html" title="Wgs84CoordinateSystemInspector" class="">Wgs84CoordinateSystemInspector</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Unity.Geospatial.Streaming.Ogc3dTiles.html" title="Unity.Geospatial.Streaming.Ogc3dTiles" class="">Unity.Geospatial.Streaming.Ogc3dTiles</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.AssetSchema.html" title="AssetSchema" class="">AssetSchema</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.B3dmTableSchema.html" title="B3dmTableSchema" class="">B3dmTableSchema</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.BoundingVolumeSchema.html" title="BoundingVolumeSchema" class="">BoundingVolumeSchema</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.ContentSchema.html" title="ContentSchema" class="">ContentSchema</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.ExtensionsSchema.html" title="ExtensionsSchema" class="">ExtensionsSchema</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.IAssetSchema.html" title="IAssetSchema" class="">IAssetSchema</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.IBoundingVolumeSchema.html" title="IBoundingVolumeSchema" class="">IBoundingVolumeSchema</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.IContentSchema.html" title="IContentSchema" class="">IContentSchema</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.IExtension.html" title="IExtension" class="">IExtension</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.IExtensionsSchema.html" title="IExtensionsSchema" class="">IExtensionsSchema</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.IPropertiesSchema.html" title="IPropertiesSchema" class="">IPropertiesSchema</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.ITileSchema-1.html" title="ITileSchema&lt;T&gt;" class="">ITileSchema&lt;T&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.ITileSchema-3.html" title="ITileSchema&lt;TBoundingVolume, TContent, TTile&gt;" class="">ITileSchema&lt;TBoundingVolume, TContent, TTile&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.ITilesetSchema.html" title="ITilesetSchema" class="">ITilesetSchema</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.ITilesetSchema-7.html" title="ITilesetSchema&lt;TAsset, TBoundingVolume, TContent, TExtensions, TExtras, TProperties, TTile&gt;" class="">ITilesetSchema&lt;TAsset, TBoundingVolume, TContent, TExtensions, TExtras, TProperties, TTile&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.Ogc3dTilesDataSource.html" title="Ogc3dTilesDataSource" class="">Ogc3dTilesDataSource</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.Ogc3dTilesDataSourceObject.html" title="Ogc3dTilesDataSourceObject" class="">Ogc3dTilesDataSourceObject</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.OgcB3dmUriLoader-2.html" title="OgcB3dmUriLoader&lt;TTableSchema, TBatchSchema&gt;" class="">OgcB3dmUriLoader&lt;TTableSchema, TBatchSchema&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.OgcB3dmUriLoader-2.Reader.html" title="OgcB3dmUriLoader&lt;TTableSchema, TBatchSchema&gt;.Reader" class="">OgcB3dmUriLoader&lt;TTableSchema, TBatchSchema&gt;.Reader</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.OgcTilesetContentLoader-2.html" title="OgcTilesetContentLoader&lt;TTileset, TTile&gt;" class="">OgcTilesetContentLoader&lt;TTileset, TTile&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.PropertiesSchema.html" title="PropertiesSchema" class="">PropertiesSchema</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.TileSchema.html" title="TileSchema" class="">TileSchema</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.TileSchema-3.html" title="TileSchema&lt;TBoundingVolume, TContent, TTile&gt;" class="">TileSchema&lt;TBoundingVolume, TContent, TTile&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.TilesetSchema.html" title="TilesetSchema" class="">TilesetSchema</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.Ogc3dTiles.TilesetSchema-7.html" title="TilesetSchema&lt;TAsset, TBoundingVolume, TContent, TExtensions, TExtras, TProperties, TTile&gt;" class="">TilesetSchema&lt;TAsset, TBoundingVolume, TContent, TExtensions, TExtras, TProperties, TTile&gt;</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Unity.Geospatial.Streaming.TmsTerrain.html" title="Unity.Geospatial.Streaming.TmsTerrain" class="">Unity.Geospatial.Streaming.TmsTerrain</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.TmsTerrain.ConfigSchema.html" title="ConfigSchema" class="">ConfigSchema</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.TmsTerrain.ContentSchema.html" title="ContentSchema" class="">ContentSchema</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.TmsTerrain.ExtentSchema.html" title="ExtentSchema" class="">ExtentSchema</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.TmsTerrain.LimitsSchema.html" title="LimitsSchema" class="">LimitsSchema</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.TmsTerrain.Tile.html" title="Tile" class="">Tile</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainContentLoader.html" title="TmsTerrainContentLoader" class="">TmsTerrainContentLoader</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainDataSource.html" title="TmsTerrainDataSource" class="">TmsTerrainDataSource</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainDataSourceObject.html" title="TmsTerrainDataSourceObject" class="">TmsTerrainDataSourceObject</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainStreamer.html" title="TmsTerrainStreamer" class="">TmsTerrainStreamer</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainStreamer.TerrainTile.html" title="TmsTerrainStreamer.TerrainTile" class="">TmsTerrainStreamer.TerrainTile</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainStreamer.TileType.html" title="TmsTerrainStreamer.TileType" class="">TmsTerrainStreamer.TileType</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainUriLoader.html" title="TmsTerrainUriLoader" class="">TmsTerrainUriLoader</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.TmsTerrain.UriCollection.html" title="UriCollection" class="">UriCollection</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Unity.Geospatial.Streaming.UniversalDecoder.html" title="Unity.Geospatial.Streaming.UniversalDecoder" class="">Unity.Geospatial.Streaming.UniversalDecoder</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.BoundingVolumeHierarchy-1.html" title="BoundingVolumeHierarchy&lt;T&gt;" class="">BoundingVolumeHierarchy&lt;T&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.ContentType.html" title="ContentType" class="">ContentType</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.CurrentState.html" title="CurrentState" class="">CurrentState</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.FileType.html" title="FileType" class="">FileType</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.GltfContentLoader.html" title="GltfContentLoader" class="">GltfContentLoader</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.GltfDataSource.html" title="GltfDataSource" class="">GltfDataSource</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.GltfDataSourceObject.html" title="GltfDataSourceObject" class="">GltfDataSourceObject</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.GltfUriLoader.html" title="GltfUriLoader" class="">GltfUriLoader</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.GltfUriLoader.AlwaysDeferAgent.html" title="GltfUriLoader.AlwaysDeferAgent" class="">GltfUriLoader.AlwaysDeferAgent</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.HierarchyContentLoader-2.html" title="HierarchyContentLoader&lt;TLeaf, TUriCollection&gt;" class="">HierarchyContentLoader&lt;TLeaf, TUriCollection&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.IEditCurrentState.html" title="IEditCurrentState" class="">IEditCurrentState</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.IEditHierarchyNodes.html" title="IEditHierarchyNodes" class="">IEditHierarchyNodes</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.IExpandingNodeContent.html" title="IExpandingNodeContent" class="">IExpandingNodeContent</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.IExploreHierarchyNodes.html" title="IExploreHierarchyNodes" class="">IExploreHierarchyNodes</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.IGetNodeData.html" title="IGetNodeData" class="">IGetNodeData</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.ILeaf.html" title="ILeaf" class="">ILeaf</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.ILoaderActions.html" title="ILoaderActions" class="">ILoaderActions</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.INodeContentLoader.html" title="INodeContentLoader" class="">INodeContentLoader</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.INodeContentManager.html" title="INodeContentManager" class="">INodeContentManager</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.IUriCollection.html" title="IUriCollection" class="">IUriCollection</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.NodeContent.html" title="NodeContent" class="">NodeContent</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.NodeContentManager.html" title="NodeContentManager" class="">NodeContentManager</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.NodeContentManager.State.html" title="NodeContentManager.State" class="">NodeContentManager.State</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.NodeData.html" title="NodeData" class="">NodeData</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.NodeId.html" title="NodeId" class="">NodeId</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.PriorityQueue-1.html" title="PriorityQueue&lt;T&gt;" class="">PriorityQueue&lt;T&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.SingleUri.html" title="SingleUri" class="">SingleUri</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.TargetState.html" title="TargetState" class="">TargetState</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.UGGltFastInstantiator.html" title="UGGltFastInstantiator" class="">UGGltFastInstantiator</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.UGUniversalDecoder.html" title="UGUniversalDecoder" class="">UGUniversalDecoder</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.UniqueContentTypeGenerator.html" title="UniqueContentTypeGenerator" class="">UniqueContentTypeGenerator</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.UniversalDecoderDataSource.html" title="UniversalDecoderDataSource" class="">UniversalDecoderDataSource</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.UriLoader.html" title="UriLoader" class="">UriLoader</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.UriNodeContent.html" title="UriNodeContent" class="">UriNodeContent</a>
+                          </li>
+                          <li class="">
+                            <a href="Unity.Geospatial.Streaming.UniversalDecoder.UriNodeContentLoader.html" title="UriNodeContentLoader" class="">UriNodeContentLoader</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Unity.Geospatial.Streaming.VertexInterpolator">
+  
+  
+  <h1 id="Unity_Geospatial_Streaming_VertexInterpolator" data-uid="Unity.Geospatial.Streaming.VertexInterpolator" class="text-break">Class VertexInterpolator
+  </h1>
+  <div class="markdown level0 summary"><p>Class allowing to interpolate blocks of vertices from a source to a goal with a blending ratio.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">VertexInterpolator</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Unity.Geospatial.Streaming.html">Unity.Geospatial.Streaming</a></h6>
+  <h6><strong>Assembly</strong>: solution.dll</h6>
+  <h5 id="Unity_Geospatial_Streaming_VertexInterpolator_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class VertexInterpolator</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Unity_Geospatial_Streaming_VertexInterpolator__ctor_" data-uid="Unity.Geospatial.Streaming.VertexInterpolator.#ctor*"></a>
+  <h4 id="Unity_Geospatial_Streaming_VertexInterpolator__ctor_UnityEngine_Rendering_VertexAttributeDescriptor___" data-uid="Unity.Geospatial.Streaming.VertexInterpolator.#ctor(UnityEngine.Rendering.VertexAttributeDescriptor[])">VertexInterpolator(VertexAttributeDescriptor[])</h4>
+  <div class="markdown level1 summary"><p>Default constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VertexInterpolator(VertexAttributeDescriptor[] vertexDescriptors)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttributeDescriptor.html">VertexAttributeDescriptor</a>[]</td>
+        <td><span class="parametername">vertexDescriptors</span></td>
+        <td><p>Attributes defining the vertices the new instance will interact with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Unity_Geospatial_Streaming_VertexInterpolator_StreamCount_" data-uid="Unity.Geospatial.Streaming.VertexInterpolator.StreamCount*"></a>
+  <h4 id="Unity_Geospatial_Streaming_VertexInterpolator_StreamCount" data-uid="Unity.Geospatial.Streaming.VertexInterpolator.StreamCount">StreamCount</h4>
+  <div class="markdown level1 summary"><p>Get the amount vertex buffer streams part of this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int StreamCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unity_Geospatial_Streaming_VertexInterpolator_VertexAttributeDescriptors_" data-uid="Unity.Geospatial.Streaming.VertexInterpolator.VertexAttributeDescriptors*"></a>
+  <h4 id="Unity_Geospatial_Streaming_VertexInterpolator_VertexAttributeDescriptors" data-uid="Unity.Geospatial.Streaming.VertexInterpolator.VertexAttributeDescriptors">VertexAttributeDescriptors</h4>
+  <div class="markdown level1 summary"><p>Information about the <a href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.html">VertexAttributes</a>
+of a <a href="https://docs.unity3d.com/ScriptReference/Mesh.html">Mesh</a> <a href="https://docs.unity3d.com/ScriptReference/Mesh-vertices.html">vertices</a>.
+<a href="https://docs.unity3d.com/ScriptReference/Mesh.html">Mesh</a> vertices vertex data comprised of
+different Vertex Attributes. For example, a vertex can include a Position, Normal, TexCoord0, and Color.
+<a href="https://docs.unity3d.com/ScriptReference/Mesh.html">Meshes</a> usually use a known format for
+data layout, for example, a position is most often a 3-component float
+vector (<a href="https://docs.unity3d.com/ScriptReference/Vector3.html">Vector3</a>), but you can also
+specify non-standard data formats and their layout for a <a href="https://docs.unity3d.com/ScriptReference/Mesh.html">Mesh</a>.
+You can use <a href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttributeDescriptor.html">VertexAttributeDescriptor</a>
+to specify custom mesh data layout in <a href="https://docs.unity3d.com/ScriptReference/Mesh.SetVertexBufferParams.html">Mesh.SetVertexBufferParams</a>.
+Vertex data is laid out in separate &quot;streams&quot; (each stream goes into a separate vertex buffer in the underlying graphics API).
+While Unity supports up to 4 vertex streams, most meshes use just one. Separate streams are most useful when
+some vertex attributes don&apos;t need to be processed, for example skinned meshes often use two vertex streams
+(one containing all the skinned data: positions, normals, tangents;
+while the other stream contains all the non-skinned data: colors and texture coordinates).
+Within each stream, attributes of a vertex are laid out one after another, in this order:
+<a href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.Position.html">VertexAttribute.Position</a>
+<a href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.Normal.html">VertexAttribute.Normal</a>
+<a href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.Tangent.html">VertexAttribute.Tangent</a>
+<a href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.Color.html">VertexAttribute.Color</a>
+<a href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.TexCoord0.html">VertexAttribute.TexCoord0</a>
+<a href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.TexCoord1.html">VertexAttribute.TexCoord1</a>
+<a href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.TexCoord2.html">VertexAttribute.TexCoord2</a>
+<a href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.TexCoord3.html">VertexAttribute.TexCoord3</a>
+<a href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.TexCoord4.html">VertexAttribute.TexCoord4</a>
+<a href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.TexCoord5.html">VertexAttribute.TexCoord5</a>
+<a href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.TexCoord6.html">VertexAttribute.TexCoord6</a>
+<a href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.TexCoord7.html">VertexAttribute.TexCoord7</a>
+<a href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.BlendWeight.html">VertexAttribute.BlendWeight</a>
+<a href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.BlendIndices.html">VertexAttribute.BlendIndices</a>
+Not all <a href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttributeDescriptor-format.html">format</a>
+and <a href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttributeDescriptor-dimension.html">dimension</a>
+combinations are valid. Specifically, the data size of a vertex attribute must be a multiple of 4 bytes. For example,
+a <a href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttributeFormat.Float16.html">VertexAttributeFormat.Float16</a>
+format with dimension 3 is not valid.</p>
+<p>See Also: <a href="https://docs.unity3d.com/ScriptReference/SystemInfo.SupportsVertexAttributeFormat.html">SystemInfo.SupportsVertexAttributeFormat</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VertexAttributeDescriptor[] VertexAttributeDescriptors { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttributeDescriptor.html">VertexAttributeDescriptor</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Unity_Geospatial_Streaming_VertexInterpolator_DuplicateVertexData_" data-uid="Unity.Geospatial.Streaming.VertexInterpolator.DuplicateVertexData*"></a>
+  <h4 id="Unity_Geospatial_Streaming_VertexInterpolator_DuplicateVertexData_SortedSet_System_Int32__System_Int32_System_Collections_Generic_Dictionary_System_Int32_System_Int32__" data-uid="Unity.Geospatial.Streaming.VertexInterpolator.DuplicateVertexData(SortedSet{System.Int32},System.Int32,System.Collections.Generic.Dictionary{System.Int32,System.Int32})">DuplicateVertexData(SortedSet&lt;Int32&gt;, Int32, Dictionary&lt;Int32, Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Copy part of the vertex indices part of this instance to the given dictionary <code data-dev-comment-type="paramref" class="paramref">srcToDstIndexMap</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DuplicateVertexData(SortedSet&lt;int&gt; srcIndices, int dstStartIndex, Dictionary&lt;int, int&gt; srcToDstIndexMap)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">SortedSet</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">srcIndices</span></td>
+        <td><p>Keys to copy to the <code data-dev-comment-type="paramref" class="paramref">srcToDstIndexMap</code> dictionary.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">dstStartIndex</span></td>
+        <td><p>Skip the vertices before this index.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">srcToDstIndexMap</span></td>
+        <td><p>Copy the indices to this dictionary.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unity_Geospatial_Streaming_VertexInterpolator_GetPosition_" data-uid="Unity.Geospatial.Streaming.VertexInterpolator.GetPosition*"></a>
+  <h4 id="Unity_Geospatial_Streaming_VertexInterpolator_GetPosition_System_Int32_" data-uid="Unity.Geospatial.Streaming.VertexInterpolator.GetPosition(System.Int32)">GetPosition(Int32)</h4>
+  <div class="markdown level1 summary"><p>Get the position of one vertex for the given <code data-dev-comment-type="paramref" class="paramref">index</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3 GetPosition(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>Index of the array the <a class="xref" href="Unity.Geospatial.Streaming.VertexInterpolator.html">VertexInterpolator</a> was initialized with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector3.html">Vector3</a></td>
+        <td><p>The position of the vertex.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unity_Geospatial_Streaming_VertexInterpolator_GetVertexDataByteSize_" data-uid="Unity.Geospatial.Streaming.VertexInterpolator.GetVertexDataByteSize*"></a>
+  <h4 id="Unity_Geospatial_Streaming_VertexInterpolator_GetVertexDataByteSize_System_Int32_" data-uid="Unity.Geospatial.Streaming.VertexInterpolator.GetVertexDataByteSize(System.Int32)">GetVertexDataByteSize(Int32)</h4>
+  <div class="markdown level1 summary"><p>Get the byte size for one given <code data-dev-comment-type="paramref" class="paramref">stream</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetVertexDataByteSize(int stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>Index of the stream to get its size</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><p>The stream size.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unity_Geospatial_Streaming_VertexInterpolator_LerpUnclamped_" data-uid="Unity.Geospatial.Streaming.VertexInterpolator.LerpUnclamped*"></a>
+  <h4 id="Unity_Geospatial_Streaming_VertexInterpolator_LerpUnclamped_System_Int32_System_Int32_System_Single_System_Int32_" data-uid="Unity.Geospatial.Streaming.VertexInterpolator.LerpUnclamped(System.Int32,System.Int32,System.Single,System.Int32)">LerpUnclamped(Int32, Int32, Single, Int32)</h4>
+  <div class="markdown level1 summary"><p>Linearly interpolates between the source to the destination.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LerpUnclamped(int indexA, int indexB, float t, int indexDst)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">indexA</span></td>
+        <td><p>Start of the interpolation index.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">indexB</span></td>
+        <td><p>Goal of the interpolation index.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td><span class="parametername">t</span></td>
+        <td><p>The blending amount to apply.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">indexDst</span></td>
+        <td><p>Index where to save the result.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unity_Geospatial_Streaming_VertexInterpolator_SetPosition_" data-uid="Unity.Geospatial.Streaming.VertexInterpolator.SetPosition*"></a>
+  <h4 id="Unity_Geospatial_Streaming_VertexInterpolator_SetPosition_System_Int32_UnityEngine_Vector3_" data-uid="Unity.Geospatial.Streaming.VertexInterpolator.SetPosition(System.Int32,UnityEngine.Vector3)">SetPosition(Int32, Vector3)</h4>
+  <div class="markdown level1 summary"><p>Change the position of a single vertex.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPosition(int index, Vector3 pos)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>Index of the vertex to modify.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.unity3d.com/ScriptReference/Vector3.html">Vector3</a></td>
+        <td><span class="parametername">pos</span></td>
+        <td><p>The new position to set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Unity_Geospatial_Streaming_VertexInterpolator_SetVertexBuffers_" data-uid="Unity.Geospatial.Streaming.VertexInterpolator.SetVertexBuffers*"></a>
+  <h4 id="Unity_Geospatial_Streaming_VertexInterpolator_SetVertexBuffers_System_Byte_____" data-uid="Unity.Geospatial.Streaming.VertexInterpolator.SetVertexBuffers(System.Byte[][])">SetVertexBuffers(Byte[][])</h4>
+  <div class="markdown level1 summary"><p>Vertices streams with the source / destination / result of the interpolation process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetVertexBuffers(byte[][] vertexStreams)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[][]</td>
+        <td><span class="parametername">vertexStreams</span></td>
+        <td><p>Blocks of vertices data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

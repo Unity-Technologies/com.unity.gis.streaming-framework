@@ -8,6 +8,16 @@ using Object = UnityEngine.Object;
 
 namespace Unity.Geospatial.Streaming
 {
+    /// <summary>
+    /// Renderer allowing multiple layers of materials for a single <see cref="Mesh"/>.
+    /// For each <see cref="UGMaterial"/> part of the <see cref="Materials"/>, it will instantiate a new
+    /// <see cref="Mesh"/>, apply the corresponding <see href="https://docs.unity3d.com/ScriptReference/Material.html">Material</see>
+    /// and output the Z Buffer only on the last instance. This allows to overlay multiple
+    /// <see href="https://docs.unity3d.com/ScriptReference/Material.html">Materials</see>.
+    /// <remarks>This can be used when a single mesh is composed of multiple
+    /// <see href="https://docs.unity3d.com/ScriptReference/Texture.html">textures</see> where each texture represent a
+    /// sub-tile of the <see href="https://docs.unity3d.com/ScriptReference/Mesh.html">mesh</see>.</remarks>
+    /// </summary>
     public class GOCompositeRenderer : GOBaseRenderer
     {
         private sealed class SecondaryRenderer : IDisposable
@@ -30,6 +40,9 @@ namespace Unity.Geospatial.Streaming
             private readonly MeshFilter m_MeshFilter;
             private readonly MeshRenderer m_MeshRenderer;
 
+            /// <summary>
+            /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            /// </summary>
             public void Dispose()
             {
                 if (Application.isPlaying)
@@ -63,7 +76,12 @@ namespace Unity.Geospatial.Streaming
             }
         }
 
-
+        /// <summary>
+        /// Default constructor.
+        /// Responsible to create <see href="https://docs.unity3d.com/ScriptReference/MeshFilter.html">MeshFilter</see>
+        /// and <see href="https://docs.unity3d.com/ScriptReference/MeshRenderer.html">MeshRenderer</see>
+        /// <see href="https://docs.unity3d.com/ScriptReference/Component.html">Components</see>.
+        /// </summary>
         public GOCompositeRenderer()
         {
             m_MeshFilter = m_GameObject.AddComponent<MeshFilter>();
@@ -78,6 +96,7 @@ namespace Unity.Geospatial.Streaming
         private readonly MeshRenderer m_MeshRenderer;
         private List<SecondaryRenderer> m_SecondaryRenderers;
 
+        /// <inheritdoc cref="GOBaseRenderer.Mesh"/>
         public override Mesh Mesh
         {
             set
@@ -95,6 +114,7 @@ namespace Unity.Geospatial.Streaming
             }
         }
 
+        /// <inheritdoc cref="GOBaseRenderer.Materials"/>
         public override UGMaterial[] Materials
         {
             set
@@ -133,6 +153,7 @@ namespace Unity.Geospatial.Streaming
             }
         }
 
+        /// <inheritdoc cref="GOBaseRenderer.UnityLayer"/>
         public override int UnityLayer
         {
             set

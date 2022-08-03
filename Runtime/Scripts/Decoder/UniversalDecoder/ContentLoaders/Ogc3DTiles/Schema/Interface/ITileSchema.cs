@@ -3,6 +3,10 @@ using Unity.Mathematics;
 
 namespace Unity.Geospatial.Streaming.Ogc3dTiles
 {
+    /// <summary>
+    /// Interface when deserializing <see cref="ILeaf"/> to this type.
+    /// </summary>
+    /// <typeparam name="T">The <see cref="ILeaf"/> type to deserialize to.</typeparam>
     public interface ITileSchema<out T>:
         ILeaf
         where T: ITileSchema<T>
@@ -19,6 +23,15 @@ namespace Unity.Geospatial.Streaming.Ogc3dTiles
         double4x4 TransformToDouble4X4();
     }
 
+    /// <summary>
+    /// Interface when deserializing <see cref="ILeaf"/> to this type.
+    /// </summary>
+    /// <typeparam name="TBoundingVolume">Bounding volume for each ILeaf part of the dataset.</typeparam>
+    /// <typeparam name="TContent">
+    /// <see cref="ILeaf"/> <see href="https://docs.microsoft.com/en-us/dotnet/api/system.uri">Uri</see> getter allowing
+    /// to retrieve where to get the data to load for this instance.
+    /// </typeparam>
+    /// <typeparam name="TTile">The <see cref="ILeaf"/> type to deserialize to.</typeparam>
     public interface ITileSchema<out TBoundingVolume, out TContent, out TTile> :
         ITileSchema<TTile>
         where TBoundingVolume: IBoundingVolumeSchema

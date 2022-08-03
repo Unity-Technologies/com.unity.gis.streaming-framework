@@ -60,6 +60,9 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
         /// </summary>
         public int Count { get { return m_Queue.Count; } }
 
+        /// <summary>
+        /// Removes all elements from the queue.
+        /// </summary>
         public void Clear()
         {
             m_Queue.Clear();

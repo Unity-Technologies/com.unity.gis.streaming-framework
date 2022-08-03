@@ -18,6 +18,18 @@
       "is_incremental": false
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/Architecture/material-factory.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/Architecture/material-factory.html",
+          "hash": "0Fxq4MyqgKyaPdLryz/1mKORAvKV+ynQ2wjOTlkyzjI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "log_codes": [
         "InvalidFileLink"
       ],
@@ -26,7 +38,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/Architecture/universal-decoder.html",
-          "hash": "H6cBlT6ub1rrnMc+7TLTnbSKxafniENI7/qxELre77M="
+          "hash": "HPeu45fYktqR2osk8mK682vGvlXs52FidiMZ1eX4tnY="
         }
       },
       "is_incremental": false,
@@ -38,7 +50,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/FileFormats/ogc-3d-tiles.html",
-          "hash": "zTtw3ebMSYnEoPjHvpUYzn9ZQ9tw/yw5qJd/izRCv6Q="
+          "hash": "YKBmzU1UoSYLN94+GN7lY4JmuGchadWx4iy8KRG2cqI="
         }
       },
       "is_incremental": false,
@@ -46,23 +58,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/FileFormats/unity-terrain-mesh.md",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/FileFormats/tms.md",
       "output": {
         ".html": {
-          "relative_path": "manual/FileFormats/unity-terrain-mesh.html",
-          "hash": "Kp/591VONoYFcbg2j4uwu3bUelOa5K0En3p9GRjBbOQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/GettingStarted/adding-multiple-datasets.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/GettingStarted/adding-multiple-datasets.html",
-          "hash": "pRGlSQTrJD2LwCH2uqI/9GhFBtxxgZUc1lNBkQFXUX4="
+          "relative_path": "manual/FileFormats/tms.html",
+          "hash": "CTheI/Gy//hWrH7FlRSe/pghOWtTNTEFjOxWyvVfj0Q="
         }
       },
       "is_incremental": false,
@@ -74,7 +74,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/GettingStarted/first-time-setup.html",
-          "hash": "bi45SmNAPtDQVn1s6xcCEn6kvMTxNo4Xfqq2PQIEDoM="
+          "hash": "PHLmehkXmm+9eK6OpRw1ZkpSk4TKIl71XvsHcU03QB4="
         }
       },
       "is_incremental": false,
@@ -86,7 +86,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/GettingStarted/frequently-asked.html",
-          "hash": "VNZ0WlMGZiVKx/YccRRdbrQWPbVdQfEMnK1joJf24T8="
+          "hash": "cnJ64rwymOixuhcawzurV2PinQx5XCdLHkcRMVoeQfs="
         }
       },
       "is_incremental": false,
@@ -98,7 +98,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/GettingStarted/known-limitations.html",
-          "hash": "zJeLYT1/9rM5jH0X0PgFj8GHpXEaehRlDbgirxVJcHM="
+          "hash": "36g0Fb+rQ06+wTQBKakEI2DKIhabVkWG9QjiQGs1eEA="
         }
       },
       "is_incremental": false,
@@ -110,22 +110,62 @@
       "output": {
         ".html": {
           "relative_path": "manual/TableOfContents.html",
-          "hash": "soQT9SFzw7n1N4FSOf7KVRuSs0rekaFWCzfhc1iEt2c="
+          "hash": "tDD+QqoYc/FOHj/ZTUSdauRMiLerdR9Lfg4EuwYGoY8="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/guide.md",
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/Architecture/MaterialFactory.meta",
       "output": {
-        ".html": {
-          "relative_path": "manual/guide.html",
-          "hash": "/eO9nAnlXm2Ws5/0egPAigXkE/Xg253ctYslO/A/hxA="
+        "resource": {
+          "relative_path": "manual/images/Architecture/MaterialFactory.meta"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/Architecture/MaterialFactory/ShaderProperties.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/Architecture/MaterialFactory/ShaderProperties.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/Architecture/MaterialFactory/SimpleMaterialFactoryEmpty.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/Architecture/MaterialFactory/SimpleMaterialFactoryEmpty.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/Architecture/MaterialFactory/SimpleMaterialFactoryValues.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/Architecture/MaterialFactory/SimpleMaterialFactoryValues.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/Architecture/MaterialFactory/SystemMaterialFactory.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/Architecture/MaterialFactory/SystemMaterialFactory.png"
         }
       },
       "is_incremental": false,
@@ -243,10 +283,54 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/FileFormats/TerrainExtentExample.png",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/FileFormats/TMS-Ordering.png",
       "output": {
         "resource": {
-          "relative_path": "manual/images/FileFormats/TerrainExtentExample.png"
+          "relative_path": "manual/images/FileFormats/TMS-Ordering.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/FileFormats/TMS-Ordering.svg",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/FileFormats/TMS-Ordering.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/FileFormats/TMS-UTRLayout.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/FileFormats/TMS-UTRLayout.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/FileFormats/TMS-UTRLayout.svg",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/FileFormats/TMS-UTRLayout.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/FileFormats/TerrainExtentExample.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/FileFormats/TerrainExtentExample.PNG"
         }
       },
       "is_incremental": false,
@@ -265,83 +349,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/FileFormats/UnityTerrainMesh-Ordering.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/FileFormats/UnityTerrainMesh-Ordering.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/FileFormats/UnityTerrainMesh-Ordering.svg",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/FileFormats/UnityTerrainMesh-Ordering.svg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/FileFormats/UnityTerrainMesh-UTRLayout.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/FileFormats/UnityTerrainMesh-UTRLayout.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/FileFormats/UnityTerrainMesh-UTRLayout.svg",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/FileFormats/UnityTerrainMesh-UTRLayout.svg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/AddCesiumAsset.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/GettingStarted/AddCesiumAsset.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/AddFlyCamera.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/GettingStarted/AddFlyCamera.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/BasicUGCamera.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/GettingStarted/BasicUGCamera.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/BasicUGSystem.png",
       "output": {
         "resource": {
@@ -353,43 +360,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/CesiumToken.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/GettingStarted/CesiumToken.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/Complete.png",
       "output": {
         "resource": {
           "relative_path": "manual/images/GettingStarted/Complete.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/CreateAssetToken.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/GettingStarted/CreateAssetToken.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/DisableFog.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/GettingStarted/DisableFog.png"
         }
       },
       "is_incremental": false,
@@ -419,61 +393,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/ExtentModifierMelbourne.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/GettingStarted/ExtentModifierMelbourne.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/FixedSkybox.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/GettingStarted/FixedSkybox.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/HillAirforceBaseDataset.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/GettingStarted/HillAirforceBaseDataset.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/Import.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/GettingStarted/Import.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/ImportPackageWindow.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/GettingStarted/ImportPackageWindow.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/InputSystemSetting.png",
       "output": {
         "resource": {
@@ -485,76 +404,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/MelbourneComplete.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/GettingStarted/MelbourneComplete.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/MelbourneConfiguration.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/GettingStarted/MelbourneConfiguration.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/MelbourneIon.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/GettingStarted/MelbourneIon.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/MelbourneLayer.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/GettingStarted/MelbourneLayer.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/NewHDRPScene.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/GettingStarted/NewHDRPScene.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/NewProject.png",
       "output": {
         "resource": {
           "relative_path": "manual/images/GettingStarted/NewProject.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/OddSkybox.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/GettingStarted/OddSkybox.png"
         }
       },
       "is_incremental": false,
@@ -584,32 +437,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/SampleDatasets.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/GettingStarted/SampleDatasets.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/SceneHierarchySystem.png",
       "output": {
         "resource": {
           "relative_path": "manual/images/GettingStarted/SceneHierarchySystem.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/images/GettingStarted/UnityCesiumTokenString.png",
-      "output": {
-        "resource": {
-          "relative_path": "manual/images/GettingStarted/UnityCesiumTokenString.png"
         }
       },
       "is_incremental": false,
@@ -654,31 +485,7 @@
       "output": {
         ".html": {
           "relative_path": "manual/index.html",
-          "hash": "fXWX9galeObNnlTHKSJ/tj2w/chjL+uZPKfhpISVXA0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/sample-package-guide.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/sample-package-guide.html",
-          "hash": "zE3ytq7JEU3gtQbvXElLb9GH8/kBniJOmWgiGiO2oio="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/test-package-guide.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/test-package-guide.html",
-          "hash": "FoPynKNXn4AyNFbtoPu9qsxDmuR4ZafunezVKsgvtx4="
+          "hash": "slSH8EI9GqwgJ0rdsB0xa/Yr+bfzgMWH7i4/+INlBvQ="
         }
       },
       "is_incremental": false,
@@ -690,22 +497,2299 @@
       "output": {
         ".html": {
           "relative_path": "manual/toc.html",
-          "hash": "OoC7lzoZSx2utoIS6/hvKraJ9qLPG817t2BDpCNA6jM="
+          "hash": "rhJIUHB8lxE8p38R1u/1gNyl3GmYGSivsUzKZFYKk+A="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidYamlHeader"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Packages/com.unity.gis.streaming-framework/Documentation~/tools-package-guide.md",
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.CameraData.yml",
       "output": {
         ".html": {
-          "relative_path": "manual/tools-package-guide.html",
-          "hash": "Q096dG/BBhfBKXX3vCysOLCf8gaZs+vwKh6lEABIB50="
+          "relative_path": "api/Unity.Geospatial.Streaming.CameraData.html",
+          "hash": "OYIUC6APyBgqdQ8OZIndmKug4BWbxXR3fzhQh7ne64E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.DecoderMultiplexer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.DecoderMultiplexer.html",
+          "hash": "8mM5qibveWczpUZ9LQhCdHOfE2WTQaWYWfL61NIMGPA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.DeferredMaterialFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.DeferredMaterialFactory.html",
+          "hash": "ycAB8TotRrlwcEdK968npEBWOIRITwQD82Gy4yjidDI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.DeferredMaterialFactoryObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.DeferredMaterialFactoryObject.html",
+          "hash": "lbeqg5bEHTci9PVUnWPq9uoL1NGcgi3FHzhV7+tOz1I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.DetailObserverData.GeometricErrorFunction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.DetailObserverData.GeometricErrorFunction.html",
+          "hash": "K6LC6GFJbiKYtntV2J4lc6kSoBSjvfioWbUxhlqLM3I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.DetailObserverData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.DetailObserverData.html",
+          "hash": "20suzlIu7QwSDRlLUtyAv+iLUmRHgEMmh1vFkFDQK40="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Edge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Edge.html",
+          "hash": "0k2B9r+L+4HhGWFjhPt/RWTURVgMerfFRDJ5eV+hL6s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.EdgeCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.EdgeCollection.html",
+          "hash": "zJ4GcGo2RdrEfp5WwzGH1ZiVXzNw4dq2cPFr5LTYOrM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Editor.EcefCoordinateSystemInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Editor.EcefCoordinateSystemInspector.html",
+          "hash": "gDJOU/jjmIZ3n0Au/wgMXxL0JkbZq5YjfQB0YMzpEvI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Editor.EditorGUILayoutWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Editor.EditorGUILayoutWrapper.html",
+          "hash": "nDcfSvOOSWrVJ+BDvvSfQiw+CbJuAxphFQPmjtjyCnc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Editor.GeodeticExtentObjectInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Editor.GeodeticExtentObjectInspector.html",
+          "hash": "U+VSTPaxC2gS1MbVQVUKSJfi563L8DGjPkBKas0dHVA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Editor.SceneHandleWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Editor.SceneHandleWrapper.html",
+          "hash": "+mpl5JklE70tAjVb/Fhz99bD2HX2uQ9j6sHbrBQGBgI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Editor.UGCameraBehaviourInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Editor.UGCameraBehaviourInspector.html",
+          "hash": "wjw0YQhzze0caxTTsrUpTcu8kzhiYK6Hjt4rZ66Hi6E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Editor.UGExtentModifierBehaviourInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Editor.UGExtentModifierBehaviourInspector.html",
+          "hash": "0HpHbajRRw+NFVg/jVCXhXmwf8l98yDTwtnnX1x5zhQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Editor.UGMetadataInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Editor.UGMetadataInspector.html",
+          "hash": "te42shIak9uoZsXeQ15/au2+IWq/rEX1oez0/zykDxo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Editor.UGSystemBehaviourInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Editor.UGSystemBehaviourInspector.html",
+          "hash": "i0Oie0yMpuoDpXiB8QXAPWWxN/7UA58Aucaa409zTxY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Editor.Wgs84CoordinateSystemInspector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Editor.Wgs84CoordinateSystemInspector.html",
+          "hash": "hvhOuZDoUmjUfXiJ/PYeeXQa51cJSnE7v1VSj5xZcI8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Editor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Editor.html",
+          "hash": "aXI5k/aO10WULHrgdXbUyAzSoLlSeT6dl2acLD3jyQ8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.EuclideanFlyCamera.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.EuclideanFlyCamera.html",
+          "hash": "YhSMHnnXVJP7i3q9Knv8eUz9EH4T3M8YAVQVhWw5Vac="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.EuclideanTR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.EuclideanTR.html",
+          "hash": "3mwA+taAElmLWtfDkJ7MNqPxnYDQQ3No6E6VvIPp3Po="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.GOBaseRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.GOBaseRenderer.html",
+          "hash": "ts6gmFb/V4YYIZ0X6LUCTydty9hjsF0YM3rkX153vW4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.GOCompositeRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.GOCompositeRenderer.html",
+          "hash": "nZZM3/Kve3zXOGUIrPvsvJueRdDr5w3RWU8aeTnMeSA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.GOMeshRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.GOMeshRenderer.html",
+          "hash": "2wnwETNSq7FID9Bnan+eEX6cyw7wUWR55i8pUOuoQ60="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.GONodeRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.GONodeRenderer.html",
+          "hash": "oVRVnMnKN3Q+BTcaQf1lOcaNpaci2E9WGB4LLmLPg8A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.GeodeticCoordinates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.GeodeticCoordinates.html",
+          "hash": "1NaRPJNWnHGwjjrKkAAQsV/AVGInD0cC6L3Noh07dhk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.GeodeticExtent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.GeodeticExtent.html",
+          "hash": "Uom406jtdR57ii8NP+XhKlBIpWz7/51ZJkssMtr87N4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.GeodeticExtentObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.GeodeticExtentObject.html",
+          "hash": "mgvMPLuGV6vKEwGHTnrH/njFOns3TYxkgm0C9kpougI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.GeodeticTR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.GeodeticTR.html",
+          "hash": "LRmg8acQg2NsdgIWuCwEstVKyh8hCBUidlHlDdKYWug="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.GeospatialAssets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.GeospatialAssets.html",
+          "hash": "EcXrThP+BZObGCGd/rxit4S2lUos0OkacMMrnxlaALA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.GlobalFlyCamera.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.GlobalFlyCamera.html",
+          "hash": "CGUIFjTPcy0U35ByBY+Y+hJuILdNi6tuyXa6BsYnkQk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.HPTransformExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.HPTransformExtensions.html",
+          "hash": "09ZbWaPwcsIz6HKjXLs+L0PGfGVAdmYxpddmrR4CGXg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.ITaskManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.ITaskManager.html",
+          "hash": "N2Na9L0F1m3jynxzg4xA560WgSEOLby2H1Wi5fv3Zzo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.IUGObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.IUGObject.html",
+          "hash": "GC+h5jnFONaHqPr98W+ephVcu2y7Hij/LgzNnevnqRU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.IUGRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.IUGRenderer.html",
+          "hash": "ad8ic5/utwNDsZaaShVhfFjapEiXWJoxAFlkMn4O3GU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.InstanceCommand.CommandType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.InstanceCommand.CommandType.html",
+          "hash": "lD64zAYYoyF5ibbWQG9S1CwVK/53YmVD37fr6sb4SEE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.InstanceCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.InstanceCommand.html",
+          "hash": "wCamcHgKB4W4G/j5kzvko7tNg98Z4272KC33skZi4RM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.InstanceData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.InstanceData.html",
+          "hash": "GaG8BRURYA2BLo0mHVpBKw8EGcbWOGw56eSktAoNGPk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.InstanceID.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.InstanceID.html",
+          "hash": "DaH/68qj1224cV6B4vky9j5YoH3nJyDxLO1DYzXX6do="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.LocalVerticalCoordinateSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.LocalVerticalCoordinateSystem.html",
+          "hash": "MzjFc+uajFG9VtZWHid7aUOZstVSYXvjHqjxaXgMnFE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.MaterialAlphaMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.MaterialAlphaMode.html",
+          "hash": "M9DUtUdr/C8KCXV+nORg8YK5c9P4o/lhqmc78uEzF/I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.MaterialID.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.MaterialID.html",
+          "hash": "rsfM8gJRzFQQgV4Qv8etYW7Ze+hFuGTSeUdYG9C2epM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.MaterialLighting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.MaterialLighting.html",
+          "hash": "dxM/jMYRkd/753dfazBdnheQMhI9u+62saY9E2oXdtk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.MaterialProperty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.MaterialProperty.html",
+          "hash": "oIQDTPgT4nH2AOiOO6wunNP6+xfAlEsQkAmDiezqsFk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.MaterialPropertyType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.MaterialPropertyType.html",
+          "hash": "qLZ9496thX8vHhPN8hKpn7KvV69kGfOfQ5tfGEoiR5w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.MaterialPropertyValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.MaterialPropertyValue.html",
+          "hash": "LR9VG5CYRU40oA73KGuTk9BZpNJwgmOjjcA2iqBrrFo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.MaterialType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.MaterialType.html",
+          "hash": "1X2GLvmBDltVD7vtwYT4RhcjsN2bXI8AJZmzKMVqrXo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.MeshData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.MeshData.html",
+          "hash": "5LguuUIqwxq9RNiaWVV1cvSNidouydF+RR5146xFIgc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.MeshDataUtil.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.MeshDataUtil.html",
+          "hash": "9Web3C53T2FohHdTemb3wXsCPRiiy8jv3Ye9WwZESmw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.MeshEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.MeshEditor.html",
+          "hash": "sseVCpRkrxOgbyuVg4gtDlLm1SotmN6IB+fPv3cOB9M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.MeshID.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.MeshID.html",
+          "hash": "laHdT9XqnqgsdLm+cmqW5J8n69qpOrXCgaIiJbrqRcY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.MetadataKeys.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.MetadataKeys.html",
+          "hash": "M/pr8IIuK9efuOalzcr7Ijv1nDczBHxVoa06SGNu1a0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.ObserverMultiplexer.Input.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.ObserverMultiplexer.Input.html",
+          "hash": "FDscJ7jd4LWtg6rGmumYew4oPnG93l82BMbcMx836pM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.ObserverMultiplexer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.ObserverMultiplexer.html",
+          "hash": "67SJ0/oJgYkZyUt0Kd8C786e8Zvzm1Vuqw039iVp54Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.AssetSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.AssetSchema.html",
+          "hash": "46GdOXHkUapM4HOBugkTXqaeQCizr+6/pV5Y6u5JdOo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.B3dmTableSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.B3dmTableSchema.html",
+          "hash": "uQo2GpXq7HTfhwPirsAHvs6I1EDdFwhyWftb6ADtsoU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.BoundingVolumeSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.BoundingVolumeSchema.html",
+          "hash": "XVR2PwgmSeMq2mXpQ9pr7QlV93Hc4AWLqJN2hAEX3gM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.ContentSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.ContentSchema.html",
+          "hash": "IkLBxaE9+colp7dtlJ9tuPVvpZ54A9/1EuCWSFaDreo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.ExtensionsSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.ExtensionsSchema.html",
+          "hash": "ID6CaSQNgKgT0/hl6Vs/MTscyiWhPS3QkfHR+yVEeNc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.IAssetSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.IAssetSchema.html",
+          "hash": "EPTeJJRLoBrY5PQ7D/XUULFSqe9Xi7LJkzySsNxA6cA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.IBoundingVolumeSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.IBoundingVolumeSchema.html",
+          "hash": "SsLOWWJ4FI8H8GZ+d3fzZ37d2t6dPt/frHyYqRcnORU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.IContentSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.IContentSchema.html",
+          "hash": "HdjbnbLJ0sR/+sAHG1n03Hhw6T3yE/pu/YFMjDzcZoE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.IExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.IExtension.html",
+          "hash": "GkgkGCXuyMElboCB2q+4D2lXyKONOrRZl3tFzyKi+0I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.IExtensionsSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.IExtensionsSchema.html",
+          "hash": "Qr7Kebb1ET6L2GAhBP2rv4kYhs7BE8OVLb44VL5yuBY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.IPropertiesSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.IPropertiesSchema.html",
+          "hash": "fUpc9kbjBRNIGt9D0uzwF0FHqQj6diNzY5WHiCptQ8g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.ITileSchema-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.ITileSchema-1.html",
+          "hash": "Ohb5E2mIhP4Dg05DyXEifIRnTZUNUE9JaBzbSFYIrL0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.ITileSchema-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.ITileSchema-3.html",
+          "hash": "Ov/PiQ5+LCDDy+enckj1gcU8uXSoTfDOI3nz72Qpgi4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.ITilesetSchema-7.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.ITilesetSchema-7.html",
+          "hash": "gll95h7HdAscrlRCHAlRoxaCOWWVPGNgWNBS6H5kXbo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.ITilesetSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.ITilesetSchema.html",
+          "hash": "WOdHmjLw9AlYZxfY1AaeX2UOhHpOUubFo+dc0q+0RWE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.Ogc3dTilesDataSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.Ogc3dTilesDataSource.html",
+          "hash": "fi4zYube8MvXxBXMy15lLAan0W2Kk2oPvPbCw/qWQu0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.Ogc3dTilesDataSourceObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.Ogc3dTilesDataSourceObject.html",
+          "hash": "7F0WKs3wangIP0WOl2bObIHdn/2MHAKwTInBqO1/Cd8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.OgcB3dmUriLoader-2.Reader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.OgcB3dmUriLoader-2.Reader.html",
+          "hash": "k9XnFT0VB1KcdQpOwSEewg+yFCpnCvXMEgwRV25jF8g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.OgcB3dmUriLoader-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.OgcB3dmUriLoader-2.html",
+          "hash": "92cD0l4MlvFD1TmPXNpZq2ksqtzO4dpGQuFHipTqWs4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.OgcTilesetContentLoader-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.OgcTilesetContentLoader-2.html",
+          "hash": "vM3TsYpj1zfEmnSZnQmPjU91+j4Br7fcZlHOppGnmF8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.PropertiesSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.PropertiesSchema.html",
+          "hash": "vxH6ASTn+0uSzZTwM0JnonT6oP7bmdb1q/lPMtBlaLU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.TileSchema-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.TileSchema-3.html",
+          "hash": "R59qe5WCCyyH16g9ynb0bHpYlwjYhT+2luYIenUe54g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.TileSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.TileSchema.html",
+          "hash": "6SM+Jai0oRT9LeLPjzuPX22H2yoFu9AewBgU9OUaAu0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.TilesetSchema-7.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.TilesetSchema-7.html",
+          "hash": "sKVVQN0Si9AFd8BgT3GALQUQjTv11J1xXI61tsV+qww="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.TilesetSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.TilesetSchema.html",
+          "hash": "Jr1TLEXMFiu3PGZwReIk4vA1sT/tcWYBiES54/+zHvc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Ogc3dTiles.html",
+          "hash": "YC0hd4RIGThPvIhLYN0LaYnDfXvpsO2WnIh+xkW4e/c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.OneToManyNode-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.OneToManyNode-1.html",
+          "hash": "lBNlat+GieJTysMgRhQ7VHrk6CZ2uzqf2fY8/U8lDVY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.RefinementMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.RefinementMode.html",
+          "hash": "qr6h1r2on1ux5cjd9kSHUXqcK+EwrhQ1P7Sv3fIy+d8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.RevertingCommandStack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.RevertingCommandStack.html",
+          "hash": "ieiFIJkdG0t36+leK7g5zYOp70Tl+vedVbu+4+76R5Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.SerializableMaterialType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.SerializableMaterialType.html",
+          "hash": "clVEVzJMQqhA/xEg5YoIDszstwZvk/jznXj2EwLMZKM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.SimpleMaterialFactory.DefaultMaterial.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.SimpleMaterialFactory.DefaultMaterial.html",
+          "hash": "Z6uwS2chlCbtleXISueoTlXyrLXWD2wz78iHAUl5mbQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.SimpleMaterialFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.SimpleMaterialFactory.html",
+          "hash": "ZpATEtS9rsOCNzduOUUDGtELgaseUYLl5Ig2Sg554sA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.SimpleMaterialFactoryObject.DefaultMaterialObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.SimpleMaterialFactoryObject.DefaultMaterialObject.html",
+          "hash": "to2vDzsxnNGOmY1cQ89KlPdO6D8EXCTkgaKNuxxOusU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.SimpleMaterialFactoryObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.SimpleMaterialFactoryObject.html",
+          "hash": "G42hqBWEb+AhlPZNZ37lReuEUKgH6wROkeWCSnqJNlU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.SystemProcessingEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.SystemProcessingEventArgs.html",
+          "hash": "YUZ+ayZdrJ3ajySgcnK6lpkKUfgEclg8gJNum6kDi4E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.TextureData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.TextureData.html",
+          "hash": "dR9OB061G7RcV5UCURu6VeywW+rnoGNDK2lo1gWandE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.TextureID.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.TextureID.html",
+          "hash": "WNKqFgFMeoKXDJkCp25UcB4HLOcNlcDFQPJgcKXYhC4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.ConfigSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.ConfigSchema.html",
+          "hash": "xeieYFOVsd7wIAg3Kc9LxIQzoq5RPAveLX6MwmHiQDs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.ContentSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.ContentSchema.html",
+          "hash": "TWDDimj2RUo85SxyCgwI6ih+vb2yrXDtJSST8zE7XWI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.ExtentSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.ExtentSchema.html",
+          "hash": "8mKe8VqpOjT2fkcAIiiR3UeJrUVPb4GRwgYXsGsls60="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.LimitsSchema.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.LimitsSchema.html",
+          "hash": "SKqcYNGhb7RCFHkvKcJPJdzrb7KJ0x7LnsbfqHR30A8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.Tile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.Tile.html",
+          "hash": "PfrFG2uefWWwN+aKTbw8/hTHVjedwK3Chx4HYLJbVhI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainContentLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainContentLoader.html",
+          "hash": "dFNz3UIyJKB7m1l3eZx+hB9oaiPB2yroq76MWeJpDhs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainDataSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainDataSource.html",
+          "hash": "jW1W07HQOCqsgsNB6+CNDCVZshrDJliL5s6A/AZkJc0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainDataSourceObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainDataSourceObject.html",
+          "hash": "g7j3v3wg8tRUO+MhOZa0/qOHEOHY5qzFJvs0aaSMSoU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainStreamer.TerrainTile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainStreamer.TerrainTile.html",
+          "hash": "ouBuPrHOCI2IwiLui7ID/QlUhosUmIh7Z/Gk4115SPQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainStreamer.TileType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainStreamer.TileType.html",
+          "hash": "kSti6Qn2qPuARLoFwkBsnoLrD38jCbLm/DJSEqZGoyA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainStreamer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainStreamer.html",
+          "hash": "o+rgUgEkXek9a1EypP4WBlmUMHIkXCLQlZ2R36JwbDo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainUriLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.TmsTerrainUriLoader.html",
+          "hash": "bIkRG+kOtJQxG/j24QaOKBoLujosiGSX4nPx7O9s+6Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.UriCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.UriCollection.html",
+          "hash": "Lc6Y9jIk6NTQue8kMVmPQK0JpkVWbpLSi6yXNKKby80="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.TmsTerrain.html",
+          "hash": "8rQFJi5D4cn0OA5CzDYqrnX/XVdj9b93UTnYu9kFeks="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.TriangleCollectionIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.TriangleCollectionIndex.html",
+          "hash": "6UQgWQXjR2WlNJYl6lJRdpfFdbM+iAeg+DcKbYUoEbs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGBehaviourPresenter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGBehaviourPresenter.html",
+          "hash": "XB5krqMnRrAvcZfZyTvN9vXzO37+C4FTcx0bPm9P8Mw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGCameraBehaviour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGCameraBehaviour.html",
+          "hash": "3dY+S+x7sTvCYa2M2WTeRqS5WLdxxSEbLGJNYRP/jF8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGCommandBuffer.IListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGCommandBuffer.IListener.html",
+          "hash": "NM+voXCZ7n5tqUQa5ApbKz0HpTmurkc4iDI2SlPKUNE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGCommandBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGCommandBuffer.html",
+          "hash": "Nyg2fVbnkdsik11bCpsOugJMDr3wTwBqjLBUU6oxtp0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGCommandBufferProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGCommandBufferProcessor.html",
+          "hash": "6YqmUGZ2Fyafo77A4YvKxicB3qhD2RvUsyX2RN6ubmI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGCommonTerrainMaterial.Factory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGCommonTerrainMaterial.Factory.html",
+          "hash": "z3AW4hNwL1jvuSHHopnx7YDj66DEyIXl5rz44970AEM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGCommonTerrainMaterial.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGCommonTerrainMaterial.html",
+          "hash": "leKkSyRe42R15QTWkBIOpPw3GrbCPu6lB25OUJSv7LY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGDataSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGDataSource.html",
+          "hash": "pTNKncVHbeqUVeegcyCZdbrRkycV/LdDa0dNKkBlow8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGDataSourceDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGDataSourceDecoder.html",
+          "hash": "+dwAS/WMpOoC8U8N31O+ih0dCB6MzlWT9jIVDlBNz4w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGDataSourceID.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGDataSourceID.html",
+          "hash": "DAud1xXNSvTGQtAp7CVivWlfz2MH/O7lEV7wsiAljHA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGDataSourceObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGDataSourceObject.html",
+          "hash": "CpeiluKNrCuXjXLWdExrspVd1ry91s9ChK0Gv1Gl6UM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGDeferredMaterial.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGDeferredMaterial.html",
+          "hash": "qWC241xYNjcAgDWnW8xDWSq25GnGJSklpfh0pbW7Kyw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGExtentModifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGExtentModifier.html",
+          "hash": "kBzO/4YpWX6oO6natamw8xgjIzCNvj6QTNw126PC20I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGExtentModifierBehaviour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGExtentModifierBehaviour.html",
+          "hash": "EuYfe3usuAltOmi/9xrvTtFIHJV1VJlCCcSS3cDyQTs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGInstantiator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGInstantiator.html",
+          "hash": "Xr12YkD77HRAUt0TZvD1cPC6XWqanmn3BGOHKdaQYy0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGLighting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGLighting.html",
+          "hash": "MKmMWHu4c22/J5l6Mh1rrgawlPys0guq62K8eLvZZU8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGMaterial.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGMaterial.html",
+          "hash": "iuyw+c9nXsMu5sCgm2NwDQcGgsmEyLdCcnwsUj+aAbM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGMaterialFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGMaterialFactory.html",
+          "hash": "bRmPKBf61wHFNDy6N/Pt5OMO5cW1PrhhDZHpG3JSboc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGMaterialFactoryObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGMaterialFactoryObject.html",
+          "hash": "f/3eF6mh0uz2EV6NzT3xPF1WJM5bBmI2hcNFWtb8Q9Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGMetadata.html",
+          "hash": "XQ2As1/gb/9LiY+PJukP/JFxpnGEFoyly1a2e3OMgec="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGMetadataBehaviour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGMetadataBehaviour.html",
+          "hash": "iOXKbPiZiOWkG5EfB6DtbUysZ7D5ygwGp5L4v05l1Mo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGModifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGModifier.html",
+          "hash": "p0efpXKLUyhkB8t5MQXAvQE7PYUDariUiY/Xb8RrM9M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGModifierBehaviour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGModifierBehaviour.html",
+          "hash": "aVMIgHnahDfXk4U9yxElPH/Zy/EiIW9FEb9rcvuqmvk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGObjectPool-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGObjectPool-1.html",
+          "hash": "nHo2LjU+N1qsP8Fm/BtqlByWKmY9wIk4xB9nstzobHU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGOmniObserverBehaviour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGOmniObserverBehaviour.html",
+          "hash": "qs8S6vp0IVovM0yApxVHxv/1jpknKOTh2ZAGYlOa0yI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGPresenter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGPresenter.html",
+          "hash": "ZvK3MPxHa1bCZDsvvEz1l2OYrfGkXJ3w/WdB53itcEk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGProcessingNode.DataAvailability.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGProcessingNode.DataAvailability.html",
+          "hash": "/wrXpUYg9Kta4ewSTUseakfsv8jf9wR8riYkYm40yy0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGProcessingNode.NodeInput-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGProcessingNode.NodeInput-1.html",
+          "hash": "rsDKjWKbEGYl4s5zhlHNHZcX1ikW3VxUqDnoYnr22iQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGProcessingNode.NodeInput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGProcessingNode.NodeInput.html",
+          "hash": "dDaziAok6MfnH/VM88laNJHcTyvpHvVp6cLaURoTnYY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGProcessingNode.NodeOutput-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGProcessingNode.NodeOutput-1.html",
+          "hash": "GQzFWEL3dhHvd/GzfuqIFLpJQosENmWDHbWv95ei2P0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGProcessingNode.NodeOutput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGProcessingNode.NodeOutput.html",
+          "hash": "6O8GmzKBoq7SHJ2OUReKmPMAI1RwDdhKV0WO82OHl/k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGProcessingNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGProcessingNode.html",
+          "hash": "7WV6Sn9f9UUAkcrb/K3RYxO3EMXN773rgUZ3WQgMo7M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGSceneObserver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGSceneObserver.html",
+          "hash": "fkzEmBa7kUXXf0gK+jyrKD5lCeWcBgIxgpVLIqkOtrQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGSceneObserverBehaviour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGSceneObserverBehaviour.html",
+          "hash": "exAFHoxiOxJIbNEFK6w2nV78UlMZXXt8uvfQKRT4UAo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGShaderPropertiesObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGShaderPropertiesObject.html",
+          "hash": "zMC4zlp0gxVhi6Gm8Yo4IKmFBI6F2HLJ8wgI2BZu5Z4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGShaderProperty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGShaderProperty.html",
+          "hash": "XO+NMc3VE3M6pEyM8YD+HIQbbi/TiCH1lYnbI+WV3FE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGSimpleMaterial.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGSimpleMaterial.html",
+          "hash": "8TMdRBbdhB/GfmKDTt7qbxaaC7k55J2CiQIDGq5qxFE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGSimpleSceneObserver.IImplementation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGSimpleSceneObserver.IImplementation.html",
+          "hash": "VcsrGQBznrLPkza6tDbEqQfByY8/ywK9D/9sLN0S0g4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGSimpleSceneObserver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGSimpleSceneObserver.html",
+          "hash": "eNhwYYviFbYm2w706BN17odZdNymEINOsqp3oY2d3Fg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGSkyboxBehaviour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGSkyboxBehaviour.html",
+          "hash": "CIBDwpuhRqWu1DDrOVhkuNg6WzXNczNw2pSN4bT9BN0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGSystem.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGSystem.Configuration.html",
+          "hash": "T8c9Dd+xgTAeucd7cpgywhtZvfIiuMtFXYVIp23KAEE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGSystem.StreamingModes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGSystem.StreamingModes.html",
+          "hash": "Z21Llb31TFxxVTPHHuyT7PjJNXEOc/CJbKtwGyGQzcc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGSystem.html",
+          "hash": "xFiclCFwmxq6Zf8x/N/8S8N4esWbcPkkdlBphpvghL4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGSystemBehaviour.PresenterConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGSystemBehaviour.PresenterConfiguration.html",
+          "hash": "BgYQJDuTsb46XrEL0koi36zfPaDB3J8uKRn45b5mWAM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGSystemBehaviour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGSystemBehaviour.html",
+          "hash": "1WUBBz2bouhq0VBgG8MXIHdpdM+MmNa8VrkCDmA6rtI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UGTextureSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UGTextureSettings.html",
+          "hash": "kjNqv5aZ3JS7qHyuRYSZON9RbNooFDSatcm0/dpEui0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UUIDGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UUIDGenerator.html",
+          "hash": "wg3cFzX8tjrWPL1w1WDFuMGxnrzBS9XEoksNfKGVzYQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.BoundingVolumeHierarchy-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.BoundingVolumeHierarchy-1.html",
+          "hash": "noA80rerTMYtAUfCTZjMI8wBFXTkvRPMsn2ixGoGTrU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.ContentType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.ContentType.html",
+          "hash": "OnQuNPmO+lq9UAhuqQ2Eey1qV1eENdv0bi6hVDhsfJE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.CurrentState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.CurrentState.html",
+          "hash": "txHXqyeolIVeD7FGh/y9gmFx37PmHVYYX60gutx44q0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.FileType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.FileType.html",
+          "hash": "9GrZHv9Z9+yHTE0VQZs5OyhwoanSgz5xImQqcKWaX4o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.GltfContentLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.GltfContentLoader.html",
+          "hash": "uuG3ne7hGU1Qv878j2JGGJVZmDACFj6qNbnE5e4GCYA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.GltfDataSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.GltfDataSource.html",
+          "hash": "yb3PucDRKSQBN9NODILSCHt5eisWCyMyxtXIHh/5JQ0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.GltfDataSourceObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.GltfDataSourceObject.html",
+          "hash": "ZlNOyziidKShECRVlF/VCJfpyFtwz0qifPPUsQszss8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.GltfUriLoader.AlwaysDeferAgent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.GltfUriLoader.AlwaysDeferAgent.html",
+          "hash": "g2ad6PJNMvL7Df9MUEaxR0reNFSmD5rlKVbwK38y2mk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.GltfUriLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.GltfUriLoader.html",
+          "hash": "ZtfWhT2kZktdfQ5jx4okdrWvUgs/CEtZUwO2lRZRopI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.HierarchyContentLoader-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.HierarchyContentLoader-2.html",
+          "hash": "fXwaFmLowRWMVgNiw6L+CEvsgTmZu+NxfyhnfCQ9lBI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.IEditCurrentState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.IEditCurrentState.html",
+          "hash": "CyR8lub3mVoVBjim8qgHDC8QQHQes6QYVoo+UfJFyPo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.IEditHierarchyNodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.IEditHierarchyNodes.html",
+          "hash": "AkhyLEYCjo5UXiRb8pHaW3VdAkraRu6MrRaIUB28PoM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.IExpandingNodeContent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.IExpandingNodeContent.html",
+          "hash": "et+J/TtaER0vexPt8AGWYZMSOBiRwsvetyZGZ2FFDZ4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.IExploreHierarchyNodes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.IExploreHierarchyNodes.html",
+          "hash": "WZb3lYlW1WmrrQI5iDUWyezry0KHL3gVV+kkLNi8O1U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.IGetNodeData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.IGetNodeData.html",
+          "hash": "nHQE6HY35Q4iJ9gacMA3mr9OiBfDULyjjRTq3oeaZ/o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.ILeaf.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.ILeaf.html",
+          "hash": "fSOOrwlT6WUWYmpVxFyZ5Ap8vUgCPb18caRTc6UqC2A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.ILoaderActions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.ILoaderActions.html",
+          "hash": "9knPBNCiRhQBMqdglUBrAE6V7dkSTLX/XepN4whI/ps="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.INodeContentLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.INodeContentLoader.html",
+          "hash": "R2Sja4gQGf4LL2p2Q0kXB8q3xfcvCh8vq6imtlxgxnM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.INodeContentManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.INodeContentManager.html",
+          "hash": "JZuSnTV/RGxG0nb384VUkQKg84FmcvjUqLFjEzAQicQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.IUriCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.IUriCollection.html",
+          "hash": "YjIdKObFs5S5DqmDNx9MZ1kJhBstQp8QUj0A5iA4iK8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.NodeContent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.NodeContent.html",
+          "hash": "1uSft09K8QOPfojp4UpNP/x1lFCm6ufdRf1G43NX7WE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.NodeContentManager.State.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.NodeContentManager.State.html",
+          "hash": "BMUyyoFrrMN0InWLokTtsMWXRovtCk+29gqaLx4NBlI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.NodeContentManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.NodeContentManager.html",
+          "hash": "IhUUZicpv4ryGvpVaUqpWV2jDQvMOheJSTOCzMvxEGc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.NodeData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.NodeData.html",
+          "hash": "czW6hjL4A14moVS6Kl05xWtYOjQ7D0e31zfKl/5lptE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.NodeId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.NodeId.html",
+          "hash": "2jJ5PhOkhQVaJRcg3t9NGXoN84TbeUlIjugFwvP8qDo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.PriorityQueue-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.PriorityQueue-1.html",
+          "hash": "I070hO6GE7R93joHbO0mSVooePSHFmiibGOBt2PchXA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.SingleUri.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.SingleUri.html",
+          "hash": "85PSgwV1XRlUQA36W2+1zhA8xiCHQCB+tvYGjOJYDu0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.TargetState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.TargetState.html",
+          "hash": "mTR7bZJd5gUsx5b7nk6g6DJTcZvRywQbZo4ak8pjGVA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.UGGltFastInstantiator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.UGGltFastInstantiator.html",
+          "hash": "UgOG8NY6k7JMJUh6v9oZIeCIvFeGDQv3Du6AYdh+vCo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.UGUniversalDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.UGUniversalDecoder.html",
+          "hash": "PCnLiB4iWKgg90jShWmj7FYVY4jJqbdrIOamNeIzdIk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.UniqueContentTypeGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.UniqueContentTypeGenerator.html",
+          "hash": "HAl0uXsEJQ+kEOeMP90uALv72aGbGoyFTK1RNjhU5Kw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.UniversalDecoderDataSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.UniversalDecoderDataSource.html",
+          "hash": "dXFTzI9wNfvywjADwb69USxxKZnV+WTKzdh/B+l5aiY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.UriLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.UriLoader.html",
+          "hash": "rHjjyeTbgmIWr6uOGBTUafyaYE57IH8XidBkA1y9Pg4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.UriNodeContent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.UriNodeContent.html",
+          "hash": "DL9N8zMSBxgyN/QCvyketKaS8A/o4ufmQtTKw6a2xLs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.UriNodeContentLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.UriNodeContentLoader.html",
+          "hash": "ynKIYUvqV4Bq/xG9XhM2OLala+t/FAbXov7RkQ3MsNA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.UniversalDecoder.html",
+          "hash": "ldgCEG/R+mjZrgQ4BIRuXyMG2Or9PhsDRffknMTnhnU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.VertexInterpolator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.VertexInterpolator.html",
+          "hash": "rsZnbvFw0BHqJBWdbef25C2L5cVRe1vqv7L/2EtoabQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.Wgs84.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.Wgs84.html",
+          "hash": "M13ifAO2901GPztMxr7HruLUsYCzEXp63gFGA73W5Q0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Unity.Geospatial.Streaming.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unity.Geospatial.Streaming.html",
+          "hash": "pUIW1r6hr5fxXWnCdKC/ffNQULTMyMwHO53iC/VkUro="
         }
       },
       "is_incremental": false,
@@ -717,7 +2801,19 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "77ww6FnN11P0kJG2IELkHub+8mF7+mCepuj2l5zXcdQ="
+          "hash": "8To8/zfcTIWSlcd1PBjHDfsxSGrS29qodeIyZBGvKIM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "yWgA8PqTw8ntl5qGKn8pvxiR2HWLb6Rj7x35evod2+Q="
         }
       },
       "is_incremental": false,
@@ -729,7 +2825,7 @@
       "output": {
         ".html": {
           "relative_path": "changelog/CHANGELOG.html",
-          "hash": "DJJk85S/tmfHaiQvkhdiZ+lpDDsoh7cyzvOQ89Kz3g8="
+          "hash": "eEKZWr2gU6q93UZ8Vzybicv2Vr/oMOm3c5pC8Qqb+ZA="
         }
       },
       "is_incremental": false,
@@ -753,7 +2849,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "0GtzvTJ0cXhw+WlY9b51ywohdFpUXzmkk4ZC+sZp33w="
+          "hash": "SZCNz4JDprkBsRJ1GZXQiSFjoTyD3P52oOHKkxTSEsA="
         }
       },
       "is_incremental": false,
@@ -765,7 +2861,7 @@
       "output": {
         ".html": {
           "relative_path": "license/LICENSE.html",
-          "hash": "skWDJwxEMdfuVAueIcwRW3rhkKkDIvRo6nACFWSeo4I="
+          "hash": "/WIvElltT30u3vm+nzrAKjCnzRF/uaE6oXdGD7gqM7E="
         }
       },
       "is_incremental": false,
@@ -777,7 +2873,7 @@
       "output": {
         ".html": {
           "relative_path": "license/index.html",
-          "hash": "BtB4LelZ0TxniZCQmgXDDgn3JSRhibEsEx3GI6aQQ5I="
+          "hash": "2xQSr/ERS/5icX9NYKnRIeNqXy5p+kmfZNuEHECVAOs="
         }
       },
       "is_incremental": false,
@@ -812,7 +2908,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "BqbM7eKjWKqFwqT9wmPyUjyszlJ6MGJj3RhASETYmgk="
+          "hash": "tH9aI7TCqgezsDogM7bZQutX6s9gGwS7k34n2cYZBX8="
         }
       },
       "is_incremental": false,
@@ -833,7 +2929,13 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 18,
+          "total_file_count": 14,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 191,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

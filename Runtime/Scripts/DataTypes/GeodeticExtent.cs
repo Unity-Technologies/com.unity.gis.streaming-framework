@@ -5,6 +5,9 @@ using Unity.Mathematics;
 
 namespace Unity.Geospatial.Streaming
 {
+    /// <summary>
+    /// Define a 2D shape with a list of geodetic coordinates (latitude / longitude).
+    /// </summary>
     public class GeodeticExtent
     {
         /// <summary>
@@ -14,8 +17,8 @@ namespace Unity.Geospatial.Streaming
         public bool IsValid { get; private set; }
 
         /// <summary>
-        /// Returns the list of points that the extent is comprised
-        /// of. These are guaranteed to be clockwise.
+        /// Returns the list of points that the extent is comprised of.
+        /// These are guaranteed to be clockwise.
         /// </summary>
         private List<double2> m_Points;
         
@@ -44,11 +47,25 @@ namespace Unity.Geospatial.Streaming
         /// </summary>
         public double2 Center { get; private set; }
 
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
+        /// <param name="extent">List of points that the extent is comprised of.</param>
         public GeodeticExtent(List<double2> extent)
         {
             Points = extent;
         }
 
+        /// <summary>
+        /// Validate the given <paramref name="points"/> are valid for creating an extent.
+        /// - It should be closed.
+        /// - Have at least 3 points.
+        /// - Convex
+        /// - No overlapping points.
+        /// - The surface is big enough.
+        /// </summary>
+        /// <param name="points"></param>
+        /// <returns></returns>
         private static bool ValidateExtent(IReadOnlyList<double2> points)
         {
             int count = points.Count;
@@ -84,6 +101,11 @@ namespace Unity.Geospatial.Streaming
             return IsConvex(xzyenuPoints);
         }
 
+        /// <summary>
+        /// Calculate the average of the given points.
+        /// </summary>
+        /// <param name="points">Calculate the X and Y average of those points.</param>
+        /// <returns>The average result.</returns>
         private static double2 GetCenter(IReadOnlyCollection<double2> points)
         {
             if (points == null || points.Count == 0)
@@ -101,6 +123,11 @@ namespace Unity.Geospatial.Streaming
             return 0.5 * (min + max);
         }
 
+        /// <summary>
+        /// Get the surface area of the given shape.
+        /// </summary>
+        /// <param name="points">Points of the surface to calculate its area.</param>
+        /// <returns>The area result. Will be a positive value if the points are clockwise ordered.</returns>
         private static double GetSignedArea(IReadOnlyList<double2> points)
         {
             double sum = 0;
@@ -113,11 +140,27 @@ namespace Unity.Geospatial.Streaming
             return sum;
         }
 
+        /// <summary>
+        /// Get if the given <paramref name="points"/> are positioned in clockwise order.
+        /// </summary>
+        /// <param name="points">Calculate the order of these coordinates.</param>
+        /// <returns>
+        /// <see langword="true"/> if the points are clockwise;
+        /// <see langword="false"/> they are anticlockwise.
+        /// </returns>
         private static bool IsClockwise(IReadOnlyList<double2> points)
         {
             return GetSignedArea(points) > 0;
         }
 
+        /// <summary>
+        /// Get if all the edges are pointing outside.
+        /// </summary>
+        /// <param name="points">Coordinates to evaluate.</param>
+        /// <returns>
+        /// <see langword="true"/> all the edges are pointing outside the shape;
+        /// <see langword="false"/> if at least one edge is pointing inside.
+        /// </returns>
         private static bool IsConvex(IReadOnlyList<double3> points)
         {
             bool hullOrientation = false;

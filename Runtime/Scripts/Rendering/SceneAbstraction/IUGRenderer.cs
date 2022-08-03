@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 using UnityEngine;
@@ -5,7 +6,12 @@ using Unity.Mathematics;
 
 namespace Unity.Geospatial.Streaming
 {
-    public interface IUGRenderer : System.IDisposable
+    /// <summary>
+    /// Interface responsible for making <see cref="InstanceID"/> rendered by displaying a
+    /// <see href="https://docs.unity3d.com/ScriptReference/Mesh.html">Mesh</see> with its corresponding
+    /// <see href="https://docs.unity3d.com/ScriptReference/Material.html">Material</see>. 
+    /// </summary>
+    public interface IUGRenderer : IDisposable
     {
         /// <summary>
         /// Sets whether the renderer is enabled or not. This should translate

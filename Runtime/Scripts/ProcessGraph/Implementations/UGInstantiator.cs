@@ -5,6 +5,9 @@ namespace Unity.Geospatial.Streaming
     //
     //  TODO - Change input to mutable instance
     //
+    /// <summary>
+    /// Allow to chain <see cref="InstanceCommand"/> results.
+    /// </summary>
     public class UGInstantiator : UGProcessingNode
     {
         private sealed class NodeInputImpl : NodeInput<InstanceCommand>
@@ -16,17 +19,23 @@ namespace Unity.Geospatial.Streaming
 
             private readonly UGInstantiator m_Instantiator;
 
+            /// <inheritdoc cref="NodeInput{T}.IsReadyForData"/> 
             public override bool IsReadyForData
             {
                 get { return m_Instantiator.IsReadyForData; }
             }
 
+            /// <inheritdoc cref="NodeInput{T}.ProcessData"/> 
             public override void ProcessData(ref InstanceCommand data)
             {
                 m_Instantiator.ProcessData(ref data);
             }
         }
 
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
+        /// <param name="outputSize">Amount of <see cref="UGProcessingNode.NodeOutput{T}"/> to create for this instance.</param>
         public UGInstantiator(int outputSize)
         {
 
@@ -39,14 +48,26 @@ namespace Unity.Geospatial.Streaming
             OutputConnections = m_Outputs;
         }
 
+        /// <summary>
+        /// Execute this <see cref="InstanceCommand"/> before executing the output commands.
+        /// </summary>
         public NodeInput<InstanceCommand> Input { get; private set; }
+        
         private readonly NodeOutput<InstanceCommand>[] m_Outputs;
 
+        /// <summary>
+        /// Amount of available <see cref="UGProcessingNode.NodeOutput{T}"/>.
+        /// </summary>
         public int OutputCount
         {
             get { return m_Outputs.Length; }
         }
 
+        /// <summary>
+        /// Get the <see cref="UGProcessingNode.NodeOutput{T}"/> for the given <paramref name="index"/>.
+        /// </summary>
+        /// <param name="index">Index of the instance to retrieve.</param>
+        /// <returns>The node output instance at the given <paramref name="index"/>.</returns>
         public NodeOutput<InstanceCommand> GetOutput(int index)
         {
             return m_Outputs[index];
@@ -72,16 +93,19 @@ namespace Unity.Geospatial.Streaming
                 output.ProcessData(ref data);
         }
 
+        /// <inheritdoc cref="UGProcessingNode.ScheduleMainThread"/> 
         public override bool ScheduleMainThread
         {
             get { return false; }
         }
 
+        /// <inheritdoc cref="UGProcessingNode.IsProcessing"/> 
         protected override bool IsProcessing
         {
             get { return false; }
         }
 
+        /// <inheritdoc cref="UGProcessingNode.Dispose"/> 
         public override void Dispose()
         {
             //
@@ -89,6 +113,7 @@ namespace Unity.Geospatial.Streaming
             //
         }
 
+        /// <inheritdoc cref="UGProcessingNode.MainThreadUpKeep"/> 
         public override void MainThreadUpKeep()
         {
             //
@@ -96,6 +121,7 @@ namespace Unity.Geospatial.Streaming
             //
         }
 
+        /// <inheritdoc cref="UGProcessingNode.MainThreadProcess"/> 
         public override void MainThreadProcess()
         {
             throw new InvalidOperationException("This method should never be called");

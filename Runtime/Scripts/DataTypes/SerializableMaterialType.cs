@@ -36,6 +36,7 @@ namespace Unity.Geospatial.Streaming
         /// Cast to <see cref="MaterialType"/>
         /// </summary>
         /// <param name="serializableMaterialType">The <see cref="SerializableMaterialType"/> to be casted from</param>
+        /// <returns>The casted result.</returns>
         public static explicit operator MaterialType(SerializableMaterialType serializableMaterialType)
         {
             return new MaterialType(serializableMaterialType.Lighting, serializableMaterialType.AlphaMode);
@@ -45,6 +46,7 @@ namespace Unity.Geospatial.Streaming
         /// Cast from <see cref="MaterialType"/>
         /// </summary>
         /// <param name="type">The <see cref="MaterialType"/> to be casted from</param>
+        /// <returns>The casted result.</returns>
         public static explicit operator SerializableMaterialType(MaterialType type)
         {
             return new SerializableMaterialType(type);

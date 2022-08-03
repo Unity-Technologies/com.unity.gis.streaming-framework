@@ -7,8 +7,14 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
     /// </summary>
     public interface IExpandingNodeContent
     {
+        /// <summary>
+        /// Item available to be loaded by a <see cref="UriLoader"/>.
+        /// </summary>
         ILeaf Leaf { get; }
 
+        /// <summary>
+        /// The parent refine value in case the refine value on this item is not set.
+        /// </summary>
         RefinementMode InheritedRefineMode { get; }
     }
 }

@@ -1,6 +1,9 @@
 
 namespace Unity.Geospatial.Streaming.Ogc3dTiles
 {
+    /// <summary>
+    /// Information for an ogc3d tiles dataset.
+    /// </summary>
     public class AssetSchema :
         IAssetSchema
     {

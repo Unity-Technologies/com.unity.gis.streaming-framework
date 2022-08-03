@@ -7,9 +7,22 @@ using Object = UnityEngine.Object;
 
 namespace Unity.Geospatial.Streaming
 {
-
+    /// <summary>
+    /// Main class responsible to convert the streamed geometry into actual
+    /// <see href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObjects</see>. Most
+    /// configurations will only require a single presenter but applications with multiple cameras or applications
+    /// where the source data is not normalized in space (think multiple planets or non-geolocated dataset) may
+    /// require multiple presenters.
+    /// </summary>
     public class UGBehaviourPresenter : UGPresenter
     {
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
+        /// <param name="rootTransform">Create the instance as children of this node.</param>
+        /// <param name="unityLayer">Load the instances only if this Unity
+        /// <see href="https://docs.unity3d.com/ScriptReference/GameObject-layer.html">layer</see> is active.</param>
+        /// <param name="dataSources">Create instances for these datasets.</param>
         public UGBehaviourPresenter(Transform rootTransform, int unityLayer, List<UGDataSourceID> dataSources)
         {
             m_UnityLayer = unityLayer;
@@ -109,6 +122,7 @@ namespace Unity.Geospatial.Streaming
         /// </returns>
         public event Action<InstanceID, GameObject, bool> OnUpdateInstanceVisibility;
 
+        /// <inheritdoc cref="UGProcessingNode.Dispose"/> 
         public override void Dispose()
         {
             foreach(var kvp in m_RenderObjects)
@@ -123,22 +137,22 @@ namespace Unity.Geospatial.Streaming
             DestroyGameObject(m_AvailableGameObjects.gameObject);
             DestroyGameObject(m_InUseGameObjects.gameObject);
         }
-
-
-        protected override void CmdAllocate(InstanceID id, InstanceData instance)
+        
+        /// <inheritdoc cref="UGPresenter.CmdAllocate(InstanceID, InstanceData)"/> 
+        protected override void CmdAllocate(InstanceID instanceId, InstanceData instanceData)
         {
-            if (!m_ApplicableDataSources.Contains(instance.Source))
+            if (!m_ApplicableDataSources.Contains(instanceData.Source))
                 return;
 
-            GOBaseRenderer renderer = CreateRenderer(instance);
+            GOBaseRenderer renderer = CreateRenderer(instanceData);
 
             renderer.Parent = m_InUseGameObjects;
             renderer.EnableHighPrecision = true;
-            renderer.Transform = instance.Transform;
+            renderer.Transform = instanceData.Transform;
 
-            m_RenderObjects.Add(id, renderer);
+            m_RenderObjects.Add(instanceId, renderer);
 
-            OnAllocateInstance?.Invoke(id, renderer.GameObject);
+            OnAllocateInstance?.Invoke(instanceId, renderer.GameObject);
         }
 
         //
@@ -190,16 +204,17 @@ namespace Unity.Geospatial.Streaming
             return materials.Length == 1 && materials[0].IsComposite;
         }
 
-        protected override void CmdDispose(InstanceID id)
+        /// <inheritdoc cref="UGPresenter.CmdDispose(InstanceID)"/> 
+        protected override void CmdDispose(InstanceID instanceId)
         {
-            if (m_RenderObjects.TryGetValue(id, out GOBaseRenderer renderer))
+            if (m_RenderObjects.TryGetValue(instanceId, out GOBaseRenderer renderer))
             {
                 if (renderer.Enabled)
                     Debug.LogWarning("Presenter is disposing of visible render instance, this should be avoided");
 
-                m_RenderObjects.Remove(id);
+                m_RenderObjects.Remove(instanceId);
 
-                OnDisposeInstance?.Invoke(id, renderer.GameObject);
+                OnDisposeInstance?.Invoke(instanceId, renderer.GameObject);
                 ReturnChildrenThenSelfToPool(renderer);
             }
         }
@@ -247,13 +262,14 @@ namespace Unity.Geospatial.Streaming
                 queue.Enqueue((GOBaseRenderer)child);
         }
 
-        protected override void CmdUpdateVisibility(InstanceID id, bool isVisible)
+        /// <inheritdoc cref="UGPresenter.CmdUpdateVisibility(InstanceID, bool)"/> 
+        protected override void CmdUpdateVisibility(InstanceID instanceId, bool visibility)
         {
-            if (m_RenderObjects.TryGetValue(id, out GOBaseRenderer renderer) 
-                && renderer.Enabled != isVisible)
+            if (m_RenderObjects.TryGetValue(instanceId, out GOBaseRenderer renderer) 
+                && renderer.Enabled != visibility)
             {
-                renderer.Enabled = isVisible;
-                OnUpdateInstanceVisibility?.Invoke(id, renderer.GameObject, isVisible);
+                renderer.Enabled = visibility;
+                OnUpdateInstanceVisibility?.Invoke(instanceId, renderer.GameObject, visibility);
             }
         }
 
@@ -307,6 +323,7 @@ namespace Unity.Geospatial.Streaming
                 Object.DestroyImmediate(gameObject);
         }
 
+        /// <inheritdoc cref="UGPresenter.MainThreadUpKeep"/> 
         public override void MainThreadUpKeep()
         {
             while (m_WaitForHPTransformRemoval.Count > 0)

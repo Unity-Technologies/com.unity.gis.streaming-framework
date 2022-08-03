@@ -4,6 +4,9 @@ using Unity.Mathematics;
 
 namespace Unity.Geospatial.Streaming.Ogc3dTiles
 {
+    /// <summary>
+    /// Interface to get the bounding volume an ILeaf.
+    /// </summary>
     public interface IBoundingVolumeSchema
     {
         /// <summary>

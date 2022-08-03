@@ -2,6 +2,9 @@ using Unity.Geospatial.HighPrecision;
 
 namespace Unity.Geospatial.Streaming.UniversalDecoder
 {
+    /// <summary>
+    /// Interface to get information for a given <see cref="NodeId"/>.
+    /// </summary>
     public interface IGetNodeData : IExploreHierarchyNodes
     {
         /// <summary>

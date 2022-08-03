@@ -2,12 +2,15 @@ using System.Collections.Generic;
 
 namespace Unity.Geospatial.Streaming.UniversalDecoder
 {
+    /// <summary>
+    /// Interface to navigate through the hierarchy of the nodes like getting the parent or the children of a <see cref="NodeId"/>.
+    /// </summary>
     public interface IExploreHierarchyNodes
     {
         /// <summary>
         /// Get the root node of the hierarchy
         /// </summary>
-        /// <returns>The <see cref="NodeId"/> which corresponds to the root node of the hierarchy</returns>
+        /// <returns>The <see cref="NodeId"/> which corresponds to the root node of the hierarchy.</returns>
         NodeId RootNode { get; }
 
         /// <summary>

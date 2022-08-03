@@ -7,6 +7,9 @@ using Unity.Mathematics;
 
 namespace Unity.Geospatial.Streaming.Ogc3dTiles
 {
+    /// <summary>
+    /// Bounding volume of an ILeaf part of an ogc3d tiles dataset.
+    /// </summary>
     public class BoundingVolumeSchema :
         IBoundingVolumeSchema
     {

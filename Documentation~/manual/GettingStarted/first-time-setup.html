@@ -4,7 +4,7 @@
   
   <head>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script','dataLayer','GTM-5V25JL6');</script>
-    <script type="text/javascript">thisPackageMetaData = { name: "com.unity.gis.streaming-framework", version: "1.0.0-preview.2", displayTitle:"Unity Geospatial Streaming 1.0.0-preview.2", lang: "en" };</script>
+    <script type="text/javascript">thisPackageMetaData = { name: "com.unity.gis.streaming-framework", version: "1.0.0-preview.3", displayTitle:"Unity Geospatial Streaming 1.0.0-preview.3", lang: "en" };</script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   
@@ -13,9 +13,9 @@
     <meta http-equiv="Expires" content="0">
     
   
-    <title>First Time Setup | Unity Geospatial Streaming | 1.0.0-preview.2 </title>
+    <title>First Time Setup | Unity Geospatial Streaming | 1.0.0-preview.3 </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="First Time Setup | Unity Geospatial Streaming | 1.0.0-preview.2 ">
+    <meta name="title" content="First Time Setup | Unity Geospatial Streaming | 1.0.0-preview.3 ">
     <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
     <meta property="docfx:tocrel" content="../toc.html">
-    <meta property="unity:packageTitle" content="Unity Geospatial Streaming | 1.0.0-preview.2">
+    <meta property="unity:packageTitle" content="Unity Geospatial Streaming | 1.0.0-preview.3">
     <meta property="docfx:rel" content="../../">
     
   </head>
@@ -121,9 +121,6 @@
                                   <a href="../GettingStarted/first-time-setup.html" title="First Time Setup" class="active">First Time Setup</a>
                                 </li>
                                 <li class="">
-                                  <a href="../GettingStarted/adding-multiple-datasets.html" title="Adding Multiple Datasets" class="">Adding Multiple Datasets</a>
-                                </li>
-                                <li class="">
                                   <a href="../GettingStarted/frequently-asked.html" title="Frequently Asked Questions" class="">Frequently Asked Questions</a>
                                 </li>
                                 <li class="">
@@ -139,7 +136,7 @@
                                   <a href="../FileFormats/ogc-3d-tiles.html" title="OGC 3D Tiles" class="">OGC 3D Tiles</a>
                                 </li>
                                 <li class="">
-                                  <a href="../FileFormats/unity-terrain-mesh.html" title="Unity Terrain Mesh" class="">Unity Terrain Mesh</a>
+                                  <a href="../FileFormats/tms.html" title="Terrain Management System" class="">Terrain Management System</a>
                                 </li>
                               </ul>  </li>
                           <li class="">
@@ -149,6 +146,9 @@
                               <ul class="nav level3">
                                 <li class="">
                                   <a href="../Architecture/universal-decoder.html" title="Universal Decoder" class="">Universal Decoder</a>
+                                </li>
+                                <li class="">
+                                  <a href="../Architecture/material-factory.html" title="Material Factory" class="">Material Factory</a>
                                 </li>
                               </ul>  </li>
                         </ul>  </li>
@@ -175,13 +175,13 @@ and running with HDRP inside of a fresh Unity project.</p>
 <p>In order to import the package, we will use Unity&#39;s Package Manager. Open
 it by clicking <code>Window -&gt; Package Manager</code></p>
 <p>Once the package manager has appeared, click on the <code>+</code> icon at the top
-left of the screen and select <code>Add package from disk...</code>. Add all three
-provided packages, in the following order. <em>The geospatial.streaming package 
+left of the screen and select <code>Add package from git URL...</code>. Add all three
+following packages, in the following order. <em>The gis.streaming-framework package 
 must be added last as it has dependencies on the two other packages.</em></p>
 <ul>
-<li><code>com.atteneder.gltfast</code></li>
-<li><code>com.unity.highprecision</code></li>
-<li><code>com.unity.geospatial.streaming</code></li>
+<li><code>git@github.com:Unity-Technologies/glTFast.git</code></li>
+<li><code>git@github.com:Unity-Technologies/com.unity.gis.high-precision-framework.git</code></li>
+<li><code>git@github.com:Unity-Technologies/com.unity.gis.streaming-framework.git</code></li>
 </ul>
 <p><img src="../images/GettingStarted/PackageManager.png" alt="Package Manager"></p>
 <h2 id="basic-scene-setup">Basic Scene Setup</h2>
@@ -197,15 +197,14 @@ component and a few child objects.</p>
 <p>By default, the UGSystem doesn&#39;t display anything. We need to create and provide a geospatial data source. We&#39;re going 
 to begin by creating a data source that will point the UGSystem towards the Unity Earth dataset.</p>
 <ol>
-<li>Download the <code>UnityEarth-80m-v1.0</code> from the geospatial release folder and decompress the archive anywhere on your machine.
-<em>The 610m dataset can also be used. The lower resolution makes the download much smaller.</em></li>
-<li>In your asset&#39;s right-click context menu select <code>Create -&gt; Geospatial -&gt; Data Sources -&gt; OGC 3DTiles</code>.</li>
+<li>Download the <a href="https://drive.google.com/file/d/1z7yPlw6g91Z9lWsgM41HHPjRb_6If7Ch/view?usp=sharing">UnityEarth-610m-v3.0</a> and decompress the archive anywhere on your machine.</li>
+<li>In your asset&#39;s right-click context menu select <code>Create -&gt; Geospatial -&gt; Data Sources -&gt; TMS Terrain</code>.</li>
 <li>Name this newly created asset <code>UnityEarth</code>.</li>
-<li>Select the asset and, in the inspector, set the URI field of the asset to  <code>file:///c:/path-to-earth-asset/tileset.json</code></li>
+<li>Select the asset and, in the inspector, set the URI field of the asset to  <code>file:///c:/path-to-earth-asset/terrain-hdrp.json</code></li>
 <li>Since this data source is unlit by default, which won&#39;t take advantage of the HDRP, let&#39;s also force the
 data source&#39;s materials to be lit by changing the <code>Lighting</code> setting from <code>Default</code> to <code>Lit</code>.</li>
 </ol>
-<p><img src="../images/GettingStarted/UnityEarthDataSourceSettings.png" alt="Unity Earth Data Srouce Settings"></p>
+<p><img src="../images/GettingStarted/UnityEarthDataSourceSettings.png" alt="Unity Earth Data Source Settings"></p>
 <h2 id="configure-the-ugsystem">Configure the UGSystem</h2>
 <p>Select the <code>UGSystem</code> and, in the inspector, apply the following configurations:</p>
 <ol>

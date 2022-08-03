@@ -1,6 +1,9 @@
 
 namespace Unity.Geospatial.Streaming.UniversalDecoder
 {
+    /// <summary>
+    /// Interface to interact with the parenting of <see cref="NodeId"/>.
+    /// </summary>
     public interface IEditHierarchyNodes : IGetNodeData
     {
         /// <summary>

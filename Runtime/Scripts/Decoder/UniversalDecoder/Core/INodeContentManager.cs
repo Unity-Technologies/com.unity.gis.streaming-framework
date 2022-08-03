@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace Unity.Geospatial.Streaming.UniversalDecoder
 {
+    /// <summary>
+    /// Interface to manage the loading / unloading of <see cref="NodeId"/> content via the <see cref="UGSystem"/> <see cref="ITaskManager"/>.
+    /// </summary>
     public interface INodeContentManager:
         ILoaderActions
     {
@@ -20,7 +23,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
         void GetChildren(NodeId parent, List<NodeId> children);
 
         /// <summary>
-        /// The number of nodes currently in the process of being loaded. This includes nodes which are
+        /// The number of nodes currently in the process of being <see cref="Load">Loaded</see>. This includes nodes which are
         /// waiting on server requests or going through some internal processing.
         /// </summary>
         int LoadingCount { get; }

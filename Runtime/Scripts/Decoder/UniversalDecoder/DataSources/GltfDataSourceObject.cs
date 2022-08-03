@@ -4,6 +4,10 @@ using Unity.Mathematics;
 
 namespace Unity.Geospatial.Streaming.UniversalDecoder
 {
+    /// <summary>
+    /// <see href="https://docs.unity3d.com/ScriptReference/ScriptableObject.html">ScriptableObject</see> allowing
+    /// to load gltf and glb files.
+    /// </summary>
     [CreateAssetMenu(fileName = "GLTF File", menuName = "Geospatial/Data Sources/GLTF", order = AssetMenuOrder)]
     public class GltfDataSourceObject : UGDataSourceObject
     {

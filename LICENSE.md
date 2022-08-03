@@ -1,4 +1,4 @@
-Geospatial Streaming Framework © 2022 Unity Technologies
+Unity Geospatial Streaming copyright © 2022 Unity Technologies ApS
 
 Licensed under the Unity Companion License for Unity-dependent projects (see [https://unity3d.com/legal/licenses/unity_companion_license](https://unity3d.com/legal/licenses/unity_companion_license)).
 

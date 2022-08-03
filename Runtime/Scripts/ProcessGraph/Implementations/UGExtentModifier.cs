@@ -11,6 +11,11 @@ using Object = UnityEngine.Object;
 
 namespace Unity.Geospatial.Streaming
 {
+    /// <summary>
+    /// The extent modifier allow to remove a zone to be displayed for a specified <see cref="UGDataSourceID"/>.
+    /// To do so, you must select a <see cref="GeodeticExtent"/>. This will be the shape that will be used to
+    /// cut the <see cref="InstanceData"/> loaded from the <see cref="UGDataSourceID"/>.
+    /// </summary>
     public class UGExtentModifier : UGModifier
     {
         private readonly struct ExtentPlane
@@ -56,7 +61,6 @@ namespace Unity.Geospatial.Streaming
         /// comprised of a lower detail environment.</param>
         /// <param name="intersectionDataSources">List of data sources which will be cropped by the specified extent. This is
         /// usually comprised of a higher detail inset.</param>
-
         public UGExtentModifier(GeodeticExtent extent, IEnumerable<UGDataSourceID> differenceDataSources, IEnumerable<UGDataSourceID> intersectionDataSources)
         {
             SetExtent(extent);
@@ -65,16 +69,19 @@ namespace Unity.Geospatial.Streaming
             m_IntersectionDataSources = new List<UGDataSourceID>(intersectionDataSources);
         }
 
+        /// <inheritdoc cref="UGModifier.IsReadyForData"/> 
         protected override bool IsReadyForData
         {
             get { return (m_InputQueue.Count + m_OutputQueue.Count) == 0; }
         }
 
+        /// <inheritdoc cref="UGProcessingNode.ScheduleMainThread"/> 
         public override bool ScheduleMainThread
         {
             get { return m_InputQueue.Count > 0; }
         }
 
+        /// <inheritdoc cref="UGProcessingNode.IsProcessing"/> 
         protected override bool IsProcessing
         {
             get { return m_InputQueue.Count > 0 || m_OutputQueue.Count > 0; }
@@ -162,6 +169,7 @@ namespace Unity.Geospatial.Streaming
             }
         }
 
+        /// <inheritdoc cref="UGModifier.ProcessData"/> 
         protected override void ProcessData(ref InstanceCommand instance)
         {
             Assert.AreEqual(0, m_InputQueue.Count);
@@ -170,6 +178,7 @@ namespace Unity.Geospatial.Streaming
             m_InputQueue.Enqueue(instance);
         }
 
+        /// <inheritdoc cref="UGProcessingNode.Dispose"/> 
         public override void Dispose()
         {
             //
@@ -177,6 +186,7 @@ namespace Unity.Geospatial.Streaming
             //
         }
 
+        /// <inheritdoc cref="UGProcessingNode.MainThreadUpKeep"/> 
         public override void MainThreadUpKeep()
         {
             //
@@ -184,6 +194,7 @@ namespace Unity.Geospatial.Streaming
             //
         }
 
+        /// <inheritdoc cref="UGProcessingNode.MainThreadProcess"/> 
         public override void MainThreadProcess()
         {
             if (m_InputQueue.Count > 0)
@@ -292,7 +303,7 @@ namespace Unity.Geospatial.Streaming
                 Plane cutPlane = new Plane(normal, point);
 
                 List<Edge> extraEdgesFromCut = new List<Edge>();
-                EdgeCollection extraEdgeCollection = new EdgeCollection(extraEdgesFromCut);
+                List<Edge> extraEdgeCollection = new List<Edge>(extraEdgesFromCut);
                 meshEditor.Cut(edit, cutPlane, out TriangleCollectionIndex outside, out TriangleCollectionIndex inside, extraEdgeCollection);
 
                 // Add skirting
@@ -374,7 +385,7 @@ namespace Unity.Geospatial.Streaming
                     continue;
 
                 List<Edge> extraEdgesFromCut = new List<Edge>();
-                EdgeCollection extraEdgeCollection = new EdgeCollection(extraEdgesFromCut);
+                List<Edge> extraEdgeCollection = new List<Edge>(extraEdgesFromCut);
                 meshEditor.Cut(edit, cutPlane, out TriangleCollectionIndex _, out TriangleCollectionIndex inside,
                     extraEdgeCollection);
 

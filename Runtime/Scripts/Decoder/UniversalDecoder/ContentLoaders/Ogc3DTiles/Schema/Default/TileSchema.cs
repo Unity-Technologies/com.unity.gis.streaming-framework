@@ -110,7 +110,7 @@ namespace Unity.Geospatial.Streaming.Ogc3dTiles
         public string Refine { get; set; }
 
         /// <summary>
-        /// A floating-point 4x4 affine transformation matrix, stored in column-major order, that transforms the tile's content
+        /// A double floating-point 4x4 affine transformation matrix, stored in column-major order, that transforms the tile's content
         /// --i.e., its features as well as content.boundingVolume, boundingVolume, and viewerRequestVolume--
         /// from the tile's local coordinate system to the parent tile's coordinate system, or, in the case of a root tile,
         /// from the tile's local coordinate system to the tileset's coordinate system.

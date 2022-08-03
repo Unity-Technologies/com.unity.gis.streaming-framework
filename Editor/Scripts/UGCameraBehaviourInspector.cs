@@ -4,8 +4,16 @@ using Unity.Geospatial.HighPrecision;
 
 namespace Unity.Geospatial.Streaming.Editor
 {
+    /// <summary>
+    /// <see cref="UGCameraBehaviour"/> commands.
+    /// </summary>
     public static class UGCameraBehaviourInspector
     {
+        /// <summary>
+        /// Create a new <see cref="UGCameraBehaviour"/> instance under the given parent.
+        /// </summary>
+        /// <param name="parent">Set this GameObject as the parent of the newly created GameObject.</param>
+        /// <returns>The newly created object.</returns>
         public static GameObject CreateNewUGCamera(GameObject parent)
         {
             // Create a custom game object

@@ -7,6 +7,9 @@ using UnityEngine.Assertions;
 
 namespace Unity.Geospatial.Streaming.UniversalDecoder
 {
+    /// <summary>
+    /// Allow to manage the loading / unloading of <see cref="NodeId"/> content via the <see cref="UGSystem"/> <see cref="ITaskManager"/>.
+    /// </summary>
     public class NodeContentManager :
         INodeContentManager
     {
@@ -79,13 +82,30 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
             }
         }
 
+        /// <summary>
+        /// The possible state of the <see cref="NodeContentManager"/> defining if a node is currently being evaluated.
+        /// </summary>
         public enum State
         {
+            /// <summary>
+            /// No more nodes are in the queue waiting to be evaluated and every one of them have also been processed.
+            /// </summary>
             Done,
+            
+            /// <summary>
+            /// At least one node is currently in the process to be loaded, unloaded or modified.
+            /// </summary>
             Processing,
+            
+            /// <summary>
+            /// At least one node is waiting in the queue to be evaluated.
+            /// </summary>
             Waiting
         }
 
+        /// <summary>
+        /// Allow to interact with the parenting of <see cref="NodeId">nodes</see>.
+        /// </summary>
         private readonly IEditHierarchyNodes m_Hierarchy;
         private readonly LinkedList<QueueItem> m_Queue = new LinkedList<QueueItem>();
         private readonly Dictionary<ContentType, INodeContentLoader> m_Loaders = new Dictionary<ContentType, INodeContentLoader>();
@@ -101,8 +121,14 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
         //
         private readonly UGCommandBuffer m_AtomicCommandBuffer = new UGCommandBuffer(UUIDGenerator.Instance);
 
+        /// <summary>
+        /// Queue of commands waiting to be executed.
+        /// </summary>
         public UGCommandBuffer CommandBuffer { get; }
 
+        /// <summary>
+        /// Unique identifier generator used for <see cref="ContentType"/> registration.
+        /// </summary>
         public UniqueContentTypeGenerator ContentTypeGenerator { get; } = new UniqueContentTypeGenerator();
 
         /// <inheritdoc cref="INodeContentManager.GenerateContentType()"/>
@@ -111,12 +137,35 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
             return ContentTypeGenerator.Generate();
         }
 
+        /// <inheritdoc cref="INodeContentManager.LoadingCount"/>
         public int LoadingCount { get; private set; }
 
+        /// <summary>
+        /// Defines how to execute the
+        /// <see href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Tasks</see>.
+        /// This allow to implement either a custom task manager or decide whether all the
+        /// <see href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Tasks</see> should be
+        /// executed on the main thread or be multi-threaded.
+        /// </summary>
         public ITaskManager TaskManager { get; }
 
+        /// <summary>
+        /// The number of nodes currently in the process of being <see cref="Unload">Unloaded</see>.
+        /// </summary>
         public int UnloadingCount { get; private set; }
 
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
+        /// <param name="hierarchy">Allow to interact with the parenting of <see cref="NodeId">nodes</see>.</param>
+        /// <param name="commandBuffer">Queue of commands waiting to be executed.</param>
+        /// <param name="taskManager">
+        /// Defines how to execute the
+        /// <see href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Tasks</see>.
+        /// This allow to implement either a custom task manager or decide whether all the
+        /// <see href="https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task">Tasks</see> should be
+        /// executed on the main thread or be multi-threaded.
+        /// </param>
         public NodeContentManager(IEditHierarchyNodes hierarchy, UGCommandBuffer commandBuffer, ITaskManager taskManager)
         {
             m_Hierarchy = hierarchy;
@@ -124,6 +173,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
             TaskManager = taskManager;
         }
 
+        /// <inheritdoc cref="ILoaderActions.AddMaterialProperty(MaterialID, MaterialProperty)"/>
         void ILoaderActions.AddMaterialProperty(MaterialID materialId, MaterialProperty materialProperty)
         {
             CommandBuffer.AddMaterialProperty(materialId, materialProperty);
@@ -135,51 +185,61 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
             return m_Hierarchy.AddNode(parent, data, content);
         }
 
+        /// <inheritdoc cref="ILoaderActions.AllocateInstance(InstanceData)"/>
         InstanceID ILoaderActions.AllocateInstance(InstanceData instanceData)
         {
             return CommandBuffer.AllocateInstance(instanceData);
         }
 
+        /// <inheritdoc cref="ILoaderActions.AllocateMaterial(MaterialType)"/>
         MaterialID ILoaderActions.AllocateMaterial(MaterialType type)
         {
             return CommandBuffer.AllocateMaterial(type);
         }
 
+        /// <inheritdoc cref="ILoaderActions.AllocateMesh(Mesh)"/>
         MeshID ILoaderActions.AllocateMesh(Mesh mesh)
         {
             return CommandBuffer.AllocateMesh(mesh);
         }
 
+        /// <inheritdoc cref="ILoaderActions.AllocateMesh(MeshData)"/>
         MeshID ILoaderActions.AllocateMesh(MeshData meshData)
         {
             return CommandBuffer.AllocateMesh(meshData);
         }
 
+        /// <inheritdoc cref="ILoaderActions.AllocateTexture(Texture2D)"/>
         TextureID ILoaderActions.AllocateTexture(Texture2D texture)
         {
             return CommandBuffer.AllocateTexture(texture);
         }
 
+        /// <inheritdoc cref="ILoaderActions.AllocateTexture(TextureData)"/>
         TextureID ILoaderActions.AllocateTexture(TextureData textureData)
         {
             return CommandBuffer.AllocateTexture(textureData);
         }
 
+        /// <inheritdoc cref="ILoaderActions.DisposeInstance(InstanceID)"/>
         void ILoaderActions.DisposeInstance(InstanceID instanceId)
         {
             CommandBuffer.DisposeInstance(instanceId);
         }
 
+        /// <inheritdoc cref="ILoaderActions.DisposeMaterial(MaterialID)"/>
         void ILoaderActions.DisposeMaterial(MaterialID materialId)
         {
             CommandBuffer.DisposeMaterial(materialId);
         }
 
+        /// <inheritdoc cref="ILoaderActions.DisposeMesh(MeshID)"/>
         void ILoaderActions.DisposeMesh(MeshID meshId)
         {
             CommandBuffer.DisposeMesh(meshId);
         }
 
+        /// <inheritdoc cref="ILoaderActions.DisposeTexture(TextureID)"/>
         void ILoaderActions.DisposeTexture(TextureID textureId)
         {
             CommandBuffer.DisposeTexture(textureId);
@@ -193,21 +253,31 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
             return id;
         }
 
+        /// <inheritdoc cref="ILoaderActions.ExecuteSingle(UGCommandBuffer.IListener)"/>
         bool ILoaderActions.ExecuteSingle(UGCommandBuffer.IListener listener)
         {
             return CommandBuffer.ExecuteSingle(listener);
         }
 
+        /// <inheritdoc cref="INodeContentManager.GetChildren(NodeId, List{NodeId})"/>
         public void GetChildren(NodeId parent, List<NodeId> children)
         {
             m_Hierarchy.GetChildren(parent, children);
         }
 
+        /// <summary>
+        /// Get the root node of the hierarchy
+        /// </summary>
+        /// <returns>The <see cref="NodeId"/> which corresponds to the root node of the hierarchy.</returns>
         public NodeId GetRootNode()
         {
             return m_Hierarchy.RootNode;
         }
 
+        /// <summary>
+        /// Get the current state of the <see cref="NodeContentManager"/> defining if a node is currently being evaluated.
+        /// </summary>
+        /// <returns>The state of the <see cref="NodeContentManager"/>.</returns>
         public State GetState()
         {
             if (m_Queue.Count == 0)
@@ -221,6 +291,11 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
             return State.Processing;
         }
 
+        /// <summary>
+        /// Initialize a new <see cref="UGMetadata"/> instance for a given <see cref="NodeId"/>.
+        /// </summary>
+        /// <param name="nodeId">The returned data will be taken from this node.</param>
+        /// <returns>The newly created <see cref="UGMetadata"/> instance.</returns>
         public UGMetadata InitializeMetadata(NodeId nodeId)
         {
             return new UGMetadata(nodeId, m_Hierarchy);
@@ -242,6 +317,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
             return true;
         }
 
+        /// <inheritdoc cref="INodeContentManager.Load(NodeId, NodeContent)"/>
         public void Load(NodeId nodeId, NodeContent content)
         {
             if (TryCancelUnload(nodeId))
@@ -253,6 +329,10 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
                 StartLoadingItem(current);
         }
 
+        /// <summary>
+        /// Execute the next action part of the queue.
+        /// </summary>
+        /// <exception cref="NotImplementedException">If the next action in the queue is not supported.</exception>
         public void ProcessNext()
         {
             if (m_Queue.Count <= 0)
@@ -312,6 +392,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
             }
         }
 
+        /// <inheritdoc cref="ILoaderActions.QueueAction(Action)"/>
         void ILoaderActions.QueueAction(Action action)
         {
             CommandBuffer.QueueAction(action);
@@ -329,6 +410,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
             TaskManager.ScheduleTask(task);
         }
 
+        /// <inheritdoc cref="ILoaderActions.RemoveMaterialProperty(MaterialID, MaterialProperty)"/>
         void ILoaderActions.RemoveMaterialProperty(MaterialID materialId, MaterialProperty materialProperty)
         {
             CommandBuffer.RemoveMaterialProperty(materialId, materialProperty);
@@ -394,6 +476,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
             return false;
         }
 
+        /// <inheritdoc cref="INodeContentManager.Unload(NodeId)"/>
         public void Unload(NodeId nodeId)
         {
             Assert.IsTrue(m_Hierarchy.HasNode(nodeId), "Cannot unload invalid node.");
@@ -401,6 +484,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
             UnloadingCount++;
         }
 
+        /// <inheritdoc cref="ILoaderActions.UpdateInstanceVisibility(InstanceID, bool)"/>
         void ILoaderActions.UpdateInstanceVisibility(InstanceID instanceId, bool visibility)
         {
             m_AtomicCommandBuffer.UpdateInstanceVisibility(instanceId, visibility);
@@ -418,6 +502,7 @@ namespace Unity.Geospatial.Streaming.UniversalDecoder
             m_Hierarchy.UpdateNode(nodeId, data);
         }
 
+        /// <inheritdoc cref="INodeContentManager.UpdateVisibility(IEnumerable{NodeId}, IEnumerable{NodeId})"/>
         public void UpdateVisibility(IEnumerable<NodeId> visible, IEnumerable<NodeId> hidden)
         {
             m_Queue.AddLast(QueueItem.UpdateVisibility(visible, hidden));

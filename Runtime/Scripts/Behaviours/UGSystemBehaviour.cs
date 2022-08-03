@@ -7,14 +7,16 @@ using UnityEngine;
 namespace Unity.Geospatial.Streaming
 {
     /// <summary>
-    /// The UGSystem is a relatively thin Monobehaviour wrapper on the underlying UGClient
-    /// class, which serves as the center piece to the Unity Geospatial Framework. It
-    /// is a facade type interface which is responsible for communicating with the underlying
-    /// UGSystem as well as building GameObject type objects (in contrast with DOTS
-    /// type objects)
+    /// The <see cref="UGSystemBehaviour"/> is a relatively thin
+    /// <see href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html">MonoBehaviour</see> wrapper on the
+    /// underlying <see cref="UGSystem"/> class, which serves as the center piece to the Unity Geospatial Framework.
+    /// It is a facade type interface which is responsible for communicating with the underlying <see cref="UGSystem"/>
+    /// as well as building <see href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObject</see> type objects
+    /// (in contrast with DOTS type objects)
     /// 
-    /// During runtime, this class will instantiate a number of other GameObjects which will
-    /// serve to render the environment as it is streamed in from various sources.
+    /// During runtime, this class will instantiate a number of other
+    /// <see href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObject</see> which will serve to render
+    /// the environment as it is streamed in from various sources.
     /// </summary>
     public class UGSystemBehaviour : MonoBehaviour
     {
@@ -122,7 +124,8 @@ namespace Unity.Geospatial.Streaming
         public List<UGModifierBehaviour> modifiers;
 
         /// <summary>
-        /// These are the presenters which will convert the streamed geometry into actual gameobjects. Most
+        /// These are the presenters which will convert the streamed geometry into actual
+        /// <see href="https://docs.unity3d.com/ScriptReference/GameObject.html">GameObjects</see>. Most
         /// configurations will only require a single presenter but applications with multiple cameras or applications
         /// where the source data is not normalized in space (think multiple planets or non-geolocated dataset) may
         /// require multiple presenters.
@@ -136,7 +139,7 @@ namespace Unity.Geospatial.Streaming
         /// The Unity Geospatial Framework comes with material factories for both the Built-in render pipeline
         /// as well as the Universal Render Pipeline.
         /// </summary>
-        public UGMaterialFactoryObject materialFactory;
+        public UGMaterialFactoryObject MaterialFactory;
 
         /// <summary>
         /// The streaming mode is an advanced feature that allows the <see cref="UGSystemBehaviour"/> to trade off
@@ -144,6 +147,12 @@ namespace Unity.Geospatial.Streaming
         /// </summary>
         public UGSystem.StreamingModes streamingMode;
 
+        /// <summary>
+        /// Allow the <see cref="UGSystem"/> to run tasks on multiple threads. Leave this on for most platforms but
+        /// turn off for platforms that do not support threading such as WebGL.
+        /// </summary>
+        public bool AllowMultithreading = true;
+        
         /// <summary>
         /// This is the time, in milliseconds, that the UG System is allowed to use on the main thread. As
         /// much as possible, the Geospatial Framework tries to offload as much of the CPU intensive tasks
@@ -160,7 +169,7 @@ namespace Unity.Geospatial.Streaming
         /// 
         /// Setting this parameter to 0 will cause only a single action to be performed each frame.
         /// </summary>
-        public float mainThreadTimeLimitMS = 10;
+        public float MainThreadTimeLimitMS = 10;
 
         /// <summary>
         /// This is the amount of files that will be loaded simultaneously.
@@ -171,7 +180,7 @@ namespace Unity.Geospatial.Streaming
         /// it will get since the system will not be able to adapt when <see cref="UGSceneObserver"/> are in movement.
         /// If the value is too low, it will take more time to get a higher resolution, but you will gain reaction speed.
         /// </remarks>
-        public int maximumSimultaneousContentRequests = 10;
+        public int MaximumSimultaneousContentRequests = 10;
 
         /// <summary>
         /// The approximate radius of the planet. By default, this setting is configured such that it matches 
@@ -225,13 +234,13 @@ namespace Unity.Geospatial.Streaming
         {
             UGSystem.Configuration configuration;
 
-            if (materialFactory == null)
+            if (MaterialFactory == null)
             {
                 Debug.LogError("Material Factory not set on UGSystem component");
                 return;
             }
 
-            configuration.MaterialFactory = materialFactory.Instantiate();
+            configuration.MaterialFactory = MaterialFactory.Instantiate();
 
             UGBehaviourPresenter[] instantiatedPresenters = presenters
                             .Select(conf => new UGBehaviourPresenter(conf.outputRoot, conf.outputLayer, GetDataSourceIDs(conf.dataSources)))
@@ -247,13 +256,15 @@ namespace Unity.Geospatial.Streaming
             }
 
             configuration.StreamingMode = streamingMode;
-            configuration.MainThreadTimeLimitMs = mainThreadTimeLimitMS;
-            configuration.MaximumSimultaneousContentRequests = maximumSimultaneousContentRequests;
+            configuration.MainThreadTimeLimitMs = MainThreadTimeLimitMS;
+            configuration.MaximumSimultaneousContentRequests = MaximumSimultaneousContentRequests;
 
             configuration.DataSources = InitializedDataSources;
 
             configuration.SceneObservers = sceneObservers.Select(o => o.Instantiate(this)).ToArray();
             configuration.Modifiers = modifiers.Select(m => m.Instantiate()).ToArray();
+
+            configuration.AllowMultithreading = AllowMultithreading;
 
             try
             {

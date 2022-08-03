@@ -28,6 +28,7 @@ namespace Unity.Geospatial.Streaming.Editor
         ///         properties. Any values passed in here will override settings defined by the style.&lt;br&gt;
         /// See Also: GUILayout.Width, GUILayout.Height, GUILayout.MinWidth, GUILayout.MaxWidth, GUILayout.MinHeight,
         /// GUILayout.MaxHeight, GUILayout.ExpandWidth, GUILayout.ExpandHeight.</param>
+        /// <returns>Get the rectangle of the new item position.</returns>
         public virtual Rect BeginHorizontal(params GUILayoutOption[] options)
         {
             return EditorGUILayout.BeginHorizontal(options);
@@ -41,6 +42,7 @@ namespace Unity.Geospatial.Streaming.Editor
         ///         properties. Any values passed in here will override settings defined by the style.&lt;br&gt;
         /// See Also: GUILayout.Width, GUILayout.Height, GUILayout.MinWidth, GUILayout.MaxWidth, GUILayout.MinHeight,
         /// GUILayout.MaxHeight, GUILayout.ExpandWidth, GUILayout.ExpandHeight.</param>
+        /// <returns>Get the rectangle of the new item position.</returns>
         public virtual Rect BeginHorizontal(GUIStyle style, params GUILayoutOption[] options)
         {
             return EditorGUILayout.BeginHorizontal(style, options);
@@ -61,6 +63,7 @@ namespace Unity.Geospatial.Streaming.Editor
         ///         properties. Any values passed in here will override settings defined by the style.&lt;br&gt;
         /// See Also: GUILayout.Width, GUILayout.Height, GUILayout.MinWidth, GUILayout.MaxWidth, GUILayout.MinHeight,
         /// GUILayout.MaxHeight, GUILayout.ExpandWidth, GUILayout.ExpandHeight.</param>
+        /// <returns>Get the rectangle of the new item position.</returns>
         public virtual Rect BeginVertical(params GUILayoutOption[] options)
         {
             return EditorGUILayout.BeginVertical(options);
@@ -74,6 +77,7 @@ namespace Unity.Geospatial.Streaming.Editor
         ///         properties. Any values passed in here will override settings defined by the style.&lt;br&gt;
         /// See Also: GUILayout.Width, GUILayout.Height, GUILayout.MinWidth, GUILayout.MaxWidth, GUILayout.MinHeight,
         /// GUILayout.MaxHeight, GUILayout.ExpandWidth, GUILayout.ExpandHeight.</param>
+        /// <returns>Get the rectangle of the new item position.</returns>
         public virtual Rect BeginVertical(GUIStyle style, params GUILayoutOption[] options)
         {
             return EditorGUILayout.BeginVertical(style, options);
@@ -86,7 +90,7 @@ namespace Unity.Geospatial.Streaming.Editor
         {
             EditorGUILayout.EndVertical();
         }
-        
+
         /// <summary>
         /// Make a label with a foldout arrow to the left of it.
         /// This is useful for folder-like structures, where child objects only appear if you've unfolded the parent folder.
@@ -473,7 +477,7 @@ namespace Unity.Geospatial.Streaming.Editor
         }
 
         private delegate void DrawFieldInRect<T>(ref T value, Rect position);
-        
+
         /// <summary>
         /// Make a field inside a specified rectangle.
         /// </summary>
@@ -485,19 +489,19 @@ namespace Unity.Geospatial.Streaming.Editor
         /// <param name="value">The value to edit.</param>
         /// <param name="labelMinWidth">Force the label to take at least this amount of width space.</param>
         private void RectField<T>(
-            string label, 
-            float x, 
-            float y, 
-            float width, 
-            float height, 
+            string label,
+            float x,
+            float y,
+            float width,
+            float height,
             ref T value,
             DrawFieldInRect<T> drawField,
             int labelMinWidth = LabelMinWidth)
         {
             height = float.IsNaN(height) ? EditorGUIUtility.singleLineHeight : height;
-            
+
             GUIContent labelContent = GetLabelContent(label, out float labelWidth, labelMinWidth);
-            
+
             Label(x, y, labelWidth, EditorGUIUtility.singleLineHeight, labelContent);
             drawField(ref value, new Rect(x + labelWidth, y + 1, width - labelWidth, height));
         }
@@ -523,13 +527,13 @@ namespace Unity.Geospatial.Streaming.Editor
             int labelMinWidth = LabelMinWidth)
         {
             RectField(
-                label, 
-                x, 
-                y, 
-                width, 
-                height, 
-                ref value, 
-                (ref double value, Rect position) => DoubleField(ref value, position), 
+                label,
+                x,
+                y,
+                width,
+                height,
+                ref value,
+                (ref double value, Rect position) => DoubleField(ref value, position),
                 labelMinWidth);
         }
 
@@ -603,6 +607,30 @@ namespace Unity.Geospatial.Streaming.Editor
             EndHorizontal();
         }
 
+
+        /// <summary>
+        /// Make a toggle checkbox field.
+        /// </summary>
+        /// <param name="label">Optional label in front of the toggle.</param>
+        /// <param name="value">The shown state of the toggle.</param>
+        /// <param name="style">Optional GUIStyle.</param>
+        /// <param name="options">An optional list of layout options that specify extra layout
+        ///         properties. Any values passed in here will override settings defined by the style.
+        /// See Also: GUILayout.Width, GUILayout.Height, GUILayout.MinWidth, GUILayout.MaxWidth, GUILayout.MinHeight,
+        /// GUILayout.MaxHeight, GUILayout.ExpandWidth, GUILayout.ExpandHeight.</param>
+        /// <returns>
+        /// The selected state of the toggle.
+        /// </returns>
+        public virtual bool BoolField(
+          GUIContent label,
+          bool value,
+          GUIStyle style = null,
+          params GUILayoutOption[] options)
+        {
+            style ??= EditorStyles.toggle;
+            return EditorGUILayout.Toggle(label, value, style, options);
+        }
+
         /// <summary>
         /// Make a text field for entering a integer value.
         /// </summary>
@@ -655,11 +683,11 @@ namespace Unity.Geospatial.Streaming.Editor
         /// <returns>
         /// The enum option that has been selected by the user.
         /// </returns>
-        public virtual Enum EnumPopup(GUIContent label, Enum selected, params GUILayoutOption[] options) 
+        public virtual Enum EnumPopup(GUIContent label, Enum selected, params GUILayoutOption[] options)
         {
             return EditorGUILayout.EnumPopup(label, selected, options);
         }
-        
+
         /// <summary>
         /// Makes a generic popup selection field.
         /// </summary>
@@ -670,44 +698,38 @@ namespace Unity.Geospatial.Streaming.Editor
         /// <param name="height">Limit the field to this height.</param>
         /// <param name="selectedIndex">The index of the option the field shows.</param>
         /// <param name="displayedOptions">An array with the options shown in the popup.</param>
-        /// <returns>
-        /// The index of the option that has been selected by the user.
-        /// </returns>
         internal void Popup(
-            string label, 
-            ref int selectedIndex, 
+            string label,
+            ref int selectedIndex,
             string[] displayedOptions,
-            float x, 
-            float y, 
-            float width, 
+            float x,
+            float y,
+            float width,
             float height = float.NaN,
             int labelMinWidth = LabelMinWidth)
         {
             RectField(
-                label, 
-                x, 
-                y, 
-                width, 
-                height, 
-                ref selectedIndex, 
-                (ref int value, Rect position) => Popup(position, ref value, displayedOptions), 
+                label,
+                x,
+                y,
+                width,
+                height,
+                ref selectedIndex,
+                (ref int value, Rect position) => Popup(position, ref value, displayedOptions),
                 labelMinWidth);
         }
-        
+
         /// <summary>
         /// Makes a generic popup selection field.
         /// </summary>
         /// <param name="position">Rectangle on the screen to use for the field.</param>
         /// <param name="selectedIndex">The index of the option the field shows.</param>
         /// <param name="displayedOptions">An array with the options shown in the popup.</param>
-        /// <returns>
-        /// The index of the option that has been selected by the user.
-        /// </returns>
-        public virtual void Popup(Rect position, ref int selectedIndex, string[] displayedOptions) 
+        public virtual void Popup(Rect position, ref int selectedIndex, string[] displayedOptions)
         {
             selectedIndex = EditorGUI.Popup(position, selectedIndex, displayedOptions);
         }
-        
+
         /// <summary>
         /// Makes an object field. You can assign objects either by drag and drop objects or by selecting an object using the Object Picker.
         /// </summary>
@@ -720,26 +742,26 @@ namespace Unity.Geospatial.Streaming.Editor
         /// <param name="objType">The type of the objects that can be assigned.</param>
         /// <param name="labelMinWidth">Force the label to take at least this amount of width space.</param>
         internal void ObjectField(
-            string label, 
-            SerializedProperty property, 
-            float x, 
-            float y, 
-            float width, 
-            float height = float.NaN, 
-            Type objType = null, 
+            string label,
+            SerializedProperty property,
+            float x,
+            float y,
+            float width,
+            float height = float.NaN,
+            Type objType = null,
             int labelMinWidth = LabelMinWidth)
         {
             RectField(
-                label, 
-                x, 
-                y, 
-                width, 
-                height, 
-                ref objType, 
-                (ref Type type, Rect position) => ObjectField(position, property, type, GUIContent.none), 
+                label,
+                x,
+                y,
+                width,
+                height,
+                ref objType,
+                (ref Type type, Rect position) => ObjectField(position, property, type, GUIContent.none),
                 labelMinWidth);
         }
-        
+
         /// <summary>
         /// Make a field to receive any object type.
         /// </summary>
@@ -757,23 +779,23 @@ namespace Unity.Geospatial.Streaming.Editor
         internal Object ObjectField(
             string label,
             Object obj,
-            float x, 
-            float y, 
-            float width, 
-            float height = float.NaN, 
+            float x,
+            float y,
+            float width,
+            float height = float.NaN,
             Type objType = null,
             int labelMinWidth = LabelMinWidth)
         {
             Object result = obj;
-            
+
             RectField(
-                label, 
-                x, 
-                y, 
-                width, 
-                height, 
-                ref objType, 
-                (ref Type type, Rect position) => result = ObjectField(position, obj, type), 
+                label,
+                x,
+                y,
+                width,
+                height,
+                ref objType,
+                (ref Type type, Rect position) => result = ObjectField(position, obj, type),
                 labelMinWidth);
 
             return result;
@@ -817,7 +839,7 @@ namespace Unity.Geospatial.Streaming.Editor
             Label(label, labelMinWidth);
             Object result = ObjectField(obj, objType, allowSceneObjects, options);
             EndHorizontal();
-            
+
             return result;
         }
 
@@ -901,7 +923,7 @@ namespace Unity.Geospatial.Streaming.Editor
         {
             EditorGUILayout.ObjectField(property, objType, label, options);
         }
-        
+
         /// <summary>
         /// Makes a field for masks.
         /// </summary>
@@ -917,19 +939,19 @@ namespace Unity.Geospatial.Streaming.Editor
             string label,
             ref int mask,
             string[] displayedOptions,
-            float x, 
-            float y, 
-            float width, 
-            float height = float.NaN, 
+            float x,
+            float y,
+            float width,
+            float height = float.NaN,
             int labelMinWidth = LabelMinWidth)
         {
             RectField(
-                label, 
-                x, 
-                y, 
-                width, 
-                height, 
-                ref mask, 
+                label,
+                x,
+                y,
+                width,
+                height,
+                ref mask,
                 (ref int value, Rect position) => MaskField(ref value, displayedOptions, position),
                 labelMinWidth);
         }
@@ -947,7 +969,7 @@ namespace Unity.Geospatial.Streaming.Editor
 
         /// <summary>
         /// Make an auto-layout label.
-        /// Labels have no user interaction, do not catch mouse clicks and are always rendered in normal style. 
+        /// Labels have no user interaction, do not catch mouse clicks and are always rendered in normal style.
         /// </summary>
         /// <param name="label">Text to display on the label.</param>
         /// <param name="minWidth">Force the label to take at least this amount of width space.</param>
@@ -958,14 +980,15 @@ namespace Unity.Geospatial.Streaming.Editor
         }
 
         /// <summary>
-        /// Calculate the size a label should take in horizontal space. 
+        /// Calculate the size a label should take in horizontal space.
         /// </summary>
         /// <param name="label">Text to calculate the width.</param>
         /// <param name="width">Returns the width the label should take.</param>
         /// <param name="minWidth">Force the label to take at least this amount of width space.</param>
+        /// <returns>Returns a new content with the given label as its text.</returns>
         public virtual GUIContent GetLabelContent(string label, out float width, int minWidth = 0)
         {
-            
+
             GUIContent content = new GUIContent(label);
             width = math.max(minWidth, GUI.skin.GetStyle("Label").CalcSize(content).x);
 
@@ -985,7 +1008,7 @@ namespace Unity.Geospatial.Streaming.Editor
         {
             Label(new Rect(x, y, width, height), label, style ?? EditorStyles.label);
         }
-        
+
         /// <summary>
         /// Makes a label field. (Useful for showing read-only info.)
         /// </summary>
@@ -996,10 +1019,10 @@ namespace Unity.Geospatial.Streaming.Editor
         {
             EditorGUI.LabelField(position, label, style ?? EditorStyles.label);
         }
-        
+
         /// <summary>
         /// Make an auto-layout label.
-        /// Labels have no user interaction, do not catch mouse clicks and are always rendered in normal style. 
+        /// Labels have no user interaction, do not catch mouse clicks and are always rendered in normal style.
         /// </summary>
         /// <param name="label">Text to display on the label.</param>
         /// <param name="value">Text to display after the label.</param>
@@ -1011,7 +1034,7 @@ namespace Unity.Geospatial.Streaming.Editor
             Label(value);
             EndHorizontal();
         }
-        
+
         /// <summary>
         /// Make a text field for entering a string value.
         /// </summary>
@@ -1025,7 +1048,7 @@ namespace Unity.Geospatial.Streaming.Editor
             TextField(ref value);
             EndHorizontal();
         }
-        
+
         /// <summary>
         /// Make a text field for entering a string value.
         /// </summary>
@@ -1058,7 +1081,7 @@ namespace Unity.Geospatial.Streaming.Editor
         {
             list.DoLayoutList();
         }
-        
+
         /// <summary>
         /// Make a small space between the previous control and the following.
         /// </summary>
@@ -1149,11 +1172,12 @@ namespace Unity.Geospatial.Streaming.Editor
                     ObjectField(key, obj, labelMinWidth: labelMinWidth);
                     break;
                 default:
-                    string nullValue = value is null 
+                    string nullValue = value is null
                         ? "NULL"
                         : value.ToString();
                     TextField(key, ref nullValue, labelMinWidth);
                     break;
+
             }
         }
     }

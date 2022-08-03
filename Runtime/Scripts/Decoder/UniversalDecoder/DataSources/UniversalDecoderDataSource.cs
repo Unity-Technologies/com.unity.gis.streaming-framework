@@ -3,6 +3,9 @@ using System;
 
 namespace Unity.Geospatial.Streaming.UniversalDecoder
 {
+    /// <summary>
+    /// Base class that defines a layer of data available to be loaded via a <see cref="NodeContentManager"/>.
+    /// </summary>
     public abstract class UniversalDecoderDataSource : UGDataSource
     {
         /// <summary>

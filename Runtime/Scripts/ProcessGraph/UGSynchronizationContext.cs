@@ -7,7 +7,15 @@ using UnityEngine.Assertions;
 
 namespace Unity.Geospatial.Streaming
 {
-    public sealed class UGSynchronizationContext : SynchronizationContext
+    /// <summary>
+    /// Determines how async / await calls are going to be resolved.
+    /// The <see cref="UGSynchronizationContext"/> is used within the <see cref="UGSystem"/> and replaces the
+    /// <see cref="UnitySynchronizationContext"/> within its execution flow.
+    /// In contrary to the <see cref="UnitySynchronizationContext"/>, the <see cref="UGSynchronizationContext"/> may
+    /// continue asynchronous operation within the same frame, if the <see cref="UGSystem">UGSystem's</see> CPU time
+    /// limit has not yet been reached.
+    /// </summary>
+    internal sealed class UGSynchronizationContext : SynchronizationContext
     {
         private readonly BlockingCollection<WorkRequest> m_Queue;
         private SynchronizationContext m_PreviousContext;
@@ -22,12 +30,21 @@ namespace Unity.Geospatial.Streaming
             m_Queue = queue;
         }
 
+        /// <summary>
+        /// When overridden in a derived class, dispatches a synchronous message to a synchronization context.
+        /// </summary>
+        /// <param name="callback">The delegate to call.</param>
+        /// <param name="state">State of the process.</param>
         public override void Send(SendOrPostCallback callback, object state)
         {
             callback(state);
         }
 
-
+        /// <summary>
+        /// When overridden in a derived class, dispatches an asynchronous message to a synchronization context.
+        /// </summary>
+        /// <param name="callback">The delegate to call.</param>
+        /// <param name="state">State of the process.</param>
         public override void Post(SendOrPostCallback callback, object state)
         {
             m_Queue.Add(new WorkRequest(callback, state));

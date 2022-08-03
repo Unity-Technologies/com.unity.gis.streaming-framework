@@ -5,24 +5,49 @@ using UnityEngine.Assertions;
 
 namespace Unity.Geospatial.Streaming
 {
+    /// <summary>
+    /// Multi-Material allowing apply multiple
+    /// <see href="https://docs.unity3d.com/ScriptReference/Material.html">Materials</see> / <see href="https://docs.unity3d.com/ScriptReference/Texture.html">Textures</see>
+    /// to the same <see href="https://docs.unity3d.com/ScriptReference/Mesh.html">Mesh</see>.
+    /// </summary>
     public class UGCommonTerrainMaterial : UGMaterial
     {
+        /// <summary>
+        /// <see cref="UGCommonTerrainMaterial"/> creator with two layers (<see cref="BaseShader"/>, <see cref="OverlayShader"/>).
+        /// </summary>
         public readonly struct Factory
         {
+            /// <summary>
+            /// Name of the underlying shader.
+            /// </summary>
             public string BaseShader { get; }
+
+            /// <summary>
+            /// Name of the overlying shader.
+            /// </summary>
             public string OverlayShader { get; }
 
+            /// <summary>
+            /// Default constructor.
+            /// </summary>
+            /// <param name="baseShader">Name of the underlying shader.</param>
+            /// <param name="overlayShader">Name of the overlying shader.</param>
             public Factory(string baseShader, string overlayShader)
             {
                 BaseShader = baseShader;
                 OverlayShader = overlayShader;
             }
 
+            /// <summary>
+            /// Create a new <see cref="UGMaterial"/> instance based on the shaders of this <see cref="Factory"/>.
+            /// </summary>
+            /// <returns></returns>
             public UGMaterial Instantiate()
             {
                 return new UGCommonTerrainMaterial(BaseShader, OverlayShader);
             }
         }
+
         private struct ShaderProperties
         {
             public int texture;
@@ -30,7 +55,13 @@ namespace Unity.Geospatial.Streaming
             public int texture_st;
         }
 
-        public UGCommonTerrainMaterial(string baseShader, string overlayShader) : base(isComposite: true)
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
+        /// <param name="baseShader">Name of the underlying shader.</param>
+        /// <param name="overlayShader">Name of the overlying shader.</param>
+        public UGCommonTerrainMaterial(string baseShader, string overlayShader) :
+            base(isComposite: true)
         {
             if (s_BaseShader == null)
                 s_BaseShader = Shader.Find(baseShader);
@@ -41,15 +72,32 @@ namespace Unity.Geospatial.Streaming
             IncrementMaterialCount();
         }
 
+        /// <summary>
+        /// High Definition Render Pipeline <see cref="Factory"/> with no lighting contribution.
+        /// </summary>
         public static readonly Factory HDRPUnlit = new Factory("Geospatial/SRP/UnlitTerrainBase", "Geospatial/SRP/UnlitTerrainOverlay");
+
+        /// <summary>
+        /// High Definition Render Pipeline <see cref="Factory"/> with lighting contribution.
+        /// </summary>
         public static readonly Factory HDRPLit = new Factory("Geospatial/SRP/LitTerrainBase", "Geospatial/SRP/LitTerrainOverlay");
 
+        /// <summary>
+        /// Universal Render Pipeline <see cref="Factory"/> with no lighting contribution.
+        /// </summary>
         public static readonly Factory URPUnlit = new Factory("Geospatial/SRP/UnlitTerrainBase", "Geospatial/SRP/UnlitTerrainOverlay");
+
+        /// <summary>
+        /// Universal Render Pipeline <see cref="Factory"/> with lighting contribution.
+        /// </summary>
         public static readonly Factory URPLit = new Factory("Geospatial/SRP/LitTerrainBase", "Geospatial/SRP/LitTerrainOverlay");
 
+        /// <summary>
+        /// Built-in Render Pipeline <see cref="Factory"/> with no lighting contribution.
+        /// </summary>
         public static readonly Factory BuiltinUnlit = new Factory("Geospatial/Builtin/UnlitTerrain", "Geospatial/Builtin/UnlitTerrain");
 
-        private const float MaskEpsilon = 0.001f;
+        private const float k_MaskEpsilon = 0.001f;
         private static Shader s_BaseShader;
         private static Shader s_OverlayShader;
         private readonly List<Material> m_Materials = new List<Material>();
@@ -84,6 +132,7 @@ namespace Unity.Geospatial.Streaming
             },
         };
 
+        /// <inheritdoc cref="UGMaterial.UnityMaterials"/>
         public override List<Material> UnityMaterials
         {
             get
@@ -92,6 +141,7 @@ namespace Unity.Geospatial.Streaming
             }
         }
 
+        /// <inheritdoc cref="UGMaterial.OnDispose"/>
         protected override void OnDispose()
         {
             foreach (Material material in m_Materials)
@@ -125,16 +175,16 @@ namespace Unity.Geospatial.Streaming
         {
             Rect v = cmp.MultiTextureMask;
 
-            if (v.x + v.width > 1.0f - MaskEpsilon)
+            if (v.x + v.width > 1.0f - k_MaskEpsilon)
                 v.width += 0.1f;
-            if (v.y + v.height > 1.0f - MaskEpsilon)
+            if (v.y + v.height > 1.0f - k_MaskEpsilon)
                 v.height += 0.1f;
-            if (v.x < MaskEpsilon)
+            if (v.x < k_MaskEpsilon)
             {
                 v.x -= 0.1f;
                 v.width += 0.1f;
             }
-            if (v.y < MaskEpsilon)
+            if (v.y < k_MaskEpsilon)
             {
                 v.y -= 0.1f;
                 v.height += 0.1f;
@@ -144,7 +194,7 @@ namespace Unity.Geospatial.Streaming
             cmp.MultiTextureMask = v;
         }
 
-
+        /// <inheritdoc cref="UGMaterial.OnAddMaterialProperty"/>
         protected override void OnAddMaterialProperty(MaterialProperty materialProperty)
         {
             AdjustMask(ref materialProperty);
@@ -154,7 +204,7 @@ namespace Unity.Geospatial.Streaming
             //
             switch (materialProperty.Type)
             {
-                case MaterialPropertyType.ColorTexture:
+                case MaterialPropertyType.AlbedoTexture:
 
                     Assert.IsNotNull(materialProperty.Texture);
                     materialProperty.Texture.wrapMode = TextureWrapMode.Clamp;
@@ -172,7 +222,7 @@ namespace Unity.Geospatial.Streaming
                         Rect mask = materialProperty.MultiTextureMask;
                         m_Materials[i / 4].SetTexture(k_ShaderProperties[i % 4].texture, materialProperty.Texture);
                         m_Materials[i / 4].SetVector(k_ShaderProperties[i % 4].mask, new Vector4(mask.x, mask.y, mask.width, mask.height));
-                        m_Materials[i / 4].SetVector(k_ShaderProperties[i % 4].texture_st, materialProperty.VectorValue);
+                        m_Materials[i / 4].SetVector(k_ShaderProperties[i % 4].texture_st, materialProperty.Vector4Value);
 
                         m_OccupiedSlots++;
 
@@ -182,16 +232,17 @@ namespace Unity.Geospatial.Streaming
             }
 
 
-            Debug.LogErrorFormat("Attempting to add more than {0} textures to CesiumUnityTerrain material", m_Slots.Count);
+            Debug.LogErrorFormat("Attempting to add more than {0} textures", m_Slots.Count);
         }
 
+        /// <inheritdoc cref="UGMaterial.OnRemoveMaterialProperty"/>
         protected override void OnRemoveMaterialProperty(MaterialProperty materialProperty)
         {
             //
             //  TODO - Manage other types of material components
             //
             Assert.IsNotNull(materialProperty.Texture);
-            Assert.AreEqual(MaterialPropertyType.ColorTexture, materialProperty.Type);
+            Assert.AreEqual(MaterialPropertyType.AlbedoTexture, materialProperty.Type);
 
             for (int i = 0; i < m_Slots.Count; i++)
             {
@@ -206,7 +257,7 @@ namespace Unity.Geospatial.Streaming
                 return;
             }
 
-            Debug.LogError("Could not find texture to remove from CesiumUnityTerrain material");
+            Debug.LogError("Could not find texture to remove");
         }
     }
 }

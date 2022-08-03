@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 
 using UnityEditor;
@@ -10,9 +9,15 @@ using UnityEngine.Assertions;
 
 namespace Unity.Geospatial.Streaming.Editor
 {
+    /// <summary>
+    /// Class to display the <see cref="GeodeticExtentObject"/> fields inside the Unity inspector.
+    /// </summary>
     [CustomEditor(typeof(GeodeticExtentObject))]
     public class GeodeticExtentObjectInspector : UnityEditor.Editor
     {
+        /// <summary>
+        /// This is by our Unit Tests because <see cref="OnEnable"/> prevents us isolate execution.
+        /// </summary>
         internal static GeodeticExtentObjectInspector Inspector;
         
         /// <summary>
@@ -26,10 +31,19 @@ namespace Unity.Geospatial.Streaming.Editor
         /// </summary>
         internal SceneHandleWrapper SceneWrapper;
 
+        /// <summary>
+        /// HelpBox message displayed when the extent points did not pass the <see cref="GeodeticExtent.ValidateExtent">Validation</see>.
+        /// </summary>
         internal const string k_InvalidExtentMessage = "The extent provided must be convex in shape and cannot be applied as-is.";
 
+        /// <summary>
+        /// HelpBox message displayed when <see cref="GeodeticExtentObject.Points"/> modification haven't been saved.
+        /// </summary>
         internal const string k_ChangesMessage = "Changes have been made to the extent, make sure to apply them!";
 
+        /// <summary>
+        /// Label to display on the Button when <see cref="GeodeticExtentObject.Points"/> modification haven't been saved.
+        /// </summary>
         internal const string k_ChangesButtonLabel = "Validate & Apply";
         
         private Vector3[] m_WorldPoints;
@@ -43,6 +57,9 @@ namespace Unity.Geospatial.Streaming.Editor
         private SerializedProperty m_ExtentProperty;
         private ReorderableList m_ReorderableExtent;
 
+        /// <summary>
+        /// This function is called when the object is loaded.
+        /// </summary>
         public void OnEnable()
         {
             Inspector = this;
@@ -52,6 +69,10 @@ namespace Unity.Geospatial.Streaming.Editor
             OnEnable(serializedObject.targetObject as GeodeticExtentObject);
         }
 
+        /// <summary>
+        /// This function is called when the object is loaded.
+        /// </summary>
+        /// <param name="target">Draw the values of this instance.</param>
         internal void OnEnable(GeodeticExtentObject target)
         {
             Assert.IsNotNull(target);
@@ -77,23 +98,34 @@ namespace Unity.Geospatial.Streaming.Editor
 
             SceneView.duringSceneGui += OnSceneGUI;
         }
-
-
-
+        
+        /// <summary>
+        /// This function is called when the behaviour becomes disabled.
+        /// This is also called when the object is destroyed and can be used for any cleanup code.
+        /// When scripts are reloaded after compilation has finished, <see cref="OnDisable"/> will be called,
+        /// followed by an <see cref="OnEnable"/> after the script has been loaded.
+        /// </summary>
         public void OnDisable()
         {
             Tools.hidden = false;
 
             SceneView.duringSceneGui -= OnSceneGUI;
         }
-
-
+        
+        /// <summary>
+        /// Custom IMGUI based GUI for the inspector.
+        /// </summary>
         public override void OnInspectorGUI()
         {
             GUILayoutWrapper ??= new EditorGUILayoutWrapper();
             OnInspectorGUI(serializedObject.targetObject as GeodeticExtentObject);
         }
         
+        
+        /// <summary>
+        /// Custom IMGUI based GUI for the inspector.
+        /// </summary>
+        /// <param name="target">Display the fields of this extent.</param>
         internal void OnInspectorGUI(GeodeticExtentObject target)
         {
             EditorGUI.BeginChangeCheck();
@@ -133,11 +165,19 @@ namespace Unity.Geospatial.Streaming.Editor
             }
         }
 
+        /// <summary>
+        /// Enables the Editor to handle an event in the Scene view.
+        /// </summary>
+        /// <param name="sceneView">The scene view where to draw the handles of the extent.</param>
         private void OnSceneGUI(SceneView sceneView)
         {
             OnSceneGUI(sceneView.camera);
         }
 
+        /// <summary>
+        /// Enables the Editor to handle an event in the Scene view.
+        /// </summary>
+        /// <param name="camera">The active camera used as the point of view.</param>
         internal void OnSceneGUI(Camera camera)
         {
             SceneWrapper ??= new SceneHandleWrapper();
@@ -241,11 +281,22 @@ namespace Unity.Geospatial.Streaming.Editor
             // }
         }
 
+        /// <summary>
+        /// Draw the extent header at the top of the <see cref="GeodeticExtentObject.Points"/> list.
+        /// </summary>
+        /// <param name="rect">Where to draw the header.</param>
         internal void DrawExtentHeader(Rect rect)
         {
             GUILayoutWrapper.Label(rect, new GUIContent("Extent"));
         }
 
+        /// <summary>
+        /// Draw the coordinates for one point part of the <see cref="GeodeticExtentObject.Points"/> list.
+        /// </summary>
+        /// <param name="rect">Where to draw the element.</param>
+        /// <param name="index">List index of the point to draw.</param>
+        /// <param name="isActive">True if this element is enabled.</param>
+        /// <param name="isFocused">True if this element has focus.</param>
         internal void DrawExtentElements(Rect rect, int index, bool isActive, bool isFocused)
         {
             double2 element = (double2)m_ReorderableExtent.list[index];
@@ -260,6 +311,10 @@ namespace Unity.Geospatial.Streaming.Editor
             m_ReorderableExtent.list[index] = element;
         }
 
+        /// <summary>
+        /// Called whenever a new point was added to the <see cref="GeodeticExtentObject.Points"/> list.
+        /// </summary>
+        /// <param name="list">The list with the newly added point.</param>
         internal static void OnAddExtentPoint(ReorderableList list)
         {
             int last = list.count;

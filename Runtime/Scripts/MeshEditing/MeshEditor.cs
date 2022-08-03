@@ -12,7 +12,11 @@ namespace Unity.Geospatial.Streaming
     //
     //  TODO - Actually make this work with burst... it's mostly burstable stuff and remove unsafe stuff
     //              and replace it with burst
-    //
+    // 
+    /// <summary>
+    /// Set of tools allowing to modify <see href="https://docs.unity3d.com/ScriptReference/Mesh-vertices.html">vertices</see>
+    /// on a <see cref="UnityEngine.Mesh">Mesh</see>.
+    /// </summary>
     public struct MeshEditor : IDisposable
     {
 
@@ -22,12 +26,16 @@ namespace Unity.Geospatial.Streaming
             public int vertexCount;
             public int capacity;
         }
+        
         private struct TriangleCollection : IDisposable
         {
             public bool valid;
             public NativeArray<Triangle> data;
             public int size;
 
+            /// <summary>
+            /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            /// </summary>
             public void Dispose()
             {
                 if (valid)
@@ -58,6 +66,9 @@ namespace Unity.Geospatial.Streaming
             public TriangleCollection middle;
             public NativeArray<bool> middleSide;
 
+            /// <summary>
+            /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            /// </summary>
             public void Dispose()
             {
                 positive.Dispose();
@@ -89,6 +100,49 @@ namespace Unity.Geospatial.Streaming
 
         private readonly int m_SubMeshCount;
 
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
+        /// <param name="meshData"></param>
+        /// <param name="vertexDescriptor">
+        /// Information about the <see href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.html">VertexAttributes</see>
+        /// of the <see href="https://docs.unity3d.com/ScriptReference/Mesh.html">Mesh</see> <see href="https://docs.unity3d.com/ScriptReference/Mesh-vertices.html">vertices</see>.
+        /// <see href="https://docs.unity3d.com/ScriptReference/Mesh.html">Mesh</see> vertices vertex data comprised of
+        /// different Vertex Attributes. For example, a vertex can include a Position, Normal, TexCoord0, and Color.
+        /// <see href="https://docs.unity3d.com/ScriptReference/Mesh.html">Meshes</see> usually use a known format for
+        /// data layout, for example, a position is most often a 3-component float
+        /// vector (<see href="https://docs.unity3d.com/ScriptReference/Vector3.html">Vector3</see>), but you can also
+        /// specify non-standard data formats and their layout for a <see href="https://docs.unity3d.com/ScriptReference/Mesh.html">Mesh</see>.
+        /// You can use <see href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttributeDescriptor.html">VertexAttributeDescriptor</see>
+        /// to specify custom mesh data layout in <see href="https://docs.unity3d.com/ScriptReference/Mesh.SetVertexBufferParams.html">Mesh.SetVertexBufferParams</see>.
+        /// Vertex data is laid out in separate "streams" (each stream goes into a separate vertex buffer in the underlying graphics API).
+        /// While Unity supports up to 4 vertex streams, most meshes use just one. Separate streams are most useful when
+        /// some vertex attributes don't need to be processed, for example skinned meshes often use two vertex streams
+        /// (one containing all the skinned data: positions, normals, tangents;
+        /// while the other stream contains all the non-skinned data: colors and texture coordinates).
+        /// Within each stream, attributes of a vertex are laid out one after another, in this order:
+        /// <see href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.Position.html">VertexAttribute.Position</see>
+        /// <see href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.Normal.html">VertexAttribute.Normal</see>
+        /// <see href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.Tangent.html">VertexAttribute.Tangent</see>
+        /// <see href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.Color.html">VertexAttribute.Color</see>
+        /// <see href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.TexCoord0.html">VertexAttribute.TexCoord0</see>
+        /// <see href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.TexCoord1.html">VertexAttribute.TexCoord1</see>
+        /// <see href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.TexCoord2.html">VertexAttribute.TexCoord2</see>
+        /// <see href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.TexCoord3.html">VertexAttribute.TexCoord3</see>
+        /// <see href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.TexCoord4.html">VertexAttribute.TexCoord4</see>
+        /// <see href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.TexCoord5.html">VertexAttribute.TexCoord5</see>
+        /// <see href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.TexCoord6.html">VertexAttribute.TexCoord6</see>
+        /// <see href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.TexCoord7.html">VertexAttribute.TexCoord7</see>
+        /// <see href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.BlendWeight.html">VertexAttribute.BlendWeight</see>
+        /// <see href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttribute.BlendIndices.html">VertexAttribute.BlendIndices</see>
+        /// Not all <see href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttributeDescriptor-format.html">format</see>
+        /// and <see href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttributeDescriptor-dimension.html">dimension</see>
+        /// combinations are valid. Specifically, the data size of a vertex attribute must be a multiple of 4 bytes. For example,
+        /// a <see href="https://docs.unity3d.com/ScriptReference/Rendering.VertexAttributeFormat.Float16.html">VertexAttributeFormat.Float16</see>
+        /// format with dimension 3 is not valid.
+        ///
+        /// See Also: <see href="https://docs.unity3d.com/ScriptReference/SystemInfo.SupportsVertexAttributeFormat.html">SystemInfo.SupportsVertexAttributeFormat</see>.
+        /// </param>
         public MeshEditor(ref Mesh.MeshData meshData, VertexAttributeDescriptor[] vertexDescriptor)
         {
             m_Interpolator = new VertexInterpolator(vertexDescriptor);
@@ -107,7 +161,7 @@ namespace Unity.Geospatial.Streaming
                 CopyVertexData(ref meshData, i, m_VertexBuffer.data[i], vertexDataByteSize);
             }
 
-            m_Interpolator.SetVertexBuffers(m_VertexBuffer.data, m_VertexBuffer.vertexCount);
+            m_Interpolator.SetVertexBuffers(m_VertexBuffer.data);
 
             //
             //  Copy index buffers
@@ -137,6 +191,9 @@ namespace Unity.Geospatial.Streaming
             }
         }
 
+        /// <summary>
+        /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+        /// </summary>
         public void Dispose()
         {
             for (int i = 0; i < m_TriangleCollectionList.Count; i++)
@@ -228,6 +285,10 @@ namespace Unity.Geospatial.Streaming
             }
         }
 
+        /// <summary>
+        /// Get the first valid collection of triangles that is not empty.
+        /// </summary>
+        /// <returns>The first valid triangle collection. If none are valid, <see cref="TriangleCollectionIndex.Null"/> will be returned.</returns>
         public TriangleCollectionIndex GetFirstCollection()
         {
             for (int i = 0; i < m_TriangleCollectionList.Count; i++)
@@ -239,6 +300,12 @@ namespace Unity.Geospatial.Streaming
             return TriangleCollectionIndex.Null;
         }
 
+        /// <summary>
+        /// Merge two triangle collections into a single one and dispose of them after.
+        /// </summary>
+        /// <param name="a">The first collection to merge with.</param>
+        /// <param name="b">The second collection to merge with.</param>
+        /// <returns>The new collection index of the merge result.</returns>
         public TriangleCollectionIndex CombineAndDispose(TriangleCollectionIndex a, TriangleCollectionIndex b)
         {
             if (!a.IsValid())
@@ -276,6 +343,10 @@ namespace Unity.Geospatial.Streaming
             return a;
         }
 
+        /// <summary>
+        /// Dispose of the given <paramref name="target"/> by emptying its buffer.
+        /// </summary>
+        /// <param name="target">Index of the collection to discard.</param>
         public void Discard(TriangleCollectionIndex target)
         {
             Assert.IsTrue(target.IsValid());
@@ -293,7 +364,15 @@ namespace Unity.Geospatial.Streaming
             m_TriangleCollectionList[target.Index] = buffer;
         }
 
-        public unsafe void Cut(TriangleCollectionIndex target, Plane plane, out TriangleCollectionIndex positive, out TriangleCollectionIndex negative, EdgeCollection extraEdgeCollection = null)
+        /// <summary>
+        /// Split a triangle collection into two by a plane.
+        /// </summary>
+        /// <param name="target">The collection to cut.</param>
+        /// <param name="plane">Cut the collection by this plane.</param>
+        /// <param name="positive">The new collection index which is on the positive side of the plane.</param>
+        /// <param name="negative">The new collection index which is on the negative side of the plane.</param>
+        /// <param name="extraEdgeCollection">Output the newly created edges into this collection.</param>
+        public unsafe void Cut(TriangleCollectionIndex target, Plane plane, out TriangleCollectionIndex positive, out TriangleCollectionIndex negative, List<Edge> extraEdgeCollection = null)
         {
             Assert.IsTrue(target.IsValid());
             Assert.IsTrue(target.Index < m_TriangleCollectionList.Count);
@@ -379,7 +458,7 @@ namespace Unity.Geospatial.Streaming
                             Index1 = e1,
                             Index2 = e2
                         };
-                        extraEdgeCollection.Data.Add(newEdge);
+                        extraEdgeCollection.Add(newEdge);
                     }
                 }
                 else
@@ -398,7 +477,7 @@ namespace Unity.Geospatial.Streaming
                             Index1 = e2,
                             Index2 = e1
                         };
-                        extraEdgeCollection.Data.Add(newEdge);
+                        extraEdgeCollection.Add(newEdge);
                     }
                 }
             }
@@ -449,7 +528,7 @@ namespace Unity.Geospatial.Streaming
         /// <param name="reverseWindingOrder"> Winding order of the new faces created from extrusion </param>
         /// <param name="direction"> Edges are extruded in this given direction </param>
         /// <param name="extrudeResult"> List index for the triangle collection created from extrusion </param>
-        public unsafe void EdgeExtrude(EdgeCollection edgesToExtrude, bool reverseWindingOrder, in Vector3 direction, out TriangleCollectionIndex extrudeResult)
+        public unsafe void EdgeExtrude(List<Edge> edgesToExtrude, bool reverseWindingOrder, in Vector3 direction, out TriangleCollectionIndex extrudeResult)
         {
             if (edgesToExtrude == null)
             {
@@ -483,27 +562,27 @@ namespace Unity.Geospatial.Streaming
 
             TriangleCollection extrudeTriangleCollection = new TriangleCollection
             {
-                data = new NativeArray<Triangle>(2 * edgesToExtrude.Data.Count, Allocator.Temp),
+                data = new NativeArray<Triangle>(2 * edgesToExtrude.Count, Allocator.Temp),
                 valid = true,
-                size = 2 * edgesToExtrude.Data.Count
+                size = 2 * edgesToExtrude.Count
             };
             Triangle* currentTriangle = (Triangle*)extrudeTriangleCollection.data.GetUnsafePtr();
 
-            for (int i = 0; i < edgesToExtrude.Data.Count; i++)
+            for (int i = 0; i < edgesToExtrude.Count; i++)
             {
-                int newExtrudeEdgeIndex1 = srcToDstIndexMap[edgesToExtrude.Data[i].Index1];
-                int newExtrudeEdgeIndex2 = srcToDstIndexMap[edgesToExtrude.Data[i].Index2];
+                int newExtrudeEdgeIndex1 = srcToDstIndexMap[edgesToExtrude[i].Index1];
+                int newExtrudeEdgeIndex2 = srcToDstIndexMap[edgesToExtrude[i].Index2];
 
                 if (reverseWindingOrder)
                 {
                     currentTriangle->a = newExtrudeEdgeIndex1;
-                    currentTriangle->b = edgesToExtrude.Data[i].Index2;
-                    currentTriangle->c = edgesToExtrude.Data[i].Index1;
+                    currentTriangle->b = edgesToExtrude[i].Index2;
+                    currentTriangle->c = edgesToExtrude[i].Index1;
                     currentTriangle->subMesh = m_SubMeshCount - 1;
                     currentTriangle++;
 
                     currentTriangle->a = newExtrudeEdgeIndex2;
-                    currentTriangle->b = edgesToExtrude.Data[i].Index2;
+                    currentTriangle->b = edgesToExtrude[i].Index2;
                     currentTriangle->c = newExtrudeEdgeIndex1;
                     currentTriangle->subMesh = m_SubMeshCount - 1;
                     currentTriangle++;
@@ -511,14 +590,14 @@ namespace Unity.Geospatial.Streaming
                 else
                 {
                     currentTriangle->a = newExtrudeEdgeIndex1;
-                    currentTriangle->b = edgesToExtrude.Data[i].Index1;
-                    currentTriangle->c = edgesToExtrude.Data[i].Index2;
+                    currentTriangle->b = edgesToExtrude[i].Index1;
+                    currentTriangle->c = edgesToExtrude[i].Index2;
                     currentTriangle->subMesh = m_SubMeshCount - 1;
                     currentTriangle++;
 
                     currentTriangle->a = newExtrudeEdgeIndex2;
                     currentTriangle->b = newExtrudeEdgeIndex1;
-                    currentTriangle->c = edgesToExtrude.Data[i].Index2;
+                    currentTriangle->c = edgesToExtrude[i].Index2;
                     currentTriangle->subMesh = m_SubMeshCount - 1;
                     currentTriangle++;
                 }
@@ -679,6 +758,11 @@ namespace Unity.Geospatial.Streaming
             return -1;
         }
 
+        /// <summary>
+        /// Transfer the given <paramref name="selection">triangle collection</paramref> to the given <paramref name="meshData"/>.
+        /// </summary>
+        /// <param name="selection">Index of the triangle collection to apply.</param>
+        /// <param name="meshData">Change the vertices of this instance.</param>
         public void AssignToMeshData(TriangleCollectionIndex selection, ref Mesh.MeshData meshData)
         {
             Assert.IsTrue(selection.IsValid());
