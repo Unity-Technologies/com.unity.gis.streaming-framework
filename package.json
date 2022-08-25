@@ -1,6 +1,6 @@
 {
     "name": "com.unity.gis.streaming-framework",
-    "version": "1.0.0-preview.3",
+    "version": "1.0.0",
     "displayName": "Unity Geospatial Streaming",
     "description": "A streaming framework to allow the visualization of large geospatial datasets",
     "unity": "2020.3",

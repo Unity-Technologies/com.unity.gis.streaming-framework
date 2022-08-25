@@ -27,7 +27,17 @@ namespace Unity.Geospatial.Streaming
         /// Higher value will result in loading less geometry to be loaded since it would require a smaller <see cref="UniversalDecoder.NodeData.GeometricError"/>;
         /// A lower value will result in displaying more geometry.
         /// </summary>
-        public float ScreenSpaceError { get; set; } = 4.0f;
+        [SerializeField]
+        private float m_ScreenSpaceError = 4.0f;
+
+        /// <summary>
+        /// <inheritdoc cref="m_ScreenSpaceError"/>
+        /// </summary>
+        public float ScreenSpaceError
+        {
+            get { return m_ScreenSpaceError; }
+            set { m_ScreenSpaceError = value; }
+        }
 
         /// <summary>
         /// Camera component this parent component refers to.
@@ -42,14 +52,14 @@ namespace Unity.Geospatial.Streaming
 
         /// <summary>
         /// HPRoot parent of this camera allowing to drive HPLocation parenting without
-        /// depending on the object classic hierarchy.
+        /// depending on the object classic hierarchy. If left null, the root in the object's
+        /// parent hierarchy will automatically be set here.
         /// </summary>
         [SerializeField]
         private HPRoot m_Root;
 
         /// <summary>
-        /// HPRoot parent of this camera allowing to drive HPLocation parenting without
-        /// depending on the object classic hierarchy.
+        /// <inheritdoc cref="m_Root"/>
         /// </summary>
         public HPRoot Root
         {
@@ -117,7 +127,7 @@ namespace Unity.Geospatial.Streaming
             result.FovRad = fovRad;
             result.Resolution = resolution;
 
-            result.ScreenSpaceError = ScreenSpaceError;
+            result.ScreenSpaceError = m_ScreenSpaceError;
             result.NearClip = m_Camera.nearClipPlane;
             result.FarClip = m_Camera.farClipPlane;
 

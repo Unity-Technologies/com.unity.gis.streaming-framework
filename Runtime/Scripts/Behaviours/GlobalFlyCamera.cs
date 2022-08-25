@@ -65,48 +65,122 @@ namespace Unity.Geospatial.Streaming
         /// based on the camera's altitude. For some use-cases, this adjustment may not
         /// be adequate.
         /// </summary>
-        public bool UpdateClipPlanes { get; set; } = true;
+        [SerializeField]
+        private bool m_UpdateClipPlanes = true;
+
+        /// <summary>
+        /// <inheritdoc cref="m_UpdateClipPlanes"/>
+        /// </summary>
+        public bool UpdateClipPlanes
+        {
+            get { return m_UpdateClipPlanes; }
+            set { m_UpdateClipPlanes = value; }
+        }
 
         /// <summary>
         /// A factor by which the camera's speed is multiplied if the `shift` key is pressed
         /// </summary>
-        public float HighSpeedMultiplier { get; set; } = 5.0f;
+        [SerializeField]
+        private float m_HighSpeedMultiplier = 5.0f;
+
+        /// <summary>
+        /// <inheritdoc cref="m_HighSpeedMultiplier"/>
+        /// </summary>
+        public float HighSpeedMultiplier
+        {
+            get { return m_HighSpeedMultiplier; }
+            set { m_HighSpeedMultiplier = value; }
+        }
+
 
         /// <summary>
         /// The speed of the camera at the start. This value will change if the user scrolls
         /// up or down.
         /// </summary>
-        public float Speed { get; set; } = 10.0f;
+        [SerializeField]
+        private float m_Speed = 10.0f;
+
+        /// <summary>
+        /// <inheritdoc cref="m_Speed"/>
+        /// </summary>
+        public float Speed
+        {
+            get { return m_Speed; }
+            set { m_Speed = value; }
+        }
 
         /// <summary>
         /// How much the scrool wheel affects the camera's speed. Higher numbers means a
         /// larger change in velocity for each click of the scroll wheel.
         /// </summary>
-        public float ScrollSensitivity { get; set; } = 30.0f;
+        [SerializeField]
+        private float m_ScrollSensitivity = 30.0f;
+
+        /// <summary>
+        /// <inheritdoc cref="m_ScrollSensitivity"/>
+        /// </summary>
+        public float ScrollSensitivity
+        {
+            get { return m_ScrollSensitivity; }
+            set { m_ScrollSensitivity = value; }
+        }
+
+
 
         /// <summary>
         /// The sensitivity of the mouse. Higher values will cause the camera to rotate faster
         /// when the mouse is moved.
         /// </summary>
-        public float MouseSensitivity { get; set; } = 1.0f;
+        [SerializeField]
+        private float m_MouseSensitivity = 1.0f;
+
+        /// <summary>
+        /// <inheritdoc cref="m_MouseSensitivity"/>
+        /// </summary>
+        public float MouseSensitivity
+        {
+            get { return m_MouseSensitivity; }
+            set { m_MouseSensitivity = value; }
+        }
 
         /// <summary>
         /// The radius of the planet. This is used only to calculate the altitude of the camera
         /// to set the clip planes.
         /// </summary>
-        public float PlanetRadius { get; set; } = 6_371_000;
+        [SerializeField]
+        private float m_PlanetRadius = 6_371_000;
+
+        /// <summary>
+        /// <inheritdoc cref="m_PlanetRadius"/>
+        /// </summary>
+        public float PlanetRadius
+        {
+            get { return m_PlanetRadius; }
+            set { m_PlanetRadius = value; }
+        }
+
 
         /// <summary>
         /// The maximum pitch of the camera before it is clamped, in degrees
         /// </summary>
-        public float MaximumPitch { get; set; } = 85.0f;
+        [SerializeField]
+        private float m_MaximumPitch = 85.0f;
+
+        /// <summary>
+        /// <inheritdoc cref="m_MaximumPitch"/>
+        /// </summary>
+        public float MaximumPitch
+        {
+            get { return m_MaximumPitch; }
+            set { m_MaximumPitch = value; }
+        }
 
         /// <summary>
         /// Multiply the mouse movement by this factor.
         /// Lower value will reduce the distance.
         /// Higher value will augment the distance.
         /// </summary>
-        public float BaseMouseSensitivity { get; set; } = 0.1f;
+        private const float k_BaseMouseSensitivity = 0.1f;
 
         /// <summary>
         /// <see langword="true"/> If the mouse right button was held down at the previous state;
@@ -154,7 +228,7 @@ namespace Unity.Geospatial.Streaming
             SetPosition(ref userInput, currentSpeed);
             SetRotation(ref userInput);
 
-            if (UpdateClipPlanes)
+            if (m_UpdateClipPlanes)
                 SetClipPlanes();
         }
 
@@ -196,11 +270,11 @@ namespace Unity.Geospatial.Streaming
         /// <returns>Get the speed multiplier result.</returns>
         private float GetAndAdjustSpeed(ref UserInput userInput)
         {
-            Speed *= math.pow(0.01f * ScrollSensitivity + 1.0f, Input.mouseScrollDelta.y);
+            m_Speed *= math.pow(0.01f * m_ScrollSensitivity + 1.0f, Input.mouseScrollDelta.y);
 
-            float result = Speed;
+            float result = m_Speed;
             if (userInput.ShiftKey)
-                result *= HighSpeedMultiplier;
+                result *= m_HighSpeedMultiplier;
 
             return result;
         }
@@ -231,12 +305,12 @@ namespace Unity.Geospatial.Streaming
                 right = -math.normalizesafe(math.cross(up, m_Transform.Up));
             float3 forward = math.cross(up, right);
 
-            float maximumPitchRad = math.radians(MaximumPitch);
+            float maximumPitchRad = math.radians(m_MaximumPitch);
             float pitch = math.asin(math.dot(up, m_Transform.Forward));
-            pitch += math.radians(BaseMouseSensitivity) * MouseSensitivity * userInput.Mouse.y;
+            pitch += math.radians(k_BaseMouseSensitivity) * m_MouseSensitivity * userInput.Mouse.y;
             pitch = math.clamp(pitch, -maximumPitchRad, maximumPitchRad);
 
-            quaternion yawQuat = HPMath.AxisAngleDegrees(up, BaseMouseSensitivity * MouseSensitivity * userInput.Mouse.x);
+            quaternion yawQuat = HPMath.AxisAngleDegrees(up, k_BaseMouseSensitivity * m_MouseSensitivity * userInput.Mouse.x);
 
             // TODO - convert to mathematics
             quaternion pitchQuat = Quaternion.AngleAxis(math.degrees(pitch), right);
@@ -252,7 +326,7 @@ namespace Unity.Geospatial.Streaming
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void SetClipPlanes()
         {
-            float height = (float)(math.length(m_Transform.UniversePosition) - PlanetRadius);
+            float height = (float)(math.length(m_Transform.UniversePosition) - m_PlanetRadius);
             float viewDistance = math.clamp(height, 10.0f, 10000.0f);
 
             m_Camera.nearClipPlane = 0.1f * viewDistance;

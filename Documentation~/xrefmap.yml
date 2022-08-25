@@ -1012,6 +1012,58 @@ references:
   commentId: T:Unity.Geospatial.Streaming.EuclideanFlyCamera
   fullName: Unity.Geospatial.Streaming.EuclideanFlyCamera
   nameWithType: EuclideanFlyCamera
+- uid: Unity.Geospatial.Streaming.EuclideanFlyCamera.HighSpeedMultiplier
+  name: HighSpeedMultiplier
+  href: api/Unity.Geospatial.Streaming.EuclideanFlyCamera.html#Unity_Geospatial_Streaming_EuclideanFlyCamera_HighSpeedMultiplier
+  commentId: P:Unity.Geospatial.Streaming.EuclideanFlyCamera.HighSpeedMultiplier
+  fullName: Unity.Geospatial.Streaming.EuclideanFlyCamera.HighSpeedMultiplier
+  nameWithType: EuclideanFlyCamera.HighSpeedMultiplier
+- uid: Unity.Geospatial.Streaming.EuclideanFlyCamera.HighSpeedMultiplier*
+  name: HighSpeedMultiplier
+  href: api/Unity.Geospatial.Streaming.EuclideanFlyCamera.html#Unity_Geospatial_Streaming_EuclideanFlyCamera_HighSpeedMultiplier_
+  commentId: Overload:Unity.Geospatial.Streaming.EuclideanFlyCamera.HighSpeedMultiplier
+  isSpec: "True"
+  fullName: Unity.Geospatial.Streaming.EuclideanFlyCamera.HighSpeedMultiplier
+  nameWithType: EuclideanFlyCamera.HighSpeedMultiplier
+- uid: Unity.Geospatial.Streaming.EuclideanFlyCamera.MouseSensitivity
+  name: MouseSensitivity
+  href: api/Unity.Geospatial.Streaming.EuclideanFlyCamera.html#Unity_Geospatial_Streaming_EuclideanFlyCamera_MouseSensitivity
+  commentId: P:Unity.Geospatial.Streaming.EuclideanFlyCamera.MouseSensitivity
+  fullName: Unity.Geospatial.Streaming.EuclideanFlyCamera.MouseSensitivity
+  nameWithType: EuclideanFlyCamera.MouseSensitivity
+- uid: Unity.Geospatial.Streaming.EuclideanFlyCamera.MouseSensitivity*
+  name: MouseSensitivity
+  href: api/Unity.Geospatial.Streaming.EuclideanFlyCamera.html#Unity_Geospatial_Streaming_EuclideanFlyCamera_MouseSensitivity_
+  commentId: Overload:Unity.Geospatial.Streaming.EuclideanFlyCamera.MouseSensitivity
+  isSpec: "True"
+  fullName: Unity.Geospatial.Streaming.EuclideanFlyCamera.MouseSensitivity
+  nameWithType: EuclideanFlyCamera.MouseSensitivity
+- uid: Unity.Geospatial.Streaming.EuclideanFlyCamera.ScrollSensitivity
+  name: ScrollSensitivity
+  href: api/Unity.Geospatial.Streaming.EuclideanFlyCamera.html#Unity_Geospatial_Streaming_EuclideanFlyCamera_ScrollSensitivity
+  commentId: P:Unity.Geospatial.Streaming.EuclideanFlyCamera.ScrollSensitivity
+  fullName: Unity.Geospatial.Streaming.EuclideanFlyCamera.ScrollSensitivity
+  nameWithType: EuclideanFlyCamera.ScrollSensitivity
+- uid: Unity.Geospatial.Streaming.EuclideanFlyCamera.ScrollSensitivity*
+  name: ScrollSensitivity
+  href: api/Unity.Geospatial.Streaming.EuclideanFlyCamera.html#Unity_Geospatial_Streaming_EuclideanFlyCamera_ScrollSensitivity_
+  commentId: Overload:Unity.Geospatial.Streaming.EuclideanFlyCamera.ScrollSensitivity
+  isSpec: "True"
+  fullName: Unity.Geospatial.Streaming.EuclideanFlyCamera.ScrollSensitivity
+  nameWithType: EuclideanFlyCamera.ScrollSensitivity
+- uid: Unity.Geospatial.Streaming.EuclideanFlyCamera.Speed
+  name: Speed
+  href: api/Unity.Geospatial.Streaming.EuclideanFlyCamera.html#Unity_Geospatial_Streaming_EuclideanFlyCamera_Speed
+  commentId: P:Unity.Geospatial.Streaming.EuclideanFlyCamera.Speed
+  fullName: Unity.Geospatial.Streaming.EuclideanFlyCamera.Speed
+  nameWithType: EuclideanFlyCamera.Speed
+- uid: Unity.Geospatial.Streaming.EuclideanFlyCamera.Speed*
+  name: Speed
+  href: api/Unity.Geospatial.Streaming.EuclideanFlyCamera.html#Unity_Geospatial_Streaming_EuclideanFlyCamera_Speed_
+  commentId: Overload:Unity.Geospatial.Streaming.EuclideanFlyCamera.Speed
+  isSpec: "True"
+  fullName: Unity.Geospatial.Streaming.EuclideanFlyCamera.Speed
+  nameWithType: EuclideanFlyCamera.Speed
 - uid: Unity.Geospatial.Streaming.EuclideanTR
   name: EuclideanTR
   href: api/Unity.Geospatial.Streaming.EuclideanTR.html
@@ -1311,19 +1363,6 @@ references:
   commentId: T:Unity.Geospatial.Streaming.GlobalFlyCamera
   fullName: Unity.Geospatial.Streaming.GlobalFlyCamera
   nameWithType: GlobalFlyCamera
-- uid: Unity.Geospatial.Streaming.GlobalFlyCamera.BaseMouseSensitivity
-  name: BaseMouseSensitivity
-  href: api/Unity.Geospatial.Streaming.GlobalFlyCamera.html#Unity_Geospatial_Streaming_GlobalFlyCamera_BaseMouseSensitivity
-  commentId: P:Unity.Geospatial.Streaming.GlobalFlyCamera.BaseMouseSensitivity
-  fullName: Unity.Geospatial.Streaming.GlobalFlyCamera.BaseMouseSensitivity
-  nameWithType: GlobalFlyCamera.BaseMouseSensitivity
-- uid: Unity.Geospatial.Streaming.GlobalFlyCamera.BaseMouseSensitivity*
-  name: BaseMouseSensitivity
-  href: api/Unity.Geospatial.Streaming.GlobalFlyCamera.html#Unity_Geospatial_Streaming_GlobalFlyCamera_BaseMouseSensitivity_
-  commentId: Overload:Unity.Geospatial.Streaming.GlobalFlyCamera.BaseMouseSensitivity
-  isSpec: "True"
-  fullName: Unity.Geospatial.Streaming.GlobalFlyCamera.BaseMouseSensitivity
-  nameWithType: GlobalFlyCamera.BaseMouseSensitivity
 - uid: Unity.Geospatial.Streaming.GlobalFlyCamera.HighSpeedMultiplier
   name: HighSpeedMultiplier
   href: api/Unity.Geospatial.Streaming.GlobalFlyCamera.html#Unity_Geospatial_Streaming_GlobalFlyCamera_HighSpeedMultiplier
